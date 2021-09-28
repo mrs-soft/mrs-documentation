@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Документация</title>
+    <description>Документация по продуктам компании «Мобильные решения для строительства»</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 27 Sep 2021 17:48:10 +0300</pubDate>
+    <lastBuildDate>Mon, 27 Sep 2021 17:48:10 +0300</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>СтройКонтроль</title>
+        <description>
+</description>
+        <pubDate>Mon, 27 Sep 2021 00:00:00 +0300</pubDate>
+        <link>http://localhost:4000/plotpad/</link>
+        <guid isPermaLink="true">http://localhost:4000/plotpad/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Конструктор</title>
+        <description>
+</description>
+        <pubDate>Mon, 27 Sep 2021 00:00:00 +0300</pubDate>
+        <link>http://localhost:4000/constructor/</link>
+        <guid isPermaLink="true">http://localhost:4000/constructor/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
