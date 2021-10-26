@@ -1,4 +1,4 @@
-#!/home/user/mrsdoc_sphinx/venv/bin/python3
+#!/mnt/c/Users/Michael/Desktop/mrs-documentation/venv/bin/python
 
 # $Id: rst2odt.py 5839 2009-01-07 19:09:28Z dkuhlman $
 # Author: Dave Kuhlman <dkuhlman@rexx.com>

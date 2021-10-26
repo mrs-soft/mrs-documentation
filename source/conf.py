@@ -75,7 +75,11 @@ html_theme_options = {
         }
     ],
 
-     "search_bar_text": "Поиск по документации..."
+     "search_bar_text": "Поиск по документации...",
+
+     "external_links": [
+      {"name": "СтройКонтроль API", "url": "_static/swagger-ui-plotpad/index.html"}
+  ]
 
 }
 

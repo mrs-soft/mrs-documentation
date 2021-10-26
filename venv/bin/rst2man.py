@@ -1,4 +1,4 @@
-#!/home/user/mrsdoc_sphinx/venv/bin/python3
+#!/mnt/c/Users/Michael/Desktop/mrs-documentation/venv/bin/python
 
 # Author:
 # Contact: grubert@users.sf.net

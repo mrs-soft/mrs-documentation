@@ -2,8 +2,10 @@
 ===========
 
 .. toctree::
-    :maxdepth: 4
+    :maxdepth: 3
     :titlesonly: 
     
-    ElementsOfSystemCON
-    startworkCON
+    constructor/startWork
+    constructor/elementsOfSystem
+    constructor/reference
+    constructor/examples
