@@ -5,7 +5,7 @@
     :maxdepth: 3
     :titlesonly: 
     
-    constructor/startWork
-    constructor/elementsOfSystem
+    constructor/start-work
+    constructor/elements-of-system
     constructor/reference
     constructor/examples

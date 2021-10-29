@@ -1,10 +1,10 @@
 Справка
 =======
 
-.. toctree::
+..  toctree::
     :maxdepth: 1
     :titlesonly:
 
-    reference/elementsOfForm
-    reference/typesOfRepresentations
+    reference/elements-of-form
+    reference/types-of-representations
     reference/api

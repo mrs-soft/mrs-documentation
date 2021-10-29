@@ -1,14 +1,14 @@
 Примеры
 =======
 
-.. toctree::
+..  toctree::
     :maxdepth: 1
     :titlesonly:
 
-    examples/firstForm
-    examples/entityAndBisRules
-    examples/firstChecklist
-    examples/expandCallRequest
-    examples/plotpadInConstructor
-    examples/refBooks1C
-    examples/bitrixWork
+    examples/first-form
+    examples/entity-and-bis-rules
+    examples/first-checklist
+    examples/expand-call-request
+    examples/plotpad-in-constructor
+    examples/ref-books-1c
+    examples/bitrix-work
