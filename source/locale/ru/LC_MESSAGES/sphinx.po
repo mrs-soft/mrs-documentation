@@ -1,0 +1,2 @@
+msgid "On this page"
+msgstr "На этой странице"
