@@ -1,1 +1,4 @@
 venv/
+*.mo
+build/_sources
+build/.doctrees
