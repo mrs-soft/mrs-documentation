@@ -15,6 +15,14 @@
             "minLength": 3
     }
 
+----
+
+Текстовое поле в Конструкторе
+
+.. image:: images/component-text.png
+    :alt: Текстовое поле в Конструкторе
+    :align: center
+
 Поле для ввода email
 """"""""""""""""""""
 
@@ -26,7 +34,23 @@
         "title": "E-mail ответственного лица",
         "type": "email",
     }
-    
+
+----
+
+Email в Конструкторе
+
+.. image:: images/component-email.png
+    :alt: Email в Конструкторе
+    :align: center
+
+----
+
+Неправильный ввод email в Конструкторе
+
+.. image:: images/component-email-wrong.png
+    :alt: Неправильный ввод email в Конструкторе
+    :align: center
+
 Ввод многострочного текста
 """"""""""""""""""""""""""
 
@@ -39,6 +63,14 @@
         "description": "Краткое или не очень описание",
         "type": "textarea",
     }
+
+----
+
+Многострочный текст в Конструкторе
+
+.. image:: images/component-textarea.png
+    :alt: Многострочный текст в Конструкторе
+    :align: center
 
 Ввод числового значения
 """""""""""""""""""""""
@@ -53,6 +85,14 @@
         "type": "number",
     }
 
+----
+
+Числовое значение в Конструкторе
+
+.. image:: images/component-number.png
+    :alt: Числовое значение в Конструкторе
+    :align: center
+
 Ввод даты
 """""""""
 
@@ -66,6 +106,14 @@
         "type": "date",
     }
 
+----
+
+Дата в Конструкторе
+
+.. image:: images/component-date.png
+    :alt: Дата в Конструкторе
+    :align: center
+
 Ввод даты и времени
 """""""""""""""""""
 
@@ -78,3 +126,11 @@
         "description": "Дата и время начала",
         "type": "datetime",
     }
+
+----
+
+Время и дата в Конструкторе
+
+.. image:: images/component-datetime.png
+    :alt: Время и дата в Конструкторе
+    :align: center

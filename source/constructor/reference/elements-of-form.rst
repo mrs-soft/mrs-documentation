@@ -1,6 +1,15 @@
 Элементы формы
 ==============
 
+Strapi
+------
+
+Работа с элементами формы проходит в Strapi в разделе Forms.
+
+.. image:: images/strapi-forms.png
+    :alt: Формы в Strapi
+    :align: center
+
 Что такое форма?
 ----------------
 
@@ -26,10 +35,10 @@
     elements-of-form/attachments
     elements-of-form/ref-books
 
-Пример полной формы
--------------------
+.. Пример полной формы
+.. -------------------
 
-.. code-block:: json
+.. .. code-block:: json
 
     {
   "order": [
