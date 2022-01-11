@@ -5,6 +5,6 @@
     :maxdepth: 2
     :titlesonly:
 
-    reference/elements-of-form
+    reference/components
     reference/types-of-representations
     reference/api
