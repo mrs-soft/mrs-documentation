@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Переключатель (radiobutton) &#8212; Документация Мобильные решения для строительства. Документация. 1.0</title>
+    <title>Список c единичным выбором &#8212; документация Мобильные решения для строительства. Документация. 1.0</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -36,8 +36,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
     <link rel="search" title="Поиск" href="../../../search.html" />
-    <link rel="next" title="Справочники" href="ref-books.html" />
-    <link rel="prev" title="Объекты в форме" href="object.html" />
+    <link rel="next" title="Список с множественным выбором" href="checkboxes.html" />
+    <link rel="prev" title="Документы и приложения" href="attachments.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ru">
     
@@ -237,23 +237,18 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="array.html">
-       Список с выбором из множества значений
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="attachments.html">
        Документы и приложения
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="button-switcher.html">
-       Вкладки в форме
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Список c единичным выбором
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="checkboxes.html">
-       Множественный чекбокс
+       Список с множественным выбором
       </a>
      </li>
      <li class="toctree-l3">
@@ -264,6 +259,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="checklistitem.html">
        Пункт чеклиста
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="array.html">
+       Список с выбором из множества значений
       </a>
      </li>
      <li class="toctree-l3">
@@ -291,19 +291,14 @@
        Объекты в форме
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Переключатель (radiobutton)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ref-books.html">
-       Справочники
-      </a>
-     </li>
      <li class="toctree-l3">
       <a class="reference internal" href="status.html">
        Статус
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="select.html">
+       Ниспадающий список
       </a>
      </li>
      <li class="toctree-l3">
@@ -318,7 +313,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="user.html">
-       Выбор пользователя СтройКонтроля
+       Выбор пользователя «СтройКонтроля»
       </a>
      </li>
     </ul>
@@ -396,9 +391,29 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> На этой странице
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Как задать компонент формы?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Пример
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Как сохраняются данные?
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -418,8 +433,67 @@
               
               <div>
                 
-  <section id="radiobutton">
-<h1>Переключатель (radiobutton)<a class="headerlink" href="#radiobutton" title="Ссылка на этот заголовок">¶</a></h1>
+  <section id="c">
+<h1>Список c единичным выбором<a class="headerlink" href="#c" title="Ссылка на этот заголовок">¶</a></h1>
+<p>С помощью компонента можно создавать список c единичным выбором.</p>
+<section id="id1">
+<h2>Как задать компонент формы?<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;radio&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите самого продуктивного сотрудника за день&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Гаранин&quot;</span><span class="p">,</span> <span class="s2">&quot;Максимов&quot;</span><span class="p">,</span> <span class="s2">&quot;Байков&quot;</span><span class="p">,</span> <span class="s2">&quot;Миронов&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">productivity</span></code> — это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задётся пользователем и необходимо для объявления любого компонента.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — тип элемента. Для списка с единичным выбором — это всегда <code class="docutils literal notranslate"><span class="pre">radio</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — числовой список доступных значений.
+Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code>.
+Формат: может быть <code class="docutils literal notranslate"><span class="pre">number</span></code> или <code class="docutils literal notranslate"><span class="pre">string</span></code>. В текстовом формате верхний пример будет выглядеть так:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">,</span> <span class="s2">&quot;four&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список отображающихся наименований для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>.
+Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code>. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2>Пример<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>JSON-схема для компонента в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;checkboxes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите самых продуктивных сотрудников за день:&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Гаранин&quot;</span><span class="p">,</span> <span class="s2">&quot;Максимов&quot;</span><span class="p">,</span> <span class="s2">&quot;Байков&quot;</span><span class="p">,</span> <span class="s2">&quot;Миронов&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Список с единичным выбором в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/radio-screen-1.png" />
+</section>
+<section id="id3">
+<h2>Как сохраняются данные?<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в конфигураторе.</p>
+<p>Выбранное значение списка в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/radio-screen-2.png" />
+<p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе. Они сохраняются также в JSON формате:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Стоит обратить внимание, что в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> идут значения из <code class="docutils literal notranslate"><span class="pre">enum</span></code>, а не наименования из <code class="docutils literal notranslate"><span class="pre">enumNames</span></code>.
+Соответственно, если ввести в <code class="docutils literal notranslate"><span class="pre">enum</span></code> текстовое значение, то в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> они сохранятся в следующем виде:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="s2">&quot;three&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
@@ -428,17 +502,17 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="object.html" title="назад страница">
+    <a class='left-prev' id="prev-link" href="attachments.html" title="назад страница">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">назад</p>
-            <p class="prev-next-title">Объекты в форме</p>
+            <p class="prev-next-title">Документы и приложения</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ref-books.html" title="вперёд страница">
+    <a class='right-next' id="next-link" href="checkboxes.html" title="вперёд страница">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">вперёд</p>
-        <p class="prev-next-title">Справочники</p>
+        <p class="prev-next-title">Список с множественным выбором</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -462,7 +536,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

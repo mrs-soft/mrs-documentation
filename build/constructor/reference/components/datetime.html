@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Дата и временя &#8212; Документация Мобильные решения для строительства. Документация. 1.0</title>
+    <title>Дата и временя &#8212; документация Мобильные решения для строительства. Документация. 1.0</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -237,23 +237,18 @@
     </label>
     <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="array.html">
-       Список с выбором из множества значений
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="attachments.html">
        Документы и приложения
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="button-switcher.html">
-       Вкладки в форме
+      <a class="reference internal" href="radio.html">
+       Список c единичным выбором
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="checkboxes.html">
-       Множественный чекбокс
+       Список с множественным выбором
       </a>
      </li>
      <li class="toctree-l3">
@@ -264,6 +259,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="checklistitem.html">
        Пункт чеклиста
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="array.html">
+       Список с выбором из множества значений
       </a>
      </li>
      <li class="toctree-l3">
@@ -292,18 +292,13 @@
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="radio.html">
-       Переключатель (radiobutton)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="ref-books.html">
-       Справочники
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="status.html">
        Статус
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="select.html">
+       Ниспадающий список
       </a>
      </li>
      <li class="toctree-l3">
@@ -318,7 +313,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="user.html">
-       Выбор пользователя СтройКонтроля
+       Выбор пользователя «СтройКонтроля»
       </a>
      </li>
     </ul>
@@ -396,9 +391,29 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> На этой странице
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Как задать компонент формы?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Пример
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Как сохраняются данные?
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -420,6 +435,57 @@
                 
   <section id="id1">
 <h1>Дата и временя<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Компонент используется для ввода даты и времени.</p>
+<section id="id2">
+<h2>Как задать компонент формы?<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;arrive-date&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;datetime&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата и время начала смены сотрудника&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;helperText&quot;</span><span class="p">:</span> <span class="s2">&quot;Укажите точное время прихода сотрудника на работу&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arrive-date</span></code> — это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задётся пользователем и необходимо для объявления любого компонента.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — тип элемента. Для поля даты и времени — это всегда <code class="docutils literal notranslate"><span class="pre">datetime</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">helperText</span></code> — описание поля. Отображается как текст под полем ввода даты и времени. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>Пример<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>JSON-схема для компонента в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;entry-date&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;datetime&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата и время приезда материалов&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Как оно выглядит в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/datetime-screen-1.png" />
+<p>Окно выбора даты:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/datetime-screen-2.png" />
+<p>Окно выбора времени следует сразу после выбора даты:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/datetime-screen-3.png" />
+</section>
+<section id="id4">
+<h2>Как сохраняются данные?<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в конфигураторе.</p>
+<p>Заполненное поле даты и времени в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/datetime-screen-4.png" />
+<p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе. Они сохраняются также в JSON формате:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="nt">&quot;entry-date&quot;</span><span class="p">:</span> <span class="mi">1639624790000</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Дата и время хранятся в виде временной метки (timestamp).</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Timestamp — это последовательность символов или закодированной информации, показывающей, когда произошло определённое событие.
+Обычно показывает дату и время (иногда с точностью до долей секунд).</p>
+</div>
+</section>
 </section>
 
 
@@ -462,7 +528,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     
