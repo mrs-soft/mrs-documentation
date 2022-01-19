@@ -396,9 +396,29 @@
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> На этой странице
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Как задать компонент формы?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Пример
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Как сохраняются данные?
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -420,6 +440,52 @@
                 
   <section id="id1">
 <h1>Многострочный текст<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Используется для ввода однострочных текстовых данных: названий и наименований.</p>
+<section id="id2">
+<h2>Как задать компонент формы?<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Название объекта&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите название ЖК&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;minLength&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;maxLength&quot;</span><span class="p">:</span> <span class="mi">15</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> — это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задётся пользователем и необходимо для объявления любого компонента.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается как заглушка поля в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — тип элемента. Для простого текстового элемента — это всегда <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> — минимальное количество символов в поле для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> — максимальное количество символов в поле для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>Пример<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>JSON-схема для простого текстового поля в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Местоположение&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Укажите оси отметки&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Как оно выглядит в Конструкторе:</p>
+<img alt="Пример текстового компонента" class="align-center" src="../../../_images/text-screen-1.png" />
+</section>
+<section id="id4">
+<h2>Как сохраняются данные?<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данные сохраняются в <strong>FormInstances</strong> в конфигураторе.</p>
+<p>Заполненное текстовое поле в Конструкторе:</p>
+<img alt="Пример текстового компонента" class="align-center" src="../../../_images/text-screen-2.png" />
+<p>После сохранения данные попадают в FromInstances в конфигураторе. Они сохраняются также в JSON формате:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ЖК \&quot;Зелёный город\&quot;&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
 </section>
 
 
