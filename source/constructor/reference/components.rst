@@ -8,7 +8,6 @@
     :maxdepth: 1
     :caption: Все стандартные компоненты формы:
 
-    components/attachments
     components/radio
     components/checkboxes
     components/checkbox
@@ -18,14 +17,19 @@
     components/datetime
     components/email
     components/number
-    components/object
-    components/status
     components/select
     components/text-area
     components/text
-    components/user
 ..  components/button-switcher
     components/ref-books
+    components/attachments
+    components/object
+    components/status
+    components/user
+
+
+
+
 
 
 
