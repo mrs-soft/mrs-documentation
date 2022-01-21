@@ -439,58 +439,110 @@
 С этим компонентом можно использовать даже компонент <code class="docutils literal notranslate"><span class="pre">user</span></code>, который даёт возможность выбирать пользователей из базы данных «СтройКонтроля».</p>
 <section id="id2">
 <h2>Как задать компонент формы?<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;selectUserArray&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Список пользователей&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
-                    <span class="p">}</span>
+<p>JSON <code class="docutils literal notranslate"><span class="pre">array</span></code> совместно с компонентом выбора пользователей из базы данных «СтройКонтроля»:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
                 <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>JSON <code class="docutils literal notranslate"><span class="pre">array</span></code> с ручным вводом пользователей:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Иванов&quot;</span><span class="p">,</span> <span class="s2">&quot;Петров&quot;</span><span class="p">,</span> <span class="s2">&quot;Сидоров&quot;</span><span class="p">,</span> <span class="s2">&quot;Андреев&quot;</span><span class="p">,</span> <span class="s2">&quot;Михайлов&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">selectUserArray</span></code> — это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задётся пользователем и необходимо для объявления любого компонента.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — тип элемента. Для списка с множественным выбором — это всегда <code class="docutils literal notranslate"><span class="pre">checkboxes</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UserArray</span></code> и <code class="docutils literal notranslate"><span class="pre">HandArray</span></code> — это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задётся пользователем и необходимо для объявления любого компонента.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — заголовок компонента, отображамый в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается под заголовком. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — тип элемента. Для списка с выбором из множества значений — это всегда <code class="docutils literal notranslate"><span class="pre">array</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code> — минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code> — максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> — с помощью атрибута задаётся список значений, в котором прописываются следующие данные:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — числовой список доступных значений.
 Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code> Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список отображающихся наименований для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>.
 Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code> Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — этот артрибут и верхние — взаимоисключащие.
+Он используется только вместе с компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code> и нужен для создания списков с пользователями из базы данных «СтройКонтроля».</p></li>
 </ol>
 </li>
 </ol>
+<p>Компонент изначально отображается в форме только с заголовком и описанием. Нажатием на кнопку <code class="docutils literal notranslate"><span class="pre">Add Item</span></code> можно добавить новый элемент в список.</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/array-screen-1.png" />
 </section>
 <section id="id3">
 <h2>Пример<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
-<p>JSON-схема для компонента в конфигураторе:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;checkboxes&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите самых продуктивных сотрудников за день:&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-        <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Гаранин&quot;</span><span class="p">,</span> <span class="s2">&quot;Максимов&quot;</span><span class="p">,</span> <span class="s2">&quot;Байков&quot;</span><span class="p">,</span> <span class="s2">&quot;Миронов&quot;</span><span class="p">]</span>
-    <span class="p">}</span>
+<p>JSON-схема для компонента с выбором пользователей из «СтройКонтроля» в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
+                <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Список с множественным выбором в пользовательском приложении:</p>
-<img alt="Пример компонента" class="align-center" src="../../../_images/checkboxes-screen-1.png" />
+<p>Список с выбором пользователей из базы данных «СтройКонтроля» в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/array-screen-2.png" />
+<p>JSON-схема для компонента с выбором пользователей заданных вручную в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Иванов&quot;</span><span class="p">,</span> <span class="s2">&quot;Петров&quot;</span><span class="p">,</span> <span class="s2">&quot;Сидоров&quot;</span><span class="p">,</span> <span class="s2">&quot;Андреев&quot;</span><span class="p">,</span> <span class="s2">&quot;Михайлов&quot;</span><span class="p">]</span>
+                <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Список с выбором пользователей заданных вручную в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/array-screen-3.png" />
 </section>
 <section id="id4">
 <h2>Как сохраняются данные?<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в конфигураторе.</p>
 <p>Выбранные значения списка в пользовательском приложении:</p>
-<img alt="Пример компонента" class="align-center" src="../../../_images/checkboxes-screen-2.png" />
+<p>С компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/array-screen-4.png" />
+<p>С ручным вводом:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/array-screen-5.png" />
 <p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе. Они сохраняются также в JSON формате:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span> <span class="p">]</span>
-<span class="p">}</span>
+<p>С компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;60febbbc04d27d7b83d93c43&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;5fdb50697ce63c231e6f8052&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>При использовании компонента <code class="docutils literal notranslate"><span class="pre">user</span></code>, в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> попадают идентификаторы выбранных пользователей из базы данных «СтройКонтроля».</p>
+<p>С ручным вводом:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="mi">3</span><span class="p">,</span>
+              <span class="mi">1</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 <p>Стоит обратить внимание, что в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> идут значения из <code class="docutils literal notranslate"><span class="pre">enum</span></code>, а не наименования из <code class="docutils literal notranslate"><span class="pre">enumNames</span></code>.</p>

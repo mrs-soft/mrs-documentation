@@ -10,7 +10,7 @@
     
     "stock": {
                 "type": "checkbox",
-                "title": "Хватает ли стройматериалов на ближайшую неделю - Штукатурка Ceresit CT175"
+                "title": "Стройматериалы на неделю --- Штукатурка Ceresit CT175"
     }
 
 #.  ``productivity`` --- это ``FIELDNAME``. Задётся пользователем и необходимо для объявления любого компонента.
@@ -24,20 +24,14 @@ JSON-схема для компонента в конфигураторе:
 
 .. code-block:: json
     
-    "productivity": {
-        "type": "checkboxes",
-        "minItems": 1,
-        "maxItems": 3,
-        "title": "Выберите самых продуктивных сотрудников за день:",
-        "items": {
-            "enum": [0, 1, 2, 3],
-            "enumNames": ["Гаранин", "Максимов", "Байков", "Миронов"]
-        }
+    "stock": {
+                "type": "checkbox",
+                "title": "Стройматериалы на неделю --- Штукатурка Ceresit CT175"
     }
 
-Список с множественным выбором в пользовательском приложении:
+Единичный чекбокс в пользовательском приложении:
 
-.. image:: images/checkboxes-screen-1.png
+.. image:: images/checkbox-screen-1.png
     :alt: Пример компонента
     :align: center
 
@@ -48,7 +42,7 @@ JSON-схема для компонента в конфигураторе:
 
 Выбранные значения списка в пользовательском приложении:
 
-.. image:: images/checkboxes-screen-2.png
+.. image:: images/checkbox-screen-2.png
     :alt: Пример компонента 
     :align: center
 
@@ -57,7 +51,7 @@ JSON-схема для компонента в конфигураторе:
 .. code-block:: json
 
     {
-        "productivity": [ "0", "1", "2" ]
+      "stock": true
     }
 
 Стоит обратить внимание, что в ``FromInstances`` идут значения из ``enum``, а не наименования из ``enumNames``.

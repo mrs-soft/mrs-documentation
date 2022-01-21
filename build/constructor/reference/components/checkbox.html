@@ -440,7 +440,7 @@
 <h2>Как задать компонент формы?<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;stock&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;checkbox&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Хватает ли стройматериалов на ближайшую неделю - Штукатурка Ceresit CT175&quot;</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Стройматериалы на неделю --- Штукатурка Ceresit CT175&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -453,29 +453,23 @@
 <section id="id3">
 <h2>Пример<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
 <p>JSON-схема для компонента в конфигураторе:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;checkboxes&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите самых продуктивных сотрудников за день:&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-        <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Гаранин&quot;</span><span class="p">,</span> <span class="s2">&quot;Максимов&quot;</span><span class="p">,</span> <span class="s2">&quot;Байков&quot;</span><span class="p">,</span> <span class="s2">&quot;Миронов&quot;</span><span class="p">]</span>
-    <span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;stock&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;checkbox&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Стройматериалы на неделю --- Штукатурка Ceresit CT175&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Список с множественным выбором в пользовательском приложении:</p>
-<img alt="Пример компонента" class="align-center" src="../../../_images/checkboxes-screen-1.png" />
+<p>Единичный чекбокс в пользовательском приложении:</p>
+<img alt="Пример компонента" class="align-center" src="../../../_images/checkbox-screen-1.png" />
 </section>
 <section id="id4">
 <h2>Как сохраняются данные?<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в конфигураторе.</p>
 <p>Выбранные значения списка в пользовательском приложении:</p>
-<img alt="Пример компонента" class="align-center" src="../../../_images/checkboxes-screen-2.png" />
+<img alt="Пример компонента" class="align-center" src="../../../_images/checkbox-screen-2.png" />
 <p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе. Они сохраняются также в JSON формате:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;productivity&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span> <span class="p">]</span>
+  <span class="nt">&quot;stock&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
