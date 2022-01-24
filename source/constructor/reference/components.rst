@@ -20,6 +20,7 @@
     components/select
     components/text-area
     components/text
+    
 ..  components/button-switcher
     components/ref-books
     components/attachments

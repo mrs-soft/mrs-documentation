@@ -6,7 +6,7 @@
 Как задать компонент формы?
 ---------------------------
 
-.. code-block:: json
+..  code-block:: json
 
     "last-date": {
                     "type": "date",
@@ -24,7 +24,7 @@
 
 JSON-схема для компонента в конфигураторе:
 
-.. code-block:: json
+..  code-block:: json
 
     "fire-date": {
                     "type": "date",
@@ -34,13 +34,13 @@ JSON-схема для компонента в конфигураторе:
 
 Как оно выглядит в пользовательском приложении:
 
-.. image:: images/date-screen-1.png
+..  image:: images/date-screen-1.png
     :alt: Пример компонента
     :align: center
 
 Окно выбора даты:
 
-.. image:: images/date-screen-2.png
+..  image:: images/date-screen-2.png
     :alt: Пример компонента 
     :align: center
 
@@ -51,13 +51,13 @@ JSON-схема для компонента в конфигураторе:
 
 Заполненное поле даты в пользовательском приложении:
 
-.. image:: images/date-screen-3.png
+..  image:: images/date-screen-3.png
     :alt: Пример компонента 
     :align: center
 
 После сохранения данные попадают в ``FromInstances`` в конфигураторе. Они сохраняются также в JSON формате:
 
-.. code-block:: json
+..  code-block:: json
 
     {
       "fire-date": 939347333000
@@ -65,6 +65,6 @@ JSON-схема для компонента в конфигураторе:
 
 Дата хранится в виде временной метки (timestamp).
 
-.. note::
+..  note::
     Timestamp --- это последовательность символов или закодированной информации, показывающей, когда произошло определённое событие.
     Обычно показывает дату и время (иногда с точностью до долей секунд).
