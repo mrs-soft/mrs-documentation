@@ -7,5 +7,7 @@
     
     constructor/start-work
     constructor/elements-of-system
-    constructor/reference
+    constructor/components
+    constructor/types-of-representations
+    constructor/api
     constructor/examples
