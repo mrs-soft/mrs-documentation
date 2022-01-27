@@ -1,4 +1,5 @@
 {
+    "title": "JSONSchema Form",
     "order": [
         "numberOfContract",
         "constractionObject",
@@ -19,7 +20,6 @@
         "generalContractor",
         "authorSupervision"
     ],
-    "title": "JSONSchema Form",
     "required": [
         "numberOfContract",
         "constractionObject",
@@ -27,7 +27,8 @@
         "jobCategory",
         "typeOfWorkPresented",
         "structuralElement"
-    ],
+    ]
+    ,
     "properties": {
         "executiveDocumentations": {
             "type": "attachments",
