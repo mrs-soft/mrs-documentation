@@ -6,11 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<<<<<<< HEAD:build/constructor/components.html
     <title>Компоненты формы &#8212; документация Мобильные решения для строительства. Документация. 1.0</title>
-=======
-    <title>Элементы формы &#8212; Документация Мобильные решения для строительства. Документация. 1.0</title>
->>>>>>> remotes/origin/main:build/constructor/reference/elements-of-form.html
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -363,19 +359,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> На этой странице
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Пример полной формы
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -416,136 +402,6 @@
 <li class="toctree-l1"><a class="reference internal" href="components/text.html">Краткий текст</a></li>
 </ul>
 </div>
-<section id="id2">
-<h2>Пример полной формы<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>  <span class="p">{</span>
-<span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">[</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;email&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;first&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;second&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;sum&quot;</span>
-<span class="p">],</span>
-<span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;JSONSchema Form&quot;</span><span class="p">,</span>
-<span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;email&quot;</span>
-<span class="p">],</span>
-<span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;selectUser&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;selectOne&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;one&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;two&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;three&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;radio&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Проверить:&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;Стяжки&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Стены&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Потолки&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Дверные проемы&quot;</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;sum&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Сумма&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;readOnly&quot;</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Название&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;minLength&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Название объекта&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;date&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата начала&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;first&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Первое значение&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;selectAny&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;checkboxes&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="mi">0</span><span class="p">,</span>
-        <span class="mi">1</span><span class="p">,</span>
-        <span class="mi">2</span><span class="p">,</span>
-        <span class="mi">3</span>
-      <span class="p">],</span>
-      <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;Первый этаж&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Второй этаж&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Третий этаж&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Пятый этаж&quot;</span>
-      <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Проверить:&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;minItems&quot;</span><span class="p">:</span> <span class="mi">2</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;selectUserArray&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Сотрудники&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Статус&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;second&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Второе значение&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Адрес&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Адрес объекта&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Количество&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Количество&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;documents&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;attachments&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Документы&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;objectType&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">&quot;Жилой комплекс&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Спортивные сооружения&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;Служебные помещения&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Тип объекта&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;datetime&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата и время&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата и время начала&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;email&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;E-mail ответственного лица&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;textarea&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Описание&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Краткое описание&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</section>
 </section>
 
 
@@ -588,7 +444,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     

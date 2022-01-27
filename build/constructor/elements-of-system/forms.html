@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Формы &#8212; Документация Мобильные решения для строительства. Документация. 1.0</title>
+    <title>Формы &#8212; документация Мобильные решения для строительства. Документация. 1.0</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -367,7 +367,17 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   Формат описания формы
+   Задание формы в конфигураторе
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#json">
+   JSON-схема формы
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Пример полной формы
   </a>
  </li>
 </ul>
@@ -393,14 +403,33 @@
                 
   <section id="id1">
 <h1>Формы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Форма — это это структурированные web-сведения в JSON формате.
+Они позволяют создавать собственные модели данных на основе ваших бизнес-процессов.
+В клиентском приложении они генерируются на основе JSON-схем, которые задаются в конфигураторе.</p>
 <section id="id2">
-<h2>Формат описания формы<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Задание формы в конфигураторе<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Для создания формы в конфигураторе надо перейти на вкладку <strong>Forms</strong>:</p>
+<img alt="Форма в конфигураторе" class="align-center" src="../../_images/forms-1-strapi.png" />
+<p>Нажатием на кнопку <img alt="Кнопка: Добавить форму" src="../../_images/forms-2-add-form.png" /> создаётся форма.</p>
+<p>Перед вами открывается окно создание формы:</p>
+<img alt="Создание формы в конфигураторе" class="align-center" src="../../_images/forms-3-creating.png" />
+<ol class="arabic simple">
+<li><p>Это основное рабочее пространство, в котором записывается JSON-схема.</p></li>
+<li><p>Здесь записывается название формы, которое будет отображаться в конфигураторе и клиентском приложении.</p></li>
+<li><p>В это поле стоит записывать краткое описание формы, которое может пояснять её необходимость.</p></li>
+<li><p>Чтобы форма опубликовалась в разделе форм в клиентском приложении в этом пункте надо добавить элемент <code class="docutils literal notranslate"><span class="pre">customForm</span></code>.</p></li>
+<li><p>После того, как все поля были заполнены, форму необходимо сохранить.</p></li>
+<li><p>Эта кнопка позволит опубликовать заданную форму.</p></li>
+</ol>
+</section>
+<section id="json">
+<h2>JSON-схема формы<a class="headerlink" href="#json" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;id*&quot;</span><span class="p">:</span> <span class="s2">&quot;string (uuid?)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string (uuid?)&quot;</span><span class="p">,</span>
     <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;properties*&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;FIELDNAME&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text | number | date | datetime | checkboxes | radio | email | textarea | user | checkbox | array | attachments | object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Здесь задаются компоненты формы&quot;</span><span class="p">,</span>
             <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
             <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
             <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="s2">&quot;string[]&quot;</span><span class="p">,</span>
@@ -409,10 +438,7 @@
             <span class="nt">&quot;maxItems&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
             <span class="nt">&quot;minLength&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
             <span class="nt">&quot;maxLength&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;items&quot;</span><span class="p">:</span>  <span class="p">{</span>
-                <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="s2">&quot;string[]&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;enumNames&quot;</span><span class="p">:</span> <span class="s2">&quot;string[]&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text | date | datetime | checkboxes | radio | email | textarea | user | checkbox | attachments&quot;</span>
+            <span class="nt">&quot;items&quot;</span><span class="p">:</span>  <span class="p">{</span> <span class="s2">&quot;...&quot;</span>
             <span class="p">},</span>
         <span class="p">}</span>
     <span class="p">},</span>
@@ -427,54 +453,237 @@
 <p><code class="docutils literal notranslate"><span class="pre">id</span></code> — поле, необходимое для идентификации схемы формы.</p>
 <p><code class="docutils literal notranslate"><span class="pre">title</span></code> — заголовок формы.</p>
 <p><code class="docutils literal notranslate"><span class="pre">properties</span></code> — список полей формы:</p>
+<p><code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code> — название поля, которое задается пользователем.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code> — название поля, которое задается пользователем.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — выбор компонента — не указывается, если заполнено поле <code class="docutils literal notranslate"><span class="pre">enum</span></code>.
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — выбор компонента.
 Все компоненты можно найти в разделе <a class="reference internal" href="../components.html"><span class="doc">Компоненты формы</span></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается как заглушка поля в форме. Подходит для полей:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">textarea</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">datetime</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code>,</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">select</span></code>.</p></li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается как заглушка поля в форме. Подходит для полей:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> — значение поля по умолчанию. На данный момент только для <code class="docutils literal notranslate"><span class="pre">status</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — список доступных значений.
-Можно использовать с типами <code class="docutils literal notranslate"><span class="pre">text</span></code> (выпадающий список), <code class="docutils literal notranslate"><span class="pre">radio</span></code>.
-При <code class="docutils literal notranslate"><span class="pre">enum</span></code> для поля <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code> осуществляется выбор одного варианта.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — список доступных значений.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список меток для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>, отображающихся в форме.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code> — значение для поля типа <code class="docutils literal notranslate"><span class="pre">array</span></code>.
-Минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code> — значение для поля типа <code class="docutils literal notranslate"><span class="pre">array</span></code>.
-Максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> — значение для поля типа <code class="docutils literal notranslate"><span class="pre">text</span></code>, <code class="docutils literal notranslate"><span class="pre">textarea</span></code>.
-Минимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> — значение для поля типа <code class="docutils literal notranslate"><span class="pre">text</span></code>, <code class="docutils literal notranslate"><span class="pre">textarea</span></code>.
-Максимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> — указывается для типа <code class="docutils literal notranslate"><span class="pre">array</span></code>, <code class="docutils literal notranslate"><span class="pre">checkboxes</span></code>.
-При заполнении поля <code class="docutils literal notranslate"><span class="pre">items.enum</span></code> — множественный выбор из доступных значений.
-Иначе — возможность добавлять элементы заданного типа.</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — список доступных значений. По аналогии с <code class="docutils literal notranslate"><span class="pre">enum</span></code> для <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список меток для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>, отображающихся в форме.
-По аналогии с <code class="docutils literal notranslate"><span class="pre">enumNames</span></code> для <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — то же, что и для <code class="docutils literal notranslate"><span class="pre">FIELDNAME.type</span></code>, за исключением поля <code class="docutils literal notranslate"><span class="pre">array</span></code></p></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code> — минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code> — максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> — минимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> — максимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> — множественный выбор из доступных значений. Иначе — возможность добавлять элементы заданного типа.</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">required</span></code> — список полей, обязательных к заполнению</p>
 <p><code class="docutils literal notranslate"><span class="pre">order</span></code> — порядок следования полей в форме.
 Можно указывать не все поля, в таком случае оставшиеся отобразятся в порядке, указанном в схеме</p>
 <p><code class="docutils literal notranslate"><span class="pre">dependencies</span></code> — список зависимых полей.
 Если заполнено поле <code class="docutils literal notranslate"><span class="pre">FIELDNAME_0</span></code>, то поля <code class="docutils literal notranslate"><span class="pre">OTHER_FIELDNAMES</span></code> тоже должны быть заполнены.</p>
+</section>
+<section id="id3">
+<h2>Пример полной формы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;numberOfContract&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;constractionObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rdCode&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jobCategory&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;typeOfWorkPresented&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;structuralElement&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;executiveDocumentations&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;workingDocumentations&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;volume&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;measurementUnits&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;reasonForRejection&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;comment&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;subcontractor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;contractor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;generalContractor&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;authorSupervision&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;JSONSchema Form&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;numberOfContract&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;constractionObject&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;rdCode&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;jobCategory&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;typeOfWorkPresented&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;structuralElement&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;executiveDocumentations&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;attachments&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Перечень ИД&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;constractionObject&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;dev_ok_construction_object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Объект строительства&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;desctiption&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите объект строительства&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;reasonForRejection&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;Нет строительной готовности&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Нет доступа&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Брак&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Причина отклонения&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;workingDocumentations&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;attachments&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Перечень РД&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;numberOfContract&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Номер договора&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите номер договора&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;measurementUnits&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;м&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;м2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;м3&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;см&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;см2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;см3&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;мм&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;мм2&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;мм3&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Единицы измерения&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Единицы измерения объема&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;subcontractor&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Субподрядчик&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;plannedDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Планируемая дата&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;contractor&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Подрядчик&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;plannedDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Планируемая дата&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;authorSupervision&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Авторский надзор&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;dateOfControl&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата проведения контроля&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Объем&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите объем&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;jobCategory&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">&quot;СМР&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Документация&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Геодезия&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Экология&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Охрана труда&quot;</span>
+            <span class="p">],</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Категория предъявляемой работы&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;textarea&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Описание&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите описание&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;generalContractor&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Генподрядчик&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;confirmationDate&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата подтверждения&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;customer&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Заказчик&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
+                <span class="p">},</span>
+                <span class="nt">&quot;dateOfControl&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
+                    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата проведения контроля&quot;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;textarea&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Комментарий&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите комментарий&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;rdCode&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Шифр РД&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите шифр РД&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;structuralElement&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Конструктивный элемент&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -518,7 +727,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
 </p>
     </div>
     
