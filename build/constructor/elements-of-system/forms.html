@@ -36,7 +36,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
-    <link rel="next" title="Справочники" href="ref-books.html" />
+    <link rel="next" title="Создание формы" href="forms/configuration.html" />
     <link rel="prev" title="Элементы системы" href="../elements-of-system.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ru">
@@ -169,10 +169,32 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
+   <li class="toctree-l2 current active has-children">
     <a class="current reference internal" href="#">
      Формы
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="forms/configuration.html">
+       Создание формы
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="forms/form-instances.html">
+       Сохранение экземпляра формы
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="forms/form-examples.html">
+       Примеры использования форм
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="ref-books.html">
@@ -220,8 +242,8 @@
   <a class="reference internal" href="../components.html">
    Компоненты формы
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -302,8 +324,8 @@
   <a class="reference internal" href="../examples.html">
    Примеры
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -359,34 +381,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> На этой странице
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Задание формы в конфигураторе
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#json">
-   JSON-схема формы
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   Атрибуты компонентов формы
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   Пример полной формы
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -411,292 +408,20 @@
 <p>Форма — это структурированные web-сведения в JSON формате.
 Они позволяют создавать собственные модели данных на основе ваших бизнес-процессов.
 В клиентском приложении они генерируются на основе JSON-схем, которые задаются в конфигураторе.</p>
-<section id="id2">
-<h2>Задание формы в конфигураторе<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Для создания формы в конфигураторе надо перейти на вкладку <strong>Forms</strong>:</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../_images/forms-1-strapi.png" />
-<hr class="docutils" />
-<p>Нажимая на кнопку <img alt="Кнопка: Добавить форму" src="../../_images/forms-2-add-form.png" />, создаётся форма.</p>
-<hr class="docutils" />
-<p>После этого перед вами открывается окно создание формы:</p>
-<img alt="Создание формы в конфигураторе" class="align-center" src="../../_images/forms-3-creating.png" />
-<ol class="arabic simple">
-<li><p>Это основное рабочее пространство, в котором записывается JSON-схема.</p></li>
-<li><p>Здесь записывается название формы, которое будет отображаться в конфигураторе и клиентском приложении.</p></li>
-<li><p>В это поле стоит записывать краткое описание формы, которое может пояснять её необходимость.</p></li>
-<li><p>Чтобы форма опубликовалась в разделе форм в клиентском приложении, в этом пункте надо добавить элемент <code class="docutils literal notranslate"><span class="pre">customForm</span></code>.</p></li>
-<li><p>После того, как все поля были заполнены, форму необходимо сохранить.</p></li>
-<li><p>Эта кнопка позволит опубликовать заданную форму.</p></li>
-</ol>
-</section>
-<section id="json">
-<h2>JSON-схема формы<a class="headerlink" href="#json" title="Ссылка на этот заголовок">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string (uuid?)&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;FIELDNAME&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;...&quot;</span>
-            <span class="p">},</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="s2">&quot;[ FIELDNAMES ]&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;[ FIELDNAMES ]&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;FIELDNAME_0&quot;</span><span class="p">:</span> <span class="s2">&quot;[OTHER_FIELDNAMES]&quot;</span>
-        <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">id</span></code> — поле, необходимое для идентификации схемы формы.</p>
-<p><code class="docutils literal notranslate"><span class="pre">title</span></code> — заголовок формы.</p>
-<p><code class="docutils literal notranslate"><span class="pre">properties</span></code> — список полей формы:</p>
-<p><code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code> — название поля, которое задается пользователем.</p>
-<p><code class="docutils literal notranslate"><span class="pre">required</span></code> — список полей, обязательных к заполнению</p>
-<p><code class="docutils literal notranslate"><span class="pre">order</span></code> — порядок следования полей в форме.
-Можно указывать не все поля, в таком случае оставшиеся отобразятся в порядке, указанном в схеме</p>
-<p><code class="docutils literal notranslate"><span class="pre">dependencies</span></code> — список зависимых полей.
-Если заполнено поле <code class="docutils literal notranslate"><span class="pre">FIELDNAME_0</span></code>, то поля <code class="docutils literal notranslate"><span class="pre">OTHER_FIELDNAMES</span></code> тоже должны быть заполнены.</p>
-</section>
-<section id="id3">
-<h2>Атрибуты компонентов формы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Работа с формами заключается в правильном использовании компонентов формы.
-Атрибуты описанные ниже подходят не для всех компонентов.</p>
-<p>Чтобы посмотреть, как себя ведёт какой-то конкретный компонент, зайдите в раздел <a class="reference internal" href="../components.html"><span class="doc">Компоненты формы</span></a>.</p>
-<p>Список существующих атрибутов:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — выбор компонента.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается как заглушка поля в форме. Подходит для полей:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> — значение поля по умолчанию. На данный момент только для выбора статуса.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — список доступных значений.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список меток для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>, отображающихся в форме.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code> — минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code> — максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> — минимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> — максимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> — множественный выбор из доступных значений. Иначе — возможность добавлять элементы заданного типа.</p></li>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Работа с формой:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="forms/configuration.html">Создание формы</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forms/configuration.html#id2">Задание формы в конфигураторе</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms/configuration.html#json">JSON-схема формы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms/configuration.html#id3">Атрибуты компонентов формы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms/configuration.html#id4">Пример формы</a></li>
 </ul>
-</section>
-<section id="id4">
-<h2>Пример полной формы<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Эта форма начинается с атрибутов, в которых:</p>
-<ul class="simple">
-<li><p>задаётся название — <code class="docutils literal notranslate"><span class="pre">title</span></code>,</p></li>
-<li><p>порядок отображения компонентов — <code class="docutils literal notranslate"><span class="pre">order</span></code>,</p></li>
-<li><p>список обязательных компонентов — <code class="docutils literal notranslate"><span class="pre">required</span></code>.</p></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="forms/form-instances.html">Сохранение экземпляра формы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forms/form-examples.html">Примеры использования форм</a></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;JSONSchema Form&quot;</span><span class="p">,</span>
-<span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;numberOfContract&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;constractionObject&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rdCode&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;jobCategory&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;typeOfWorkPresented&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;structuralElement&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;executiveDocumentations&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;workingDocumentations&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;description&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;volume&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;measurementUnits&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;reasonForRejection&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;comment&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;customer&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;subcontractor&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;contractor&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;generalContractor&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;authorSupervision&quot;</span>
-<span class="p">],</span>
-<span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;numberOfContract&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;constractionObject&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;rdCode&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;jobCategory&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;typeOfWorkPresented&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;structuralElement&quot;</span>
-<span class="p">]</span>
-</pre></div>
 </div>
-<p>Далее в <code class="docutils literal notranslate"><span class="pre">properties</span></code> прописываются компоненты с необходимыми атрибутами:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;executiveDocumentations&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;attachments&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Перечень ИД&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;constractionObject&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;dev_ok_construction_object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Объект строительства&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;desctiption&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите объект строительства&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;reasonForRejection&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;Нет строительной готовности&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Нет доступа&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Брак&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Причина отклонения&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;workingDocumentations&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;attachments&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Перечень РД&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;numberOfContract&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Номер договора&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите номер договора&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;measurementUnits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;м&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;м2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;м3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;см&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;см2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;см3&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;мм&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;мм2&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;мм3&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Единицы измерения&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Единицы измерения объема&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;subcontractor&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Субподрядчик&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;plannedDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Планируемая дата&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;contractor&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Подрядчик&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;plannedDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Планируемая дата&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;authorSupervision&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Авторский надзор&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;dateOfControl&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата проведения контроля&quot;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;volume&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;number&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Объем&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите объем&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;jobCategory&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;enum&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;СМР&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Документация&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Геодезия&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Экология&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;Охрана труда&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;select&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Категория предъявляемой работы&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;textarea&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Описание&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите описание&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;generalContractor&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Генподрядчик&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;confirmationDate&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата подтверждения&quot;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;customer&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Заказчик&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Пользователь&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;organization&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Организация&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите наименование организации&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;dateOfControl&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата проведения контроля&quot;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;textarea&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Комментарий&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите комментарий&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;rdCode&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Шифр РД&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите шифр РД&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;structuralElement&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Конструктивный элемент&quot;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>В клиентском приложении эта форма будет выглядеть следующим образом:</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../_images/forms-4-long-form.png" />
-</section>
 </section>
 
 
@@ -712,10 +437,10 @@
             <p class="prev-next-title">Элементы системы</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ref-books.html" title="вперёд страница">
+    <a class='right-next' id="next-link" href="forms/configuration.html" title="вперёд страница">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">вперёд</p>
-        <p class="prev-next-title">Справочники</p>
+        <p class="prev-next-title">Создание формы</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -1,0 +1,37 @@
+{
+    "order": [
+        "Hello World!"
+    ],
+    "title": "Hello World Form",
+    "required": [
+        "Hello World!"
+    ]
+    ,
+    "properties": {
+        "Hello World!": {
+            "order": [
+                "textField",
+                "dateField"
+            ],
+            "required": [
+                "textField",
+                "dateField"
+            ],
+            "type": "object",
+            "title": "Привет, мир!",
+            "properties": {
+                "textField": {
+                    "type": "text",
+                    "title": "Приветствие в текстовом виде",
+                    "description": "Введите приветствие"
+                },
+                "dateField": {
+                    "type": "date",
+                    "title": "Дата приветствия",
+                    "description": "Выберите дату приветствия",
+                    "helperText": "Советуем приветствовать мир в течение рабочего дня, иначе есть шанс, что вам не ответят."
+                }
+            }
+        }
+    }
+}
