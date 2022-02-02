@@ -6,7 +6,7 @@
 
 Для создания формы в конфигураторе надо перейти на вкладку **Forms**:
 
-..  image:: images/forms-1-strapi.png
+..  image:: images/forms-1-strapi.gif
     :alt: Форма в конфигураторе
     :align: center
 
@@ -21,7 +21,7 @@
 
 После этого перед вами открывается окно создание формы:
 
-..  image:: images/forms-3-creating.png
+..  image:: images/forms-3-creating.gif
     :alt: Создание формы в конфигураторе
     :align: center
 
