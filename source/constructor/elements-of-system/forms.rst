@@ -10,5 +10,7 @@
     :caption: Работа с формой:
 
     forms/configuration
+    forms/json
     forms/form-instances
-    forms/form-examples
+
+..forms/form-examples

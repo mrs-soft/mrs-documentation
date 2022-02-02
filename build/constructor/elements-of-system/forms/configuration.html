@@ -6,28 +6,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Создание формы &#8212; Документация Мобильные решения для строительства. Документация. 1.0</title>
+    <title>Работа с формой в конфигураторе &#8212; документация Мобильные решения для строительства. Документация. 1.0</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -36,7 +36,7 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
     <link rel="search" title="Поиск" href="../../../search.html" />
-    <link rel="next" title="Сохранение экземпляра формы" href="form-instances.html" />
+    <link rel="next" title="JSON-схема формы" href="json.html" />
     <link rel="prev" title="Формы" href="../forms.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="ru">
@@ -101,16 +101,12 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://www.instagram.com/mrs_software/" rel="noopener" target="_blank" title="Instagram">
-            <span><i class="fab fa-instagram"></i></span>
-            <label class="sr-only">Instagram</label>
-          </a>
+          <a class="nav-link" href="https://www.instagram.com/mrs_software/" rel="noopener" target="_blank" title="Instagram"><span><i class="fab fa-instagram"></i></span>
+            <label class="sr-only">Instagram</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://vk.com/m_r_s" rel="noopener" target="_blank" title="VK">
-            <span><i class="fab fa-vk"></i></span>
-            <label class="sr-only">VK</label>
-          </a>
+          <a class="nav-link" href="https://vk.com/m_r_s" rel="noopener" target="_blank" title="VK"><span><i class="fab fa-vk"></i></span>
+            <label class="sr-only">VK</label></a>
         </li>
       </ul>
       </div>
@@ -126,7 +122,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Поиск по документации..." aria-label="Поиск по документации..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -181,17 +178,17 @@
     <ul class="current">
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Создание формы
+       Работа с формой в конфигураторе
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="json.html">
+       JSON-схема формы
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="form-instances.html">
-       Сохранение экземпляра формы
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="form-examples.html">
-       Примеры использования форм
+       Экземпляр формы
       </a>
      </li>
     </ul>
@@ -371,6 +368,9 @@
 
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -381,34 +381,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> На этой странице
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Задание формы в конфигураторе
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#json">
-   JSON-схема формы
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   Атрибуты компонентов формы
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   Пример формы
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -429,130 +404,28 @@
               <div>
                 
   <section id="id1">
-<h1>Создание формы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
-<section id="id2">
-<h2>Задание формы в конфигураторе<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<h1>Работа с формой в конфигураторе<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Для создания формы в конфигураторе надо перейти на вкладку <strong>Forms</strong>:</p>
 <img alt="Форма в конфигураторе" class="align-center" src="../../../_images/forms-1-strapi.gif" />
 <hr class="docutils" />
 <p>Чтобы создать форму, нажмите на кнопку <img alt="Кнопка: Добавить форму" src="../../../_images/forms-2-add-form.png" /> в правом верхнем углу страницы.</p>
 <hr class="docutils" />
-<p>После этого перед вами открывается окно создание формы:</p>
-<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-3-creating.gif" />
-<ol class="arabic simple">
-<li><p>Это основное рабочее пространство, в котором записывается JSON-схема.</p></li>
-<li><p>Здесь записывается название формы, которое будет отображаться в конфигураторе и клиентском приложении.</p></li>
-<li><p>В это поле стоит записывать краткое описание формы, которое может пояснять её необходимость.</p></li>
-<li><p>Чтобы форма опубликовалась в разделе форм в клиентском приложении, в этом пункте надо добавить элемент <code class="docutils literal notranslate"><span class="pre">customForm</span></code>.</p></li>
-<li><p>После того, как все поля были заполнены, форму необходимо сохранить.</p></li>
-<li><p>Эта кнопка позволит опубликовать заданную форму.</p></li>
-</ol>
-</section>
-<section id="json">
-<h2>JSON-схема формы<a class="headerlink" href="#json" title="Ссылка на этот заголовок">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string (uuid?)&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;FIELDNAME&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;...&quot;</span>
-            <span class="p">},</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="s2">&quot;[ FIELDNAMES ]&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;[ FIELDNAMES ]&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;FIELDNAME_0&quot;</span><span class="p">:</span> <span class="s2">&quot;[OTHER_FIELDNAMES]&quot;</span>
-        <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">id</span></code> — поле, необходимое для идентификации схемы формы.</p>
-<p><code class="docutils literal notranslate"><span class="pre">title</span></code> — заголовок формы.</p>
-<p><code class="docutils literal notranslate"><span class="pre">properties</span></code> — список полей формы:</p>
-<p><code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code> — название поля, которое задается пользователем.</p>
-<p><code class="docutils literal notranslate"><span class="pre">required</span></code> — список полей, обязательных к заполнению</p>
-<p><code class="docutils literal notranslate"><span class="pre">order</span></code> — порядок следования полей в форме.
-Можно указывать не все поля, в таком случае оставшиеся могут отобразиться в случайном порядке.</p>
-<p><code class="docutils literal notranslate"><span class="pre">dependencies</span></code> — список зависимых полей.
-Если заполнено поле <code class="docutils literal notranslate"><span class="pre">FIELDNAME_0</span></code>, то поля <code class="docutils literal notranslate"><span class="pre">OTHER_FIELDNAMES</span></code> тоже должны быть заполнены.</p>
-</section>
-<section id="id3">
-<h2>Атрибуты компонентов формы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Работа с формами заключается в правильном использовании компонентов формы.
-Атрибуты описанные ниже подходят не для всех компонентов.</p>
-<p>Чтобы посмотреть, как себя ведёт какой-то конкретный компонент, зайдите в раздел <a class="reference internal" href="../../components.html"><span class="doc">Компоненты формы</span></a>.</p>
-<p>Список основных атрибутов:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — выбор компонента.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — название поля, отображаемое в форме.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается как заглушка поля в форме. Подходит для полей:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> — значение поля по умолчанию. На данный момент только для выбора статуса.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — список доступных значений.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список меток для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>, отображающихся в форме.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code> — минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code> — максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minLength</span></code> — минимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLength</span></code> — максимальное количество символов в поле для того, чтобы заполненная форма считалась корректной</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> — множественный выбор из доступных значений. Иначе — возможность добавлять элементы заданного типа.</p></li>
-</ul>
-</section>
-<section id="id4">
-<h2>Пример формы<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Эта форма начинается с атрибутов, в которых:</p>
-<ul class="simple">
-<li><p>задаётся название — <code class="docutils literal notranslate"><span class="pre">title</span></code>,</p></li>
-<li><p>порядок отображения компонентов — <code class="docutils literal notranslate"><span class="pre">order</span></code>,</p></li>
-<li><p>список обязательных компонентов — <code class="docutils literal notranslate"><span class="pre">required</span></code>.</p></li>
-</ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;Hello World!&quot;</span>
-<span class="p">],</span>
-<span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello World Form&quot;</span><span class="p">,</span>
-<span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;Hello World!&quot;</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<p>Далее в <code class="docutils literal notranslate"><span class="pre">properties</span></code> прописываются компоненты с необходимыми атрибутами:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;Hello World!&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;order&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;textField&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;dateField&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s2">&quot;textField&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;dateField&quot;</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Привет, мир!&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;textField&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Приветствие в текстовом виде&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Введите приветствие&quot;</span>
-            <span class="p">},</span>
-            <span class="nt">&quot;dateField&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Дата приветствия&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Выберите дату приветствия&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;helperText&quot;</span><span class="p">:</span> <span class="s2">&quot;Советуем приветствовать мир в течение рабочего дня, иначе есть шанс, что вам не ответят.&quot;</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>В клиентском приложении эта форма будет выглядеть следующим образом:</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../../_images/forms-4-hello-form.png" />
+<p>После этого перед вами открывается окно создания формы:</p>
+<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-3-creating.png" />
 <hr class="docutils" />
-<p>Подробнее о компонентах, которые использовались в этой форме:</p>
-<ol class="arabic simple">
-<li><p><a class="reference internal" href="../../components/object.html"><span class="doc">Объекты в форме</span></a></p></li>
-<li><p><a class="reference internal" href="../../components/text.html"><span class="doc">Краткий текст</span></a></p></li>
-<li><p><a class="reference internal" href="../../components/date.html"><span class="doc">Дата</span></a></p></li>
-</ol>
-</section>
+<p><strong>Scheme</strong> — это основное рабочее поле, в котором записывается JSON-схема.</p>
+<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-4-json-field.gif" />
+<hr class="docutils" />
+<p>В поле <strong>Title</strong> записывается название формы, которое будет отображаться в конфигураторе и клиентском приложении.
+В поле <strong>Description</strong> стоит записывать краткое описание формы, которое может пояснять её необходимость.</p>
+<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-5-title-description.gif" />
+<hr class="docutils" />
+<p>Для публикации формы в клиентском приложении, в поле <strong>Tags</strong> необходимо выбрать элемент <code class="docutils literal notranslate"><span class="pre">customForm</span></code>.
+После того, как все поля были заполнены, форму необходимо сохранить и опубликовать, нажав соответствующие кнопки.</p>
+<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-6-tags-save-public.gif" />
+<hr class="docutils" />
+<p>Для последующего редактировании формы достаточно будет просто нажимать кнопку сохранить, чтобы изменения появились
+в клиенте.</p>
 </section>
 
 
@@ -560,7 +433,7 @@
               
               
               <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../forms.html" title="назад страница">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -568,10 +441,10 @@
             <p class="prev-next-title">Формы</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="form-instances.html" title="вперёд страница">
+    <a class='right-next' id="next-link" href="json.html" title="вперёд страница">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">вперёд</p>
-        <p class="prev-next-title">Сохранение экземпляра формы</p>
+        <p class="prev-next-title">JSON-схема формы</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -583,8 +456,8 @@
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -595,7 +468,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     
