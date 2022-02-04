@@ -1,8 +1,22 @@
 Компоненты формы
 ================
 
+<<<<<<< HEAD:source/constructor/components.rst
 Компонент --- это единичный структурный элемент с определенным поведением.
 Поведение зависит от задачи, для которой он создан. При необходимости компоненты могут дополняться.
+=======
+Strapi
+------
+
+Работа с элементами формы проходит в Strapi в разделе Forms.
+
+.. image:: images/strapi-forms.png
+    :alt: Формы в Strapi
+    :align: center
+
+Что такое форма?
+----------------
+>>>>>>> remotes/origin/constructor/start-work/about:source/constructor/reference/elements-of-form.rst
 
 ..  toctree::
     :maxdepth: 1
@@ -34,10 +48,10 @@
 
 
 
-Пример полной формы
--------------------
+.. Пример полной формы
+.. -------------------
 
-.. code-block:: json
+.. .. code-block:: json
 
     {
   "order": [

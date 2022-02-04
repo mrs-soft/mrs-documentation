@@ -6,5 +6,5 @@
     :titlesonly:
 
     start-work/about
-    start-work/structure
     start-work/how-to-start
+    start-work/structure
