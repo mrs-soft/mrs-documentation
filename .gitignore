@@ -1,3 +1,4 @@
+.venv/
 venv/
 *.mo
 build/_sources
