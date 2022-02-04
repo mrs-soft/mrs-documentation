@@ -1,6 +1,6 @@
 .venv/
 venv/
 .vscode/
+
 *.mo
-build/_sources
-build/.doctrees
+build/
