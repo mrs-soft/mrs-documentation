@@ -1,0 +1,207 @@
+{
+    "title": "JSONSchema Form",
+    "order": [
+        "numberOfContract",
+        "constractionObject",
+        "rdCode",
+        "jobCategory",
+        "typeOfWorkPresented",
+        "structuralElement",
+        "executiveDocumentations",
+        "workingDocumentations",
+        "description",
+        "volume",
+        "measurementUnits",
+        "reasonForRejection",
+        "comment",
+        "customer",
+        "subcontractor",
+        "contractor",
+        "generalContractor",
+        "authorSupervision"
+    ],
+    "required": [
+        "numberOfContract",
+        "constractionObject",
+        "rdCode",
+        "jobCategory",
+        "typeOfWorkPresented",
+        "structuralElement"
+    ]
+    ,
+    "properties": {
+        "executiveDocumentations": {
+            "type": "attachments",
+            "title": "Перечень ИД"
+        },
+        "constractionObject": {
+            "type": "dev_ok_construction_object",
+            "title": "Объект строительства",
+            "desctiption": "Выберите объект строительства"
+        },
+        "reasonForRejection": {
+            "enum": [
+                "Нет строительной готовности",
+                "Нет доступа",
+                "Брак"
+            ],
+            "type": "select",
+            "title": "Причина отклонения"
+        },
+        "workingDocumentations": {
+            "type": "attachments",
+            "title": "Перечень РД"
+        },
+        "numberOfContract": {
+            "type": "text",
+            "title": "Номер договора",
+            "description": "Введите номер договора"
+        },
+        "measurementUnits": {
+            "enum": [
+                "м",
+                "м2",
+                "м3",
+                "см",
+                "см2",
+                "см3",
+                "мм",
+                "мм2",
+                "мм3"
+            ],
+            "type": "select",
+            "title": "Единицы измерения",
+            "description": "Единицы измерения объема"
+        },
+        "subcontractor": {
+            "type": "object",
+            "title": "Субподрядчик",
+            "properties": {
+                "user": {
+                    "type": "user",
+                    "title": "Пользователь"
+                },
+                "plannedDate": {
+                    "type": "date",
+                    "title": "Планируемая дата"
+                },
+                "organization": {
+                    "type": "text",
+                    "title": "Организация",
+                    "description": "Введите наименование организации"
+                }
+            }
+        },
+        "contractor": {
+            "type": "object",
+            "title": "Подрядчик",
+            "properties": {
+                "user": {
+                    "type": "user",
+                    "title": "Пользователь"
+                },
+                "plannedDate": {
+                    "type": "date",
+                    "title": "Планируемая дата"
+                },
+                "organization": {
+                    "type": "text",
+                    "title": "Организация",
+                    "description": "Введите наименование организации"
+                }
+            }
+        },
+        "authorSupervision": {
+            "type": "object",
+            "title": "Авторский надзор",
+            "properties": {
+                "user": {
+                    "type": "user",
+                    "title": "Пользователь"
+                },
+                "organization": {
+                    "type": "text",
+                    "title": "Организация",
+                    "description": "Введите наименование организации"
+                },
+                "dateOfControl": {
+                    "type": "date",
+                    "title": "Дата проведения контроля"
+                }
+            }
+        },
+        "volume": {
+            "type": "number",
+            "title": "Объем",
+            "description": "Введите объем"
+        },
+        "jobCategory": {
+            "enum": [
+                "СМР",
+                "Документация",
+                "Геодезия",
+                "Экология",
+                "Охрана труда"
+            ],
+            "type": "select",
+            "title": "Категория предъявляемой работы"
+        },
+        "description": {
+            "type": "textarea",
+            "title": "Описание",
+            "description": "Введите описание"
+        },
+        "generalContractor": {
+            "type": "object",
+            "title": "Генподрядчик",
+            "properties": {
+                "user": {
+                    "type": "user",
+                    "title": "Пользователь"
+                },
+                "organization": {
+                    "type": "text",
+                    "title": "Организация",
+                    "description": "Введите наименование организации"
+                },
+                "confirmationDate": {
+                    "type": "date",
+                    "title": "Дата подтверждения"
+                }
+            }
+        },
+        "customer": {
+            "type": "object",
+            "title": "Заказчик",
+            "properties": {
+                "user": {
+                    "type": "user",
+                    "title": "Пользователь"
+                },
+                "organization": {
+                    "type": "text",
+                    "title": "Организация",
+                    "description": "Введите наименование организации"
+                },
+                "dateOfControl": {
+                    "type": "date",
+                    "title": "Дата проведения контроля"
+                }
+            }
+        },
+        "comment": {
+            "type": "textarea",
+            "title": "Комментарий",
+            "description": "Введите комментарий"
+        },
+        "rdCode": {
+            "type": "text",
+            "title": "Шифр РД",
+            "description": "Введите шифр РД"
+        },
+        "structuralElement": {
+            "type": "text",
+            "title": "Конструктивный элемент"
+        }
+    }
+}
