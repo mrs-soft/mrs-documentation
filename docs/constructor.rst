@@ -5,7 +5,8 @@
     :maxdepth: 3
     :titlesonly: 
     
-    constructor/start-work
+    constructor/how-to-start
+    constructor/structure
     constructor/elements-of-system
     constructor/components
     constructor/types-of-representations
