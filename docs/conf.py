@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Мобильные решения для строительства. Документация.'
+project = 'Мобильные решения для строительства. Платформа МРС 1.0. Документация.'
 copyright = '2022, МРС'
 author = 'ООО Мобильные Решения для Строительства'
 
@@ -31,7 +31,9 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-]
+    'sphinxcontrib.youtube',
+    'sphinxcontrib.images',
+    ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
