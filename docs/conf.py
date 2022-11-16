@@ -33,7 +33,12 @@ release = '1.0'
 extensions = [
     'sphinxcontrib.youtube',
     'sphinxcontrib.images',
+    'hoverxref.extension',
     ]
+
+hoverxref_roles = [
+    'term',
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -67,12 +72,6 @@ html_favicon = '_static/favicon.ico'
 
 html_theme_options = {
     "icon_links": [
-        {
-            "name": "Instagram",
-            "url": "https://www.instagram.com/mrs_software/",
-            "icon": "fab fa-instagram",
-        },
-
         {
             "name": "VK",
             "url": "https://vk.com/m_r_s",
