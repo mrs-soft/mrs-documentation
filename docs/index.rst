@@ -7,8 +7,9 @@
 На этом сайте вы найдёте документациию для МРС Платформы:
 
 #.  :doc:`constructor`
-#.  :doc:`user`
-#.  :doc:`admin`
+#.  :doc:`api`
+#.  :doc:`services`
+#.  :doc:`examples`
 
 О Платформе
 -----------
@@ -25,8 +26,9 @@
     :hidden:
 
     constructor
-    user
-    admin
+    api
+    services
+    examples
     glossary
 
 Информационная система

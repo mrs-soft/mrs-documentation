@@ -75,15 +75,11 @@ html_theme_options = {
         {
             "name": "VK",
             "url": "https://vk.com/m_r_s",
-            "icon": "fab fa-vk",
+            "icon": "fa-brands fa-vk",
         }
     ],
 
      "search_bar_text": "Поиск по документации...",
-
-     "external_links": [
-      {"name": "СтройКонтроль API ", "url": "_static/swagger-ui-plotpad/index.html"}
-  ]
 
 }
 

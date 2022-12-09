@@ -1,5 +1,5 @@
-Прикладная документация
-=======================
+Конструктор
+===========
 
 .. toctree::
     :maxdepth: 3
@@ -10,5 +10,3 @@
     constructor/elements-of-system
     constructor/components
     constructor/types-of-representations
-    constructor/api
-    constructor/examples

@@ -3,3 +3,6 @@ msgstr "На этой странице"
 
 msgid "Section Navigation"
 msgstr "Навигация"
+
+msgid "light/dark"
+msgstr "Светлая тема/Тёмная тема"
