@@ -18,3 +18,9 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
+    - name: Copy To Branches Action
+      uses: planetoftheweb/copy-to-branches@v1.2
+      env:
+        key: main
+        files: CNAME
+        branches: gh-pages
