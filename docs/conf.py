@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Мобильные решения для строительства. Документация.'
-copyright = '2021, МРС'
+project = 'Мобильные решения для строительства. Платформа МРС.'
+copyright = '2022, МРС'
 author = 'ООО Мобильные Решения для Строительства'
 
 # The full version, including alpha/beta/rc tags
@@ -31,6 +31,13 @@ release = '1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxcontrib.youtube',
+    'sphinxcontrib.images',
+    'hoverxref.extension',
+    ]
+
+hoverxref_roles = [
+    'term',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -66,23 +73,13 @@ html_favicon = '_static/favicon.ico'
 html_theme_options = {
     "icon_links": [
         {
-            "name": "Instagram",
-            "url": "https://www.instagram.com/mrs_software/",
-            "icon": "fab fa-instagram",
-        },
-
-        {
             "name": "VK",
             "url": "https://vk.com/m_r_s",
-            "icon": "fab fa-vk",
+            "icon": "fa-brands fa-vk",
         }
     ],
 
      "search_bar_text": "Поиск по документации...",
-
-     "external_links": [
-      {"name": "СтройКонтроль API ", "url": "_static/swagger-ui-plotpad/index.html"}
-  ]
 
 }
 
@@ -90,3 +87,5 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [ 'css/custom.css', ]
