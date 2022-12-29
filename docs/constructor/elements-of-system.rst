@@ -6,7 +6,7 @@
     :titlesonly:
 
     elements-of-system/forms
-    elements-of-system/ref-books
+    elements-of-system/dictionaries
     elements-of-system/representations
     elements-of-system/menu
     elements-of-system/connections

@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Мобильные решения для строительства. Платформа МРС.'
-copyright = '2022, МРС'
+copyright = '2023, МРС'
 author = 'ООО Мобильные Решения для Строительства'
 
 # The full version, including alpha/beta/rc tags

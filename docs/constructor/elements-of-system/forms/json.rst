@@ -82,6 +82,5 @@ JSON-схема формы
 
 Подробнее о компонентах, которые использовались в этой форме:
 
-#.  :doc:`/constructor/components/object`
 #.  :doc:`/constructor/components/text`
 #.  :doc:`/constructor/components/date`
