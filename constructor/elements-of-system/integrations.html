@@ -4,7 +4,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Сценарии интеграции &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
   <script>
@@ -44,7 +44,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/hoverxref.js"></script>
     <script src="../../_static/js/tooltipster.bundle.min.js"></script>
     <script src="../../_static/js/micromodal.min.js"></script>
@@ -329,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="forms/form-instances.html">Экземпляр формы</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ref-books.html">Справочники</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionaries.html">Справочники</a></li>
 <li class="toctree-l2"><a class="reference internal" href="representations.html">Представления</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu.html">Меню</a></li>
 <li class="toctree-l2"><a class="reference internal" href="connections.html">Связи</a></li>
@@ -340,18 +342,18 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../components/radio.html">Список c единичным выбором</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/checkboxes.html">Список с множественным выбором</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/checkbox.html">Единичный чекбокс</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/checklistitem.html">Пункт чеклиста</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/array.html">Список с выбором из множества значений</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/date.html">Дата</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/datetime.html">Дата и временя</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/email.html">Email</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/number.html">Числовые значения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/select.html">Ниспадающий список</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/text-area.html">Многострочный текст</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/text.html">Краткий текст</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/text.html">Краткий текст — text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/text-area.html">Многострочный текст — textarea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/email.html">Электронная почта — email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/number.html">Числовое поле — number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/date.html">Дата — date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/datetime.html">Дата и время — datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/array.html">Выбор из множества значений — array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/radio.html">Радиобаттон — radio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/checkboxes.html">Список из чекбоксов — checkboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/checkbox.html">Единичный чекбокс — checkbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/checklistitem.html">Пункт чеклиста — checklistItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/select.html">Ниспадающий список — select</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../types-of-representations.html">Виды представлений</a></li>
@@ -384,7 +386,7 @@
             <article class="bd-article" role="main">
               
   <section id="id1">
-<h1>Сценарии интеграции<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">#</a></h1>
+<h1>Сценарии интеграции<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 </section>
 
 
@@ -456,7 +458,7 @@
     
 <p class="copyright">
 
-    &copy; Copyright 2022, МРС.<br>
+    &copy; Copyright 2023, МРС.<br>
 
 </p>
 
@@ -465,7 +467,7 @@
   <div class="footer-item">
     
 <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
 
   </div>

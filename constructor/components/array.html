@@ -4,9 +4,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Список с выбором из множества значений &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
+    <title>Выбор из множества значений — array &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -44,7 +44,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/hoverxref.js"></script>
     <script src="../../_static/js/tooltipster.bundle.min.js"></script>
     <script src="../../_static/js/micromodal.min.js"></script>
@@ -56,8 +58,8 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
-    <link rel="next" title="Дата" href="date.html" />
-    <link rel="prev" title="Пункт чеклиста" href="checklistitem.html" />
+    <link rel="next" title="Радиобаттон — radio" href="radio.html" />
+    <link rel="prev" title="Дата и время — datetime" href="datetime.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
   </head>
@@ -329,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../elements-of-system/forms/form-instances.html">Экземпляр формы</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../elements-of-system/ref-books.html">Справочники</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../elements-of-system/dictionaries.html">Справочники</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../elements-of-system/representations.html">Представления</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../elements-of-system/menu.html">Меню</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../elements-of-system/connections.html">Связи</a></li>
@@ -340,18 +342,18 @@
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../components.html">Компоненты формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="radio.html">Список c единичным выбором</a></li>
-<li class="toctree-l2"><a class="reference internal" href="checkboxes.html">Список с множественным выбором</a></li>
-<li class="toctree-l2"><a class="reference internal" href="checkbox.html">Единичный чекбокс</a></li>
-<li class="toctree-l2"><a class="reference internal" href="checklistitem.html">Пункт чеклиста</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Список с выбором из множества значений</a></li>
-<li class="toctree-l2"><a class="reference internal" href="date.html">Дата</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datetime.html">Дата и временя</a></li>
-<li class="toctree-l2"><a class="reference internal" href="email.html">Email</a></li>
-<li class="toctree-l2"><a class="reference internal" href="number.html">Числовые значения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="select.html">Ниспадающий список</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text-area.html">Многострочный текст</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text.html">Краткий текст</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text.html">Краткий текст — text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text-area.html">Многострочный текст — textarea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Электронная почта — email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="number.html">Числовое поле — number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="date.html">Дата — date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datetime.html">Дата и время — datetime</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Выбор из множества значений — array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio.html">Радиобаттон — radio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checkboxes.html">Список из чекбоксов — checkboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checkbox.html">Единичный чекбокс — checkbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checklistitem.html">Пункт чеклиста — checklistItem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="select.html">Ниспадающий список — select</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../types-of-representations.html">Виды представлений</a></li>
@@ -383,78 +385,16 @@
             
             <article class="bd-article" role="main">
               
-  <section id="id1">
-<h1>Список с выбором из множества значений<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">#</a></h1>
+  <section id="array">
+<h1>Выбор из множества значений — array<a class="headerlink" href="#array" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>Определение<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>С помощью компонента можно создавать список, который наполняется значениями либо из справочников, либо вручную.
-С этим компонентом можно использовать даже компонент <code class="docutils literal notranslate"><span class="pre">user</span></code>, который даёт возможность выбирать пользователей из базы данных «СтройКонтроля».</p>
-<section id="id2">
-<h2>Как задать компонент формы?<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">#</a></h2>
-<p>Список с выбором из множества значений совместно с компонентом выбора пользователей из базы данных «СтройКонтроля»
-задаётся следующей JSON-схемой:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>JSON-схема для списка с выбором из множества значений с ручным вводом данных:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;enumNames&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Иванов&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Петров&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Сидоров&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Андреев&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Михайлов&quot;</span><span class="p">]</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">UserArray</span></code> и <code class="docutils literal notranslate"><span class="pre">HandArray</span></code> — это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задётся пользователем и необходимо для объявления любого компонента.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> — заголовок компонента, отображамый в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> — описание поля. Отображается под заголовком. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — тип элемента. Для списка с выбором из множества значений — это всегда <code class="docutils literal notranslate"><span class="pre">array</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code> — минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code> — максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> — с помощью атрибута задаётся список значений, в котором прописываются следующие данные:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enum</span></code> — числовой список доступных значений.
-Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code> Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code> — список отображающихся наименований для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>.
-Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code> Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> — этот артрибут и верхние — взаимоисключащие.
-Он используется только вместе с компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code> и нужен для создания списков с пользователями из базы данных «СтройКонтроля».</p></li>
-</ol>
-</li>
-</ol>
-<p>Компонент изначально отображается в форме только с заголовком и описанием. Нажатием на кнопку <img alt="Пример компонента" src="../../_images/array-screen-add-item.png" /> можно добавить новый элемент в список.</p>
-<img alt="Пример компонента" class="align-center" src="../../_images/array-screen-1.png" />
+С этим компонентом можно использовать <code class="docutils literal notranslate"><span class="pre">user</span></code>, который даёт возможность выбирать пользователей из базы данных.</p>
+<p>Тип компонента в конфигураторе: <strong>array</strong>.</p>
 </section>
-<section id="id3">
-<h2>Пример<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">#</a></h2>
-<p>JSON-схема для компонента с выбором пользователей из «СтройКонтроля» в конфигураторе:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Список с выбором пользователей из базы данных «СтройКонтроля» в пользовательском приложении:</p>
-<img alt="Пример компонента" class="align-center" src="../../_images/array-screen-2.png" />
+<section id="id2">
+<h2>Внешний вид<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>JSON-схема для компонента с выбором пользователей заданных вручную в конфигураторе:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
@@ -470,25 +410,111 @@
 </pre></div>
 </div>
 <p>Список с выбором пользователей заданных вручную в пользовательском приложении:</p>
-<img alt="Пример компонента" class="align-center" src="../../_images/array-screen-3.png" />
-</section>
-<section id="id4">
-<h2>Как сохраняются данные?<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">#</a></h2>
-<p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в конфигураторе.</p>
-<p>Выбранные значения списка в пользовательском приложении:</p>
-<p>С компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
-<img alt="Пример компонента" class="align-center" src="../../_images/array-screen-4.png" />
-<p>С ручным вводом:</p>
-<img alt="Пример компонента" class="align-center" src="../../_images/array-screen-5.png" />
-<p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе. Они сохраняются также в JSON формате:</p>
-<p>С компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;60febbbc04d27d7b83d93c43&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;5fdb50697ce63c231e6f8052&quot;</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
+<a class=""
+               data-lightbox="group-7302483b-70fa-4bf2-b7ed-1243f4843f41"
+               href="../../_images/array-screen-31.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/array-screen-31.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента"/>
+                </a></section>
+<section id="id3">
+<h2>Свойства<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>С использованием компонента <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>При использовании компонента <code class="docutils literal notranslate"><span class="pre">user</span></code>, в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> попадают идентификаторы выбранных пользователей из базы данных «СтройКонтроля».</p>
+<p>С ручным вводом данных:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;enumNames&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Иванов&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Петров&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Сидоров&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Андреев&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Михайлов&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Свойство</p></th>
+<th class="head"><p>Определение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">UserArray</span></code> и <code class="docutils literal notranslate"><span class="pre">HandArray</span></code></p></td>
+<td><p>Это <code class="docutils literal notranslate"><span class="pre">FIELDNAME</span></code>. Задаются программистом, то есть вместо них можно поставить любое подходящее наименование.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">title</span></code></p></td>
+<td><p>Заголовок компонента, отображаемый в форме. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>Описание поля. Отображается под заголовком. Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>Тип элемента. Для списка с выбором из множества значений — это всегда <code class="docutils literal notranslate"><span class="pre">array</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">minItems</span></code></p></td>
+<td><p>Минимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">maxItems</span></code></p></td>
+<td><p>Максимальное количество выбранных элементов для того, чтобы заполненная форма считалась корректной. Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>Это свойство используется только вместе с компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code> и нужно для создания списков с пользователями из базы данных.
+Если вы используете этот аттрибут, то нижние вы использовать не сможете.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">items</span></code></p></td>
+<td><p>С помощью атрибута задаётся список значений, в котором прописываются <code class="docutils literal notranslate"><span class="pre">enum</span></code> и <code class="docutils literal notranslate"><span class="pre">enumNames</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">enum</span></code></p></td>
+<td><p>Числовой список доступных значений.
+Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code> Формат: <code class="docutils literal notranslate"><span class="pre">number</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">enumNames</span></code></p></td>
+<td><p>Список отображающихся наименований для значений из поля <code class="docutils literal notranslate"><span class="pre">enum</span></code>.
+Если значений больше одного, они вписываются в квадратных скобках — <code class="docutils literal notranslate"><span class="pre">[]</span></code> Формат: <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2>Модель данных<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в конфигураторе.</p>
+<p>Выбранные значения списка в пользовательском приложении:</p>
+<p>С ручным вводом:</p>
+<a class=""
+               data-lightbox="group-cbd59604-2259-4d25-9aa0-17c8361d20db"
+               href="../../_images/array-screen-51.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/array-screen-51.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента"/>
+                </a><p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе. Они сохраняются также в JSON формате:</p>
 <p>С ручным вводом:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;HandArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">        </span><span class="mi">3</span><span class="p">,</span><span class="w"></span>
@@ -496,8 +522,75 @@
 <span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Стоит обратить внимание, что в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> идут значения из <code class="docutils literal notranslate"><span class="pre">enum</span></code>, а не наименования из <code class="docutils literal notranslate"><span class="pre">enumNames</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> идут значения из <code class="docutils literal notranslate"><span class="pre">enum</span></code>, а не наименования из <code class="docutils literal notranslate"><span class="pre">enumNames</span></code>.</p>
+</div>
+<p>С компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
+<a class=""
+               data-lightbox="group-39834e1d-72b7-470a-9d7e-535580e9273a"
+               href="../../_images/array-screen-41.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/array-screen-41.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента"/>
+                </a><p>С компонентом <code class="docutils literal notranslate"><span class="pre">user</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;60febbbc04d27d7b83d93c43&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;5fdb50697ce63c231e6f8052&quot;</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+<p>При использовании компонента <code class="docutils literal notranslate"><span class="pre">user</span></code>, в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> попадают идентификаторы выбранных пользователей из базы данных.</p>
 </section>
+<section id="id5">
+<h2>Комментарии<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>Если задать компонент без вводных данных, то он изначально отобразится в форме только с заголовком и описанием.
+Нажатием на кнопку <img alt="Add Item" src="../../_images/array-screen-add-item.png" /> можно добавить новый элемент в список.</p>
+<a class=""
+               data-lightbox="group-c02ef5ff-119d-407a-a053-cd757d250553"
+               href="../../_images/array-screen-11.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/array-screen-11.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента"/>
+                </a></section>
+<section id="id6">
+<h2>Примеры использования<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<p>JSON-схема для компонента с выбором пользователей из «СтройКонтроля» в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;UserArray&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Сотрудники&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Начните вводить имя сотрудника&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;minItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;maxItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Список с выбором пользователей из базы данных «СтройКонтроля» в пользовательском приложении:</p>
+<a class=""
+               data-lightbox="group-d07c9ea3-fc8c-4157-8018-d99551eda492"
+               href="../../_images/array-screen-21.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/array-screen-21.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента"/>
+                </a></section>
 </section>
 
 
@@ -508,17 +601,17 @@
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="checklistitem.html" title="назад страница">
+  <a class='left-prev' id="prev-link" href="datetime.html" title="назад страница">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">назад</p>
-          <p class="prev-next-title">Пункт чеклиста</p>
+          <p class="prev-next-title">Дата и время — datetime</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="date.html" title="вперёд страница">
+  <a class='right-next' id="next-link" href="radio.html" title="вперёд страница">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">вперёд</p>
-      <p class="prev-next-title">Дата</p>
+      <p class="prev-next-title">Радиобаттон — radio</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -539,18 +632,33 @@
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Определение
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   Как задать компонент формы?
+   Внешний вид
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   Пример
+   Свойства
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id4">
-   Как сохраняются данные?
+   Модель данных
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Комментарии
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Примеры использования
   </a>
  </li>
 </ul>
@@ -596,7 +704,7 @@
     
 <p class="copyright">
 
-    &copy; Copyright 2022, МРС.<br>
+    &copy; Copyright 2023, МРС.<br>
 
 </p>
 
@@ -605,7 +713,7 @@
   <div class="footer-item">
     
 <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
 </p>
 
   </div>
