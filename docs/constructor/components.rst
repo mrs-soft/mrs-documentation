@@ -19,16 +19,16 @@
     components/number
     components/date
     components/datetime
-    components/array
     components/radio
     components/checkboxes
-    components/checkbox
-    components/checklistitem
     components/select
-    
-..  components/button-switcher
-    components/ref-books
-    components/attachments
-    components/object
-    components/status
     components/user
+    components/attachments
+    components/dictionary
+    components/button-switcher
+    components/drawing2d
+    components/view
+    components/view-display
+    components/feed
+    components/object
+    

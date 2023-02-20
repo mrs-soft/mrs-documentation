@@ -10,4 +10,4 @@
     constructor/dev-environment
     constructor/elements-of-system
     constructor/components
-    constructor/types-of-representations
+    constructor/types-of-view
