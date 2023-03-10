@@ -11,7 +11,7 @@ Visual Studio Code
 
 ..  note::  `Ссылка на официальный сайт VS Code <https://code.visualstudio.com/>`_.
             
-..  attention:: Также для работы расширения необходимо установить `Node.js <VS Code>`_.
+..  attention:: Также для работы расширения необходимо установить `Node.js <https://nodejs.org/en/download/>`_.
 
 Сразу после установки зайдите в раздел с расширениями (Extensions) в VS Code --- |VSC-Extensions|.
 
