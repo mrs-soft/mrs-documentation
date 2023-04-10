@@ -4,40 +4,123 @@
 Определение
 -----------
 
-С помощью компонента можно создавать список c радиобаттонами. Подходит для работы со списками, в которых необходимо выбрать только что-то одно.
+С помощью компонента можно создавать список c переключателями или ряд кнопок.
+Подходит для работы со списками, в которых необходимо выбрать только что-то одно.
 
 Тип компонента в конфигураторе: **radio**.
 
 Внешний вид
 -----------
 
-JSON-схема для компонента в конфигураторе:
+Компонент делится на два различных видах отображения. Всё зависит от параметра в свойстве ``variant``.
+
+variant: radio
+++++++++++++++
+
+JSON-схема:
 
 ..  code-block:: json
     
-    "productivity": {
-        "type": "radio",
-        "title": "Выберите самых продуктивных сотрудников за день:",
-        "enum": [0, 1, 2, 3],
-        "enumNames": ["Гаранин", "Максимов", "Байков", "Миронов"]
+    "selectVariants": {
+      "type": "radio",
+      "title": "Проверить:",
+      "variant": "radio",
+      "anyOf": [
+        {
+          "enum": [
+            "1"
+          ],
+          "type": "string",
+          "title": "Отменено"
+        },
+        {
+          "enum": [
+            "2"
+          ],
+          "type": "string",
+          "title": "Готов к приёмке" 
+        },
+        {
+          "enum": [
+            "3"
+          ],
+          "type": "string",
+          "title": "Не готов к приемке"
+        }
+      ]
     }
 
-Список с единичным выбором в пользовательском приложении:
+Отображение в клиенте:
 
-..  thumbnail:: images/radio-screen-1.png
+..  thumbnail:: images/radio-screen-1-variant-radio.png
     :alt: Пример компонента
-    :align: center
+    :width: 70%
+    :class: framed
+
+variant: button
++++++++++++++++
+
+JSON-схема:
+
+..  code-block:: json
+    
+    "selectVariants": {
+      "type": "radio",
+      "title": "Проверить:",
+      "variant": "button",
+      "anyOf": [
+        {
+          "enum": [
+            "1"
+          ],
+          "type": "string",
+          "title": "Отменено"
+        },
+        {
+          "enum": [
+            "2"
+          ],
+          "type": "string",
+          "color": "success.main",
+          "title": "Готов к приёмке"
+        },
+        {
+          "enum": [
+            "3"
+          ],
+          "type": "string",
+          "color": "error.main",
+          "title": "Не готов к приемке"
+        }
+      ]
+    }
+
+Отображение в клиенте:
+
+..  thumbnail:: images/radio-screen-2-variant-button.png
+    :alt: Пример компонента
+    :width: 70%
+    :class: framed
 
 Свойства
 --------
 
 ..  code-block:: json
     
-    "productivity": {
-        "type": "radio",
-        "title": "Выберите самого продуктивного сотрудника за день",
-        "enum": [0, 1, 2, 3],
-        "enumNames": ["Гаранин", "Максимов", "Байков", "Миронов"]
+    {
+    "type": "radio",
+      "title": "...",
+      "variant": "..."
+      "anyOf": [
+        {
+          "enum": [
+            "..."
+          ],
+          "type": "string",
+          "title": "..."
+          "color": "..."
+        }
+      ]
     }
 
 ..  list-table::
