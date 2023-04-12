@@ -28,7 +28,8 @@
     components/button-switcher
     components/drawing2d
     components/view
-    components/view-display
     components/feed
     components/object
+
+..    components/view-display
     
