@@ -6,3 +6,6 @@ msgstr "Навигация"
 
 msgid "light/dark"
 msgstr "Светлая тема/Тёмная тема"
+
+msgid "Site Navigation"
+msgstr "Навигация"
