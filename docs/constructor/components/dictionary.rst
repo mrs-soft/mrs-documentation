@@ -41,17 +41,17 @@ JSON-схема для создания компонента в конфигур
 
 ..  code-block:: json
 
-    "type": "dictionary",
-    "title": "Название компонента",
-    "description": "Описание компонента",
-    "dictionaryName": "Наименование справочника",
-    "multiple": true,
-    "isTree": false,
-    "hidden": false
-
+    {
+        "type": "dictionary",
+        "title": "Название компонента",
+        "description": "Описание компонента",
+        "dictionaryName": "Наименование справочника",
+        "multiple": true,
+        "isTree": false,
+        "hidden": false
+    }
 
 ..  list-table::
-    :widths: 20 70 10
     :header-rows: 1
 
     *   - Свойство
