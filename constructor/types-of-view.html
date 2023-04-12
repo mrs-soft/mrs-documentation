@@ -54,12 +54,12 @@
     <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'constructor/types-of-representations';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'constructor/types-of-view';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
     <link rel="next" title="Интеграция и API" href="../api.html" />
-    <link rel="prev" title="Ниспадающий список — select" href="components/select.html" />
+    <link rel="prev" title="Разделы в форме — object" href="components/object.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
   </head>
@@ -124,8 +124,8 @@
       
       <div class="navbar-center-item">
         <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Навигация">
+        Навигация
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
@@ -235,8 +235,8 @@
       
       <div class="navbar-center-item">
         <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Навигация">
+        Навигация
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
@@ -323,9 +323,16 @@
     <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="how-to-start.html">Логинация</a></li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Структура приложения</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev-environment.html">Среда разработки</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="elements-of-system.html">Элементы системы</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="elements-of-system/forms.html">Формы</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="dev-environment.html">Среда разработки</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev-environment/vs-code.html">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev-environment/strapi.html">Strapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev-environment/directus.html">Directus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev-environment/n8n.html">N8N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev-environment/grafana.html">Grafana</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="elements-of-system.html">Элементы системы</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="elements-of-system/forms.html">Формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="elements-of-system/forms/configuration.html">Работа с формой в конфигураторе</a></li>
 <li class="toctree-l3"><a class="reference internal" href="elements-of-system/forms/json.html">JSON-схема формы</a></li>
 <li class="toctree-l3"><a class="reference internal" href="elements-of-system/forms/form-instances.html">Экземпляр формы</a></li>
@@ -341,19 +348,25 @@
 <li class="toctree-l2"><a class="reference internal" href="elements-of-system/integrations.html">Сценарии интеграции</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="components/text.html">Краткий текст — text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/text-area.html">Многострочный текст — textarea</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/email.html">Электронная почта — email</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/number.html">Числовое поле — number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/date.html">Дата — date</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/datetime.html">Дата и время — datetime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components/array.html">Выбор из множества значений — array</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components/radio.html">Радиобаттон — radio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/radio.html">Переключатель — radio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/checkboxes.html">Список из чекбоксов — checkboxes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components/checkbox.html">Единичный чекбокс — checkbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components/checklistitem.html">Пункт чеклиста — checklistItem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/select.html">Ниспадающий список — select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/user.html">Выбор пользователя — user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/attachments.html">Прикреплённые файлы — attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/dictionary.html">Выбор из справочника — dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/button-switcher.html">Меню вкладок — buttonSwitcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/drawing2d.html">Аннотации на чертёже — drawing2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/view.html">Выбор из представления — view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/view-display.html">Отображение представления — viewDisplay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/feed.html">Отображение ленты сообщений — feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/object.html">Разделы в форме — object</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Виды представлений</a></li>
@@ -397,11 +410,11 @@
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="components/select.html" title="назад страница">
+  <a class='left-prev' id="prev-link" href="components/object.html" title="назад страница">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">назад</p>
-          <p class="prev-next-title">Ниспадающий список — select</p>
+          <p class="prev-next-title">Разделы в форме — object</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="../api.html" title="вперёд страница">

@@ -5,3 +5,8 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
     --pst-color-primary: white;
 }
+
+.framed img {
+    border:2px solid rgb(184, 180, 180);
+    border-radius: 20px;
+}

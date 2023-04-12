@@ -124,8 +124,8 @@
       
       <div class="navbar-center-item">
         <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Навигация">
+        Навигация
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
@@ -235,8 +235,8 @@
       
       <div class="navbar-center-item">
         <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Навигация">
+        Навигация
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
@@ -323,9 +323,16 @@
     <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../how-to-start.html">Логинация</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../structure.html">Структура приложения</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev-environment.html">Среда разработки</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../elements-of-system.html">Элементы системы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../forms.html">Формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../dev-environment.html">Среда разработки</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dev-environment/vs-code.html">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev-environment/strapi.html">Strapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev-environment/directus.html">Directus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev-environment/n8n.html">N8N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dev-environment/grafana.html">Grafana</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../elements-of-system.html">Элементы системы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../forms.html">Формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="configuration.html">Работа с формой в конфигураторе</a></li>
 <li class="toctree-l3"><a class="reference internal" href="json.html">JSON-схема формы</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Экземпляр формы</a></li>
@@ -341,22 +348,28 @@
 <li class="toctree-l2"><a class="reference internal" href="../integrations.html">Сценарии интеграции</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../components/text.html">Краткий текст — text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/text-area.html">Многострочный текст — textarea</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/email.html">Электронная почта — email</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/number.html">Числовое поле — number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/date.html">Дата — date</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/datetime.html">Дата и время — datetime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../components/array.html">Выбор из множества значений — array</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../components/radio.html">Радиобаттон — radio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/radio.html">Переключатель — radio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/checkboxes.html">Список из чекбоксов — checkboxes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../components/checkbox.html">Единичный чекбокс — checkbox</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../components/checklistitem.html">Пункт чеклиста — checklistItem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../components/select.html">Ниспадающий список — select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/user.html">Выбор пользователя — user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/attachments.html">Прикреплённые файлы — attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/dictionary.html">Выбор из справочника — dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/button-switcher.html">Меню вкладок — buttonSwitcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/drawing2d.html">Аннотации на чертёже — drawing2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/view.html">Выбор из представления — view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/view-display.html">Отображение представления — viewDisplay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/feed.html">Отображение ленты сообщений — feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../components/object.html">Разделы в форме — object</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../types-of-representations.html">Виды представлений</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../types-of-view.html">Виды представлений</a></li>
 </ul>
 
   </div>
@@ -411,16 +424,16 @@
 <img alt="Форма в конфигураторе" class="align-center" src="../../../_images/form-instances-3-strapi.gif" />
 <hr class="docutils" />
 <p>Сохранение происходит в JSON-формате по шаблону:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="nt">&quot;Наименование поля&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Данные поля&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;Наименование поля&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Данные поля&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>То есть заполненный пример из предыдущего пункта статьи сохранится так:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;Hello World!&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;dateField&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1643694572000</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;textField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Привет, мир!&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;Hello World!&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;dateField&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1643694572000</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;textField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Привет, мир!&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
