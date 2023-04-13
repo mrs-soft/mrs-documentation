@@ -331,13 +331,13 @@
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../elements-of-system.html">Элементы системы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../forms.html">Формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="configuration.html">Работа с формой в конфигураторе</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html">Форма в конфигураторе</a></li>
 <li class="toctree-l3"><a class="reference internal" href="json.html">JSON-схема формы</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Экземпляр формы</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../dictionaries.html">Справочники</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html">Представления</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view.html">Представления</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menu.html">Меню</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../connections.html">Связи</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../doc-templates.html">Шаблоны документов</a></li>
@@ -400,28 +400,42 @@
 <h1>Экземпляр формы<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Экземпляр формы<span class="colon">:</span></dt>
-<dd class="field-odd"><p>это форма созданная из единого конфигурируемого шаблона. Заполняется пользователем клиентского приложения.</p>
+<dd class="field-odd"><p>это отдельная сущностью системы, которая хранит данные заполняемые пользователям клиентского приложения по выбранной форме.</p>
 </dd>
 </dl>
 <section id="id2">
 <h2>Экземпляр формы в клиентском приложении<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
 <p>После написания JSON-схемы в конфигураторе и публикации, в клиентском приложении у вас появляется сама форма.
 Форма, написанная один раз, может переиспользоваться множество раз с разными входными данными.</p>
-<p>То есть, когда в клиенте вы заходите на страницу созданной формы, там можно создавать множество <strong>экземляров формы</strong>.</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../../_images/form-instances-1-client.gif" />
-<hr class="docutils" />
+<p>То есть, когда в клиенте вы заходите на страницу созданной формы, там можно создавать множество <strong>экземпляров формы</strong>.</p>
+<a class=""
+               data-lightbox="group-42dece7f-d348-4a34-82b8-53ac03b5c917"
+               href="../../../_images/form-instances-1-client1.gif"
+               title=""
+               data-title=""
+               
+               ><img src="../../../_images/form-instances-1-client1.gif"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Форма в конфигураторе"/>
+                </a><hr class="docutils" />
 <p>Заполнение экземпляра формы:</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../../_images/form-instances-2-client-filing.gif" />
-</section>
+<a class=""
+               data-lightbox="group-e5e33b3c-1257-4b08-821c-e9e18bc22e36"
+               href="../../../_images/form-instances-2-client-filing1.gif"
+               title=""
+               data-title=""
+               
+               ><img src="../../../_images/form-instances-2-client-filing1.gif"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Форма в конфигураторе"/>
+                </a></section>
 <section id="id3">
 <h2>Экземпляр формы в конфигураторе<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>Данные, которые заполняет пользователь в экземляре формы, сохраняются в конфигураторе в разделе <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code>.
-Для удобства стоит использовать фильтрацию.
-Самый простой способ использовать название, которое вы дали своему экземпляру.
-Учтите, что по фильтру <strong>равно</strong> надо вводить точное название экземпляра вашей формы, учитывая регистр и пунктуационные знаки.</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../../_images/form-instances-3-strapi.gif" />
-<hr class="docutils" />
-<p>Сохранение происходит в JSON-формате по шаблону:</p>
+<p>Экземпляр формы является отдельной сущностью системы. Информация сохраняется в JSON-формате по шаблону:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="nt">&quot;Наименование поля&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Данные поля&quot;</span>
 <span class="p">}</span>

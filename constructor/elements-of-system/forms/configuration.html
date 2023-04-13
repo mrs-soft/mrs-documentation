@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Работа с формой в конфигураторе &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
+    <title>Форма в конфигураторе &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -331,13 +331,13 @@
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../elements-of-system.html">Элементы системы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../forms.html">Формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Работа с формой в конфигураторе</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Форма в конфигураторе</a></li>
 <li class="toctree-l3"><a class="reference internal" href="json.html">JSON-схема формы</a></li>
 <li class="toctree-l3"><a class="reference internal" href="form-instances.html">Экземпляр формы</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../dictionaries.html">Справочники</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../representations.html">Представления</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view.html">Представления</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../menu.html">Меню</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../connections.html">Связи</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../doc-templates.html">Шаблоны документов</a></li>
@@ -397,28 +397,59 @@
             <article class="bd-article" role="main">
               
   <section id="id1">
-<h1>Работа с формой в конфигураторе<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>Для создания формы в конфигураторе надо перейти на вкладку <strong>Forms</strong>:</p>
-<img alt="Форма в конфигураторе" class="align-center" src="../../../_images/forms-1-strapi.gif" />
-<hr class="docutils" />
-<p>Чтобы создать форму, нажмите на кнопку <img alt="Кнопка: Добавить форму" src="../../../_images/forms-2-add-form.png" /> в правом верхнем углу страницы.</p>
-<hr class="docutils" />
-<p>После этого перед вами открывается окно создания формы:</p>
-<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-3-creating.png" />
-<hr class="docutils" />
-<p><strong>Scheme</strong> — это основное рабочее поле, в котором записывается JSON-схема.</p>
-<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-4-json-field.gif" />
-<hr class="docutils" />
-<p>В поле <strong>Title</strong> записывается название формы, которое будет отображаться в конфигураторе и клиентском приложении.
-В поле <strong>Description</strong> стоит записывать краткое описание формы, которое может пояснять её необходимость.</p>
-<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-5-title-description.gif" />
-<hr class="docutils" />
-<p>Для публикации формы в клиентском приложении, в поле <strong>Tags</strong> необходимо выбрать элемент <code class="docutils literal notranslate"><span class="pre">customForm</span></code>.
-После того, как все поля были заполнены, форму необходимо сохранить и опубликовать, нажав соответствующие кнопки.</p>
-<img alt="Создание формы в конфигураторе" class="align-center" src="../../../_images/forms-6-tags-save-public.gif" />
-<hr class="docutils" />
-<p>Для последующего редактировании формы достаточно будет просто нажимать кнопку сохранить, чтобы изменения появились
-в клиенте.</p>
+<h1>Форма в конфигураторе<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Общий вид формы в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;scheme&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">    </span><span class="nt">&quot;isArchived&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;code&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fieldsForMappedTable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;relationsData&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Наименование поля</p></th>
+<th class="head"><p>Определение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">title</span></code></p></td>
+<td><p>В поле записывается название формы, которое будет отображаться в конфигураторе и клиентском приложении.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>В поле стоит записывать краткое описание формы, которое может пояснять её необходимость.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code></p></td>
+<td><p>Основное рабочее поле, в котором записывается JSON-схема.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">isArchived</span></code></p></td>
+<td><p>В значении <code class="docutils literal notranslate"><span class="pre">true</span></code> обозначает архивированную форму, которая не будет доступна для использования в приложении.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fieldsForMappedTable</span></code></p></td>
+<td><p>В поле  прописывается массив полей, которые необходимы для построения связей в мобильной версии приложения.
+Например, в полях, где пользователь будет выбирать одно из представлений в выпадающем списке.
+Также fieldsForMappedTable необходимо заполнять для форм,
+в которых должен быть поиск и/или фильтрация по каким-то полям.</p>
+<p>Attachments, drawing2d мапятся сами.
+Для полей с типом view надо заполнить linkTo вместо занесения названий в fieldsForMappedTable.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Идентификатор формы.</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 

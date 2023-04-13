@@ -331,13 +331,13 @@
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../elements-of-system.html">Элементы системы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="forms.html">Формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="forms/configuration.html">Работа с формой в конфигураторе</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forms/configuration.html">Форма в конфигураторе</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forms/json.html">JSON-схема формы</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forms/form-instances.html">Экземпляр формы</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaries.html">Справочники</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html">Представления</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view.html">Представления</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu.html">Меню</a></li>
 <li class="toctree-l2"><a class="reference internal" href="connections.html">Связи</a></li>
 <li class="toctree-l2"><a class="reference internal" href="doc-templates.html">Шаблоны документов</a></li>
@@ -398,6 +398,64 @@
               
   <section id="id1">
 <h1>Аналитические графики<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Для отображения аналитических графиков используется Grafana.</p>
+<section id="grafana">
+<h2>Описание рабочего пространства Grafana<a class="headerlink" href="#grafana" title="Permalink to this heading">#</a></h2>
+<p>Рабочее пространство состоит из нескольких элементов:</p>
+<ol class="arabic">
+<li><p>Область ввода запроса. Поле в которое вводится запрос PostgreSQL, на основе которого должен формироваться график.
+При создании нового графика в поле “Format as” выбирается один из двух вариантов:</p>
+<ul class="simple">
+<li><p>“Time series” — для графиков, которые будут отображать значения разбитые по временным отрезкам</p></li>
+<li><p>“Table” — для графиков, не группируемых по временным отрезкам</p></li>
+</ul>
+<p>После нужно нажать на кнопку “Edit SQL”, находящуюся рядом. Далее откроется поле для ввода запроса.
+Ниже располагается кнопка “+ Query” для создания нового поля для ввода запроса.</p>
+</li>
+<li><p>Скрываемое поле опций. Поле позволяющее конфигурировать график. Представляет собой список сгруппированных по типам настроек.
+Основная настройка это “Visualization”, в которой можно выбрать внешний вид графика.</p>
+<p>Поле открывается кнопкой “Show options” в правом верхнем углу и закрывается кнопкой “&gt;”, располагающейся там же.</p>
+</li>
+<li><p>Область фильтров. Область в которой отображаются прописанные фильтры, которые влияют на график (в том случае если данные фильтры прописаны в запросе).
+По дефолту установлен фильтр по времени.
+Остальные фильтры необходимо прописывать вручную, если в этом есть необходимость (про создание фильтров далее).</p>
+<p>Также в этой области присутствует набор кнопок “Fill/Fit/Exact”, отвечающие за размер области отображения графика.
+Правее временного фильтра распологается кнопка обновления отображаемых данных и ниспадающий список с выбором промежутка времени,
+через каждый из которых будет происходить авоматическое обновление.</p>
+</li>
+<li><p>Область графика/отображения данных. Область, где отображается результат запроса, с учетом выставленных фильтров и в формате, настроенном в поле опций.</p></li>
+<li><p>Верхняя панель. Область содержащая несколько кнопок с общими для панели и дашборда действиями:</p>
+<ol class="arabic simple">
+<li><p>⚙️ (”Open dashboard settings”) - открыть настройки дашборда</p></li>
+<li><p>“Discard” - отменить изменения и закрыть страницу графика</p></li>
+<li><p>“Save” - сохранить дашборд</p></li>
+<li><p>“Apply” - применить изменения графика и перейти на страницу дашборда (без сохранения дашборда)</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="id2">
+<h2>Создание фильтров для дашборда<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Иногда временного фильтра может не хватать для определенных метрик.
+В таком случае можно создать собственные фильтры (фильтры создаются не для конкретного графика, а для всего дашборда).
+Для этого в вверхней панели выбираем ⚙️ (”Open dashboard settings”).
+В боковом меню открывшейся страницы нажимаем “Variables” и открывается страница редактирования фильтров
+(для того чтобы эта страница работала необходимо чтобы в области запроса был введен запрос;
+если запрос есть то по дефолту тут пусто). Для создания нового фильтра нажимаем кнопку “New”.</p>
+<p>Открывается страница для заполнения данных фильтра, содержащая следующие поля:</p>
+<ul class="simple">
+<li><p>“Name” - имя фильтра, к которому можно обратится в запросе</p></li>
+<li><p>“Type” - формат получения данных (запросом, вводимые списком значения и т.д.)</p></li>
+<li><p>“Label” - имя фильтра, отображаемое на панели фильтров</p></li>
+<li><p>“Hide” - поле, в котором указывается, что скрыть на панели. Всего 3 варианта: ничего не скрывать (” ”),
+скрыть название фильтра (”Label”) или скрыть весь фильтр (”Variable”)</p></li>
+<li><p>“{Type} Options” -  поле для ввода данных в зависимости от типа фильтра
+(для “Query” это запрос, база из которой берутся данные и сортировки; для “Custom” это поле для ввода значений и т.д.)</p></li>
+<li><p>“Selection Options” - поле с 2 настройками выбора данных: возмоность множественного выбора (”Multi-value”)
+и добавление поля “Выбрать все” (”Include All option”)</p></li>
+</ul>
+<p>После заполнения всех полей нажимаем кнопку “Add” и теперь в области фильтров отображается (если в поле “Hide” не выбранно “Variable”) новый фильтр.</p>
+</section>
 </section>
 
 
@@ -431,6 +489,28 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> На этой странице
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grafana">
+   Описание рабочего пространства Grafana
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Создание фильтров для дашборда
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>

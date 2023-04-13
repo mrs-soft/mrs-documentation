@@ -331,13 +331,13 @@
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../elements-of-system.html">Элементы системы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="forms.html">Формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="forms/configuration.html">Работа с формой в конфигураторе</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forms/configuration.html">Форма в конфигураторе</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forms/json.html">JSON-схема формы</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forms/form-instances.html">Экземпляр формы</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="dictionaries.html">Справочники</a></li>
-<li class="toctree-l2"><a class="reference internal" href="representations.html">Представления</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view.html">Представления</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu.html">Меню</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Связи</a></li>
 <li class="toctree-l2"><a class="reference internal" href="doc-templates.html">Шаблоны документов</a></li>
@@ -398,6 +398,69 @@
               
   <section id="id1">
 <h1>Связи<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>Антология<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="context-entity">
+<h3>Сущность контекста (Context Entity)<a class="headerlink" href="#context-entity" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>id (Идентификатор сущности)</p></li>
+<li><p>type (Тип сущности. Отображает принадлежность к тому или иному контексту)</p></li>
+<li><p>childOf (Список исходящих связей типа CHILD_OF)</p></li>
+<li><p>parent  (Список исходящих связей типа PARENT)</p></li>
+<li><p>hasAttachment  (Список исходящих связей типа HAS_ATTACHMENT)</p></li>
+<li><p>assignedTo  (Список исходящих связей типа ASSIGNED_TO)</p></li>
+<li><p>owner  (Список исходящих связей типа OWNER)</p></li>
+<li><p>relatedTo  (Список исходящих связей типа RELATED_TO)</p></li>
+<li><p>incomingParent (Список входящих связей типа PARENT)</p></li>
+<li><p>incomingHasAttachment (Список входящих связей типа HAS_ATTACHMENT)</p></li>
+<li><p>incomingAssignedTo (Список входящих связей типа ASSIGNED_TO)</p></li>
+<li><p>incomingOwner (Список входящих связей типа OWNER)</p></li>
+<li><p>incomingRelatedTo (Список входящих связей типа RELATED_TO)</p></li>
+</ul>
+</section>
+<section id="relation">
+<h3>Связь (Relation)<a class="headerlink" href="#relation" title="Permalink to this heading">#</a></h3>
+<p>Является объектом на уровне графовой базы Neo4j.</p>
+<ul class="simple">
+<li><p>id (Идентификатор связи на уровне Neo4j)</p></li>
+<li><p>start (Узел в neo4j, из которого выходит связь)</p></li>
+<li><p>end (Узел в neo4j, в который входит связь)</p></li>
+<li><p>relationId (Идентификатор связи, который задаётся клиентским приложеним,
+необходимо для подготовки клиент-серверного взаимодействия к оффлайн режиму работы)</p></li>
+<li><p>relationType (Тип данной связи)</p></li>
+<li><p>archived (При попытке удаления связи путём запросов к контексту связей происходит её архивация)</p></li>
+<li><p>payload (Произвольные данные в json формате, хранящиеся внутри связи)</p></li>
+</ul>
+</section>
+<section id="relation-types">
+<h3>Типы связей (Relation types)<a class="headerlink" href="#relation-types" title="Permalink to this heading">#</a></h3>
+<p>На данный момент имеются следующие типы связей:</p>
+<ul class="simple">
+<li><p>ASSIGNED_TO - связь, отображающая назначение пользователя на произвольную сущность</p></li>
+<li><p>CHILD_OF - связь, отображающая принадлежность объекта некоему объекту на уровень выше.
+На данный момент актуальна только для УС, планируется её удаление и переход к связи PARENT</p></li>
+<li><p>PARENT - связь, отображающая отношение “является родителем” между двумя сущностями</p></li>
+<li><p>OWNER - связь между пользователем и произвольной сущностью, отражающая факт владения пользователем данной сущностью.
+В основном используется для отображения того факта, что пользователь является создателем данной сущности</p></li>
+<li><p>RELATED_TO - связь, обозначающая произвольное отношение между двумя сущностями.
+Используется в том случае, когда нам не важно в каком отношении находятся сущности, но необходима связь между ним                                                                                                                                                                                                                                                                                                                                                  и</p></li>
+<li><p>HAS_ATTACHMENT - связь между неким аттачментом и произвольной сущностью в системе. По большей степени актуальна для УС</p></li>
+</ul>
+</section>
+<section id="assigned-to">
+<h3>Связь ASSIGNED_TO<a class="headerlink" href="#assigned-to" title="Permalink to this heading">#</a></h3>
+<p>Помимо стандартных атрибутов связи имеет поле roles (Список идентификаторов ролей пользователя).
+Данное поле используется для реализации Графовых прав.</p>
+<section id="id3">
+<h4>Типы прав<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Access (проверяется на графе) — возможность принципиального доступа до сущности
+Например, если есть доступ, то вся сущность грузится в оффлайн-хранилище или к ней может пройти запрос или команда;</p></li>
+<li><p>Permissions (проверяются с помощью хуков или ABAC-движка) — возможность выполнить команду или произвести чтение;</p></li>
+</ul>
+</section>
+</section>
+</section>
 </section>
 
 
@@ -431,6 +494,52 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> На этой странице
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Антология
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context-entity">
+     Сущность контекста (Context Entity)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relation">
+     Связь (Relation)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relation-types">
+     Типы связей (Relation types)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assigned-to">
+     Связь ASSIGNED_TO
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Типы прав
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
