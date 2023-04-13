@@ -39,6 +39,7 @@ JSON-схема для создания компонента в конфигур
     "helperText": "..."
 
 ..  list-table::
+    :widths: 10 80 10
     :header-rows: 1
 
     *   - Свойство

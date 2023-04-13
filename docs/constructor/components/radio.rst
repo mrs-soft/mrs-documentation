@@ -123,6 +123,7 @@ JSON-схема:
     }
 
 ..  list-table::
+    :widths: 10 80 10
     :header-rows: 1
 
     *   - Свойство

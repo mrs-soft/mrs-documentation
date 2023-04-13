@@ -41,7 +41,7 @@ JSON-схема для создания раздела в форме в конф
     "properties": {}
 
 ..  list-table::
-    :widths: 20 70 10
+    :widths: 10 80 10
     :header-rows: 1
 
     *   - Свойство
