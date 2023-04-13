@@ -29,35 +29,40 @@
         "structuralElement"
     ]
     ,
-    "properties": {
-        "executiveDocumentations": {
+    "properties": [
+        {
             "type": "attachments",
-            "title": "Перечень ИД"
+            "title": "Перечень ИД",
+            "name": "executiveDocumentations"
         },
-        "constractionObject": {
+        {
             "type": "dev_ok_construction_object",
             "title": "Объект строительства",
-            "desctiption": "Выберите объект строительства"
+            "desctiption": "Выберите объект строительства",
+            "name":"constractionObject"
         },
-        "reasonForRejection": {
+        {
             "enum": [
                 "Нет строительной готовности",
                 "Нет доступа",
                 "Брак"
             ],
             "type": "select",
-            "title": "Причина отклонения"
+            "title": "Причина отклонения",
+            "name": "reasonForRejection"
         },
-        "workingDocumentations": {
+        {
             "type": "attachments",
-            "title": "Перечень РД"
+            "title": "Перечень РД",
+            "name": "workingDocumentations"
         },
-        "numberOfContract": {
+        {
             "type": "text",
             "title": "Номер договора",
-            "description": "Введите номер договора"
+            "description": "Введите номер договора",
+            "name": "numberOfContract"
         },
-        "measurementUnits": {
+        {
             "enum": [
                 "м",
                 "м2",
@@ -71,11 +76,13 @@
             ],
             "type": "select",
             "title": "Единицы измерения",
-            "description": "Единицы измерения объема"
+            "description": "Единицы измерения объема",
+            "name": "measurementUnits"
         },
-        "subcontractor": {
+        {
             "type": "object",
             "title": "Субподрядчик",
+            "name": "subcontractor",
             "properties": {
                 "user": {
                     "type": "user",
@@ -92,9 +99,10 @@
                 }
             }
         },
-        "contractor": {
+        {
             "type": "object",
             "title": "Подрядчик",
+            "name": "contractor",
             "properties": {
                 "user": {
                     "type": "user",
@@ -111,9 +119,10 @@
                 }
             }
         },
-        "authorSupervision": {
+        {
             "type": "object",
             "title": "Авторский надзор",
+            "name": "authorSupervision",
             "properties": {
                 "user": {
                     "type": "user",
@@ -130,12 +139,13 @@
                 }
             }
         },
-        "volume": {
+        {
             "type": "number",
             "title": "Объем",
-            "description": "Введите объем"
+            "description": "Введите объем",
+            "name": "volume"
         },
-        "jobCategory": {
+        {
             "enum": [
                 "СМР",
                 "Документация",
@@ -144,16 +154,19 @@
                 "Охрана труда"
             ],
             "type": "select",
-            "title": "Категория предъявляемой работы"
+            "title": "Категория предъявляемой работы",
+            "name": "jobCategory"
         },
-        "description": {
+        {
             "type": "textarea",
             "title": "Описание",
-            "description": "Введите описание"
+            "description": "Введите описание",
+            "name": "description"
         },
-        "generalContractor": {
+        {
             "type": "object",
             "title": "Генподрядчик",
+            "name": "generalContractor",
             "properties": {
                 "user": {
                     "type": "user",
@@ -170,9 +183,10 @@
                 }
             }
         },
-        "customer": {
+        {
             "type": "object",
             "title": "Заказчик",
+            "name": "customer",
             "properties": {
                 "user": {
                     "type": "user",
@@ -189,19 +203,22 @@
                 }
             }
         },
-        "comment": {
+        {
             "type": "textarea",
             "title": "Комментарий",
-            "description": "Введите комментарий"
+            "description": "Введите комментарий",
+            "name": "comment"
         },
-        "rdCode": {
+        {
             "type": "text",
             "title": "Шифр РД",
-            "description": "Введите шифр РД"
+            "description": "Введите шифр РД",
+            "name": "rdCode"
         },
-        "structuralElement": {
+        {
             "type": "text",
-            "title": "Конструктивный элемент"
+            "title": "Конструктивный элемент",
+            "name": "structuralElement"
         }
-    }
+    ]
 }

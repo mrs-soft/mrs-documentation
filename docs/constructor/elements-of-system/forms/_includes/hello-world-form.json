@@ -7,8 +7,9 @@
         "Hello World!"
     ]
     ,
-    "properties": {
-        "Hello World!": {
+    "properties": [
+        {
+            "name": "Hello World!",
             "order": [
                 "textField",
                 "dateField"
@@ -19,19 +20,21 @@
             ],
             "type": "object",
             "title": "Привет, мир!",
-            "properties": {
-                "textField": {
+            "properties": [
+                {
                     "type": "text",
                     "title": "Приветствие в текстовом виде",
-                    "description": "Введите приветствие"
+                    "description": "Введите приветствие",
+                    "name": "textField"
                 },
-                "dateField": {
+                {
                     "type": "date",
                     "title": "Дата приветствия",
                     "description": "Выберите дату приветствия",
-                    "helperText": "Советуем приветствовать мир в течение рабочего дня, иначе есть шанс, что вам не ответят."
+                    "helperText": "Советуем приветствовать мир в течение рабочего дня, иначе есть шанс, что вам не ответят.",
+                    "name": "dateField"
                 }
-            }
+            ]
         }
-    }
+    ]
 }
