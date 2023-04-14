@@ -10,6 +10,7 @@
 #.  :doc:`api`
 #.  :doc:`services`
 #.  :doc:`examples`
+#.  :doc:`glossary`
 
 О Платформе
 -----------
