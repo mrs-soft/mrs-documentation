@@ -409,6 +409,183 @@
               
   <section id="id1">
 <h1>Виды представлений<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="list">
+<h2>List — Список<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3>Предназначение<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Отображение элементов в виде списка</p>
+<p><strong>Class</strong>: <code class="docutils literal notranslate"><span class="pre">list</span></code></p>
+</section>
+<section id="id3">
+<h3>Модель данных<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">interface</span><span class="w"> </span><span class="nx">IListViewItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">icon</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewIcon</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">avatar</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewUser</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewTitle</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewDescription</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fields</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewField</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">chips</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewChip</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">users</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewUser</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">docUrl</span><span class="o">?:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Внешний вид<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h4>Список для отображения информации о доступных пользователю экземплярах формы<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<a class="framed"
+               data-lightbox="group-1f609627-f808-4ba7-96f3-227e53e9eba5"
+               href="../_images/list-1-form-instances1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/list-1-form-instances1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+<section id="id6">
+<h4>Список для отображения и скачивания отчетов<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<a class="framed"
+               data-lightbox="group-8cedce98-8524-4f3a-96e9-36cdf9a2f300"
+               href="../_images/list-2-reports1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/list-2-reports1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+<section id="id7">
+<h4>Список для отображения плоских справочников<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<a class="framed"
+               data-lightbox="group-64e764bd-9dcb-4014-9504-8c0f81880385"
+               href="../_images/list-3-dictionaries1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/list-3-dictionaries1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+</section>
+</section>
+<section id="tree">
+<h2>Tree — Дерево<a class="headerlink" href="#tree" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h3>Предназначение<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>Отображение списка элементов в виде дерева</p>
+<p><strong>Class</strong>: <code class="docutils literal notranslate"><span class="pre">tree</span></code></p>
+</section>
+<section id="id9">
+<h3>Модель данных<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">interface</span><span class="w"> </span><span class="nx">ITreeViewItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewTitle</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewDescription</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">icon</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewIcon</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">parentId</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">isFolder</span><span class="o">?:</span><span class="w"> </span><span class="kr">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h3>Внешний вид<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<a class="framed"
+               data-lightbox="group-a8ae9457-d670-4533-a292-dc8ec1e5c501"
+               href="../_images/tree-1-view1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/tree-1-view1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+</section>
+<section id="grid">
+<h2>Grid — Карточки<a class="headerlink" href="#grid" title="Permalink to this heading">#</a></h2>
+<section id="id11">
+<h3>Предназначение<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<p>Используется для отображения списка экземпляров представления в виде карточек</p>
+<p><strong>Class</strong>: <code class="docutils literal notranslate"><span class="pre">grid</span></code></p>
+</section>
+<section id="id12">
+<h3>Модель данных<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">interface</span><span class="w"> </span><span class="nx">IGridViewItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">topChip</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewChip</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">caption</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewCaption</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewTitle</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewDescription</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">images</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewImage</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">chips</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewChip</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">users</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewUser</span><span class="p">[];</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id13">
+<h3>Внешний вид<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<a class="framed"
+               data-lightbox="group-e88dbfcd-4492-486e-9aa8-d99a7dab7f8f"
+               href="../_images/grid-1-view1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/grid-1-view1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+</section>
+<section id="drawing2d">
+<h2>Drawing2d — Чертёж<a class="headerlink" href="#drawing2d" title="Permalink to this heading">#</a></h2>
+<section id="id14">
+<h3>Предназначение<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>Представление darwing2d — это возможность отображать и работать с двухмерными чертежами.
+Просматривать чертеж, проставлять и редактировать аннотации и отметки, а также указывать дополнительную информацию</p>
+<p><strong>Class</strong>: <code class="docutils literal notranslate"><span class="pre">drawing2d</span></code></p>
+</section>
+<section id="id15">
+<h3>Модель данных<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">interface</span><span class="w"> </span><span class="nx">IDrawing2dViewItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewTitle</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewDescription</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">pin</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">shapes</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="p">[];</span>
+<span class="w">    </span><span class="nb">document</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3>Внешний вид<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<a class="framed"
+               data-lightbox="group-27045def-6c86-414f-8702-5d7463b6cb52"
+               href="../_images/drawing2d-1-view1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/drawing2d-1-view1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+</section>
 </section>
 
 
@@ -442,6 +619,123 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> На этой странице
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list">
+   List — Список
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Предназначение
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Модель данных
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Внешний вид
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Список для отображения информации о доступных пользователю экземплярах формы
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Список для отображения и скачивания отчетов
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Список для отображения плоских справочников
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tree">
+   Tree — Дерево
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Предназначение
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Модель данных
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Внешний вид
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grid">
+   Grid — Карточки
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Предназначение
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Модель данных
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Внешний вид
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawing2d">
+   Drawing2d — Чертёж
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Предназначение
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Модель данных
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Внешний вид
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
