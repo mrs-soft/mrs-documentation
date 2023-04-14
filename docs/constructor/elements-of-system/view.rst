@@ -4,87 +4,23 @@
 Определение
 -----------
 
-Представление — это настроенное отображение нескольких сущностей (экземпляров форм) системы в определенном интерфейсе.
-Представление позволяет отображать сущности в разном виде (Подробнее в Виды представлений).
+Представление — это преднастроеный элемент пользовательского интерфейса системы, служащий для отображения и/или интерактивной работы с данными. 
 
-Представления заранее описываются в конфигурации, на них можно ссылаться в связанных представлениях, детально настраивать, параметризовать и тд.
+Представления позволяют улучшить пользовательский опыт.
+Например, вместо того чтобы всегда использовать список объектов вы можете вывести их как карточки, отобразить на чертеже, карте,
+в календаре, диаграмме Гантта и тд.
 
-Содержимое текущей формы передается в представление как модель для параметров.
+В представлениях могут быть организованы интерактивные элементы.
+Например, фильтры для отображения требуемой выборки данных или возможность изменять объекты системы прямо из представления (запланировано в v2.1).
 
-В интерфейсе можно отобразить не только данные формы, но и отобразить связанные с формой объекты в удобном для пользователя виде.
+Представление можно вывести в главное меню приложения, откуда пользователи смогут войти в него и выполнить свою задачу.
 
-Модель view
------------
+Представлени строится на основе определенного Запроса к данным системы и функции-хука преобразования (map) данных.
+Полученные в результате данные должны соответствовать модели, которую ожидает выбранный тип представления.
 
-View =
+..  toctree::
+    :maxdepth: 2
+    :caption: Подробнее в статьях:
 
-*   Id: guid
-*   Title: string
-*   Class: string
-*   Query: json
-*   Map: json
-*   Settings: json
-
-Модель данных
-+++++++++++++
-
-..  code-block:: javascript
-
-    interface IViewTitle {
-        value: string;
-        placeholder: string;
-        textClip?: boolean;
-    }
-
-..  code-block:: javascript
-
-    interface IViewDescription extends IViewTitle {}
-
-..  code-block:: javascript
-
-    interface IViewCaption extends IViewTitle {
-        color?: string;
-    }
-
-..  code-block:: javascript
-
-    interface IViewIcon {
-        value: MRSIcon;
-        color?: string;
-    }
-
-..  code-block:: javascript
-
-    interface IViewField extends IViewTitle {
-        title: string;
-    }
-
-..  code-block:: javascript
-
-    interface IViewChip extends IViewTitle {
-        icon?: MRSIcon;
-        color?: string;
-    }
-
-..  code-block:: javascript
-
-    interface IViewUser {
-        avatar?: string;
-        name: string;
-        caption?: string;
-    }
-
-..  code-block:: javascript
-
-    interface IViewImage {
-        placeholder: string;
-        images: IImage[];
-    }
-
-..  code-block:: javascript
-
-    interface IImage {
-        url: string;
-    }
-
-..  note:: В поля ``color`` подставляются только значения из темы, например, “primary.dark”.
+    view/structure
+    view/query
