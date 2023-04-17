@@ -354,7 +354,7 @@
 <li class="toctree-l2"><a class="reference internal" href="configuration-structure/connections.html">Связи</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration-structure/doc-templates.html">Шаблоны документов</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration-structure/analytics.html">Аналитические графики</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration-structure/integrations.html">Сценарии интеграции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/integrations.html">Сценарии и интеграции</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -410,6 +410,7 @@
   <section id="id1">
 <h1>Структура конфигурации<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Оглавление</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="configuration-structure/forms.html">Формы</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="configuration-structure/forms/configuration.html">Структура Формы</a></li>
@@ -420,48 +421,117 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="configuration-structure/dictionaries.html">Справочники</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration-structure/view.html">Представления</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="configuration-structure/view/structure.html">Структура Представления</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration-structure/view/query.html">Запросы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/view.html#id2">Определение</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="configuration-structure/menu.html">Меню</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration-structure/connections.html">Связи</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration-structure/doc-templates.html">Шаблоны документов</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration-structure/analytics.html">Аналитические графики</a></li>
-<li class="toctree-l1"><a class="reference internal" href="configuration-structure/integrations.html">Сценарии интеграции</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration-structure/menu.html">Меню</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/menu.html#id2">Системные пункты меню</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/menu.html#id3">Кастомные пункты меню</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration-structure/connections.html">Связи</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/connections.html#relation">Связь (Relation)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/connections.html#relation-types">Типы связей (Relation types)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/connections.html#assigned-to">Связь ASSIGNED_TO</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration-structure/doc-templates.html">Шаблоны документов</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/doc-templates.html#doc-templates">Модель данных doc_templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration-structure/analytics.html">Аналитические графики</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/analytics.html#grafana">Описание рабочего пространства Grafana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration-structure/analytics.html#id2">Создание фильтров для дашборда</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration-structure/integrations.html">Сценарии и интеграции</a></li>
 </ul>
 </div>
 <section id="id2">
 <h2>Информационная система<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>Работа системы начинается после <a class="reference internal" href="../glossary.html#term-3"><span class="xref std std-term">ввода данных</span></a> пользователем.
-Информация от пользователя попадает либо в <strong>бизнес-объекты</strong>, либо в <strong>справочную информацию</strong>.</p>
-<figure class="">
+<p>Для понимания ниже представлена примерная схема работы типичной информационной системы. Далее описан план её работы.</p>
+<figure class="framed">
             <a 
-               data-lightbox="group-3cd90b3f-7ffb-4049-84cb-2fcc034d83b8"
+               data-lightbox="group-0a1fe8f5-3355-4f9b-94b6-44786817b9c9"
                href="../_images/index-1-full-scheme-info-sys1.png"
-               title="Общая схема информационной системы"
-               data-title="Общая схема информационной системы"
+               title="Схема информационной системы"
+               data-title="Схема информационной системы"
                
                ><img src="../_images/index-1-full-scheme-info-sys1.png"
                      class="align-center"
                      width="100%"
                      height="auto"
-                     alt="Общая схема информационной системы"/>
-                </a><figcaption>Общая схема информационной системы</figcaption>
-            </figure><figure class="">
+                     alt="Схема информационной системы"/>
+                </a><figcaption>Схема информационной системы</figcaption>
+            </figure><p>Работа системы начинается после <a class="reference internal" href="../glossary.html#term-3"><span class="xref std std-term">ввода данных</span></a> пользователем.
+Информация от пользователя попадает либо в <a class="reference internal" href="../glossary.html#term-4"><span class="xref std std-term">бизнес-объекты</span></a>, либо в <a class="reference internal" href="../glossary.html#term-9"><span class="xref std std-term">справочную информацию</span></a>.</p>
+<p>Бизнес-объекты, как правило, состоят из модели данных и правил <a class="reference internal" href="../glossary.html#term-6"><span class="xref std std-term">поведения</span></a>.
+То есть данные не просто попадают в бизнес-объект, но и сверяет полученные данные с внутренними правилами функционирования системы.</p>
+<p><a class="reference internal" href="../glossary.html#term-9"><span class="xref std std-term">Справочная информация</span></a> — это какие-то сведения, которые попадают в систему без каких-то строгих правил.
+На основе эти данных в бизнес-объекте могут быть созданые какие-то правила, но на входе данные не проверяются и не изменяются.</p>
+<p>Также в схеме присутствуют <strong>внешние системы</strong>, которые тем или иным образом связаны с нашей информационной системой.
+Информация от внешний систем попадает к нам только в виде справочных данных, так как она формируется и создаётся вне нашей системы.</p>
+<p>Во время работы информационной системы <a class="reference internal" href="../glossary.html#term-5"><span class="xref std std-term">состяние</span></a> бизнес-объектов может меняться
+и это приводит к появлению <a class="reference internal" href="../glossary.html#term-8"><span class="xref std std-term">событий</span></a>. События в свою очередь приводят в работу бизнес-процессы, которые каким-то образом
+влияют на бизнес-объекты.</p>
+<p>После того, как описанная система работает исправно, необходимо подготовить одну или несколько <a class="reference internal" href="../glossary.html#term-10"><span class="xref std std-term">моделей для чтения</span></a>.
+Примерные виды моделей для чтения:</p>
+<ul class="simple">
+<li><p>пользовательский интерфейс,</p></li>
+<li><p>аналитические графики,</p></li>
+<li><p>документация.</p></li>
+</ul>
+<p>В схеме также присутствуют некоторые бизнес-правила обмена, которые позволяют отправлять данные во внешние системы.</p>
+<p>Но конечным потребителем данных всё ещё является пользователь.</p>
+</section>
+<section id="id3">
+<h2>Схема относительно Платформы МРС<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>На основе предыдущей схемы мы создали нашу информационную систему, которую и описываем в этой документации — Платформа МРС.</p>
+<figure class="framed">
             <a 
-               data-lightbox="group-383ff451-099e-442f-9aba-b7dee6f63fd6"
+               data-lightbox="group-b176e137-e2aa-407c-9ec4-f3e0d6413085"
                href="../_images/index-2-full-scheme-with-terms1.png"
-               title="Общая схема c элементами системы"
-               data-title="Общая схема c элементами системы"
+               title="Схема относительно Платформы МРС"
+               data-title="Схема относительно Платформы МРС"
                
                ><img src="../_images/index-2-full-scheme-with-terms1.png"
                      class="align-center"
                      width="100%"
                      height="auto"
-                     alt="Общая схема c элементами системы"/>
-                </a><figcaption>Общая схема c элементами системы</figcaption>
-            </figure></section>
+                     alt="Схема относительно Платформы МРС"/>
+                </a><figcaption>Схема относительно Платформы МРС</figcaption>
+            </figure><p>За работу бизнес-объектов в нашей системе отвечают:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="configuration-structure/forms.html"><span class="doc">формы</span></a> — используются для моделирования бизнес-объектов,</p>
+<ul>
+<li><p><a class="reference internal" href="configuration-structure/forms/hooks.html"><span class="doc">бизнес-правила (хуки)</span></a> — хуки отвечают за моделирование поведения внутри бизнес-объектов,</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="configuration-structure/connections.html"><span class="doc">связи</span></a> — связи отвечают за моделирование взаимосвязей между объектами;</p></li>
+</ul>
+<p>За работу справочной информации в нашей системе отвечают:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="configuration-structure/dictionaries.html"><span class="doc">справочники</span></a> — справочники хранят справочную информацию,</p></li>
+<li><p><a class="reference internal" href="configuration-structure/integrations.html"><span class="doc">сценарии и интеграции</span></a> — сценарии и интеграции отвечают за правила обмена
+информацией между справочниками и внешними системами;</p></li>
+</ul>
+<p>За бизнес-процессы и события отвечают:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="configuration-structure/integrations.html"><span class="doc">сценарии и интеграции</span></a> — сценарии и интеграции отвечают за контроль событий
+и взаимодействие бизнес-процессов с бизнес-объектами;</p></li>
+</ul>
+<p>Модели для чтения:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="configuration-structure/view.html"><span class="doc">представления</span></a> — представления выступают в виде пользовательского интерфейса,
+который будет удобен для решения конкретной задачи,</p></li>
+<li><p><a class="reference internal" href="configuration-structure/menu.html"><span class="doc">меню</span></a> — от меню зависит то, как пользователь будет ориентироваться в приложении</p></li>
+<li><p><a class="reference internal" href="configuration-structure/analytics.html"><span class="doc">внедряемые графики</span></a> — это аналитические графики,
+которые составляются на основе бизнес-объектов и справочных данных,</p></li>
+<li><p><a class="reference internal" href="configuration-structure/doc-templates.html"><span class="doc">шаблоны документов</span></a> — система позволяет создавать шаблоны печатных форм,</p></li>
+<li><p><a class="reference internal" href="configuration-structure/integrations.html"><span class="doc">сценарии и интеграции</span></a> — сценарии и интеграции отвечают за сбор нашей информации
+и публикацию их в некоторые внешние системы.</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -505,6 +575,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    Информационная система
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Схема относительно Платформы МРС
   </a>
  </li>
 </ul>
