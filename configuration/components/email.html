@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Электронная почта — email &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
+  <script>
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1e1de1a1873e13ef5536" rel="stylesheet">
+
+  
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/hoverxref.js"></script>
+    <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../_static/js/micromodal.min.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'configuration/components/email';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Числовое поле — number" href="number.html" />
+    <link rel="prev" title="Многострочный текст — textarea" href="text-area.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="ru">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Поиск по документации..." aria-label="Поиск по документации..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../index.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Навигация">
+        Навигация
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item current active">
+                    <a class="nav-link" href="../../configuration.html">
+                        Конфигурация
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../api.html">
+                        Интеграция и API
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../services.html">
+                        Службы
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../examples.html">
+                        Примеры
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../glossary.html">
+                        Глоссарий
+                    </a>
+                </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      <div class="navbar-end-item navbar-end__search-button-container">
+        
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Поиск" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="Светлая тема/Тёмная тема" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://vk.com/m_r_s" title="VK" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-vk"></i></span>
+            <label class="sr-only">VK</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  <div class="search-button-container--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Поиск" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+  </div>
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Навигация">
+        Навигация
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                <li class="nav-item current active">
+                    <a class="nav-link" href="../../configuration.html">
+                        Конфигурация
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../api.html">
+                        Интеграция и API
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../services.html">
+                        Службы
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../examples.html">
+                        Примеры
+                    </a>
+                </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../../glossary.html">
+                        Глоссарий
+                    </a>
+                </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <span class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="Светлая тема/Тёмная тема" data-toggle="tooltip">
+    <a class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="fa-regular fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://vk.com/m_r_s" title="VK" class="nav-link" rel="noopener" target="_blank" data-toggle="tooltip"><span><i class="fa-brands fa-vk"></i></span>
+            <label class="sr-only">VK</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Section navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    Навигация
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../dev-environment.html">Среда разработки</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dev-environment/vs-code.html">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev-environment/strapi.html">Strapi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev-environment/directus.html">Directus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev-environment/n8n.html">N8N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dev-environment/grafana.html">Grafana</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../configuration-structure.html">Структура конфигурации</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../configuration-structure/forms.html">Формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration-structure/forms/configuration.html">Структура Формы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration-structure/forms/json.html">Структура Схемы данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration-structure/forms/form-instances.html">Экземпляр формы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration-structure/forms/hooks.html">Бизнес-правила (хуки)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../configuration-structure/dictionaries.html">Справочники</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../configuration-structure/dictionaries/dictionaries-types.html">Типовые структуры справочников</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration-structure/dictionaries/dictionaries-types/list.html">Плоский справочник — list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration-structure/dictionaries/dictionaries-types/tree.html">Иерархический справочник — tree</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../configuration-structure/view.html">Представления</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration-structure/view/structure.html">Структура Представления</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration-structure/view/query.html">Запросы</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration-structure/menu.html">Меню</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration-structure/connections.html">Связи</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration-structure/doc-templates.html">Шаблоны документов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration-structure/analytics.html">Аналитические графики</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration-structure/integrations.html">Сценарии интеграции</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../components.html">Компоненты формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="text.html">Краткий текст — text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text-area.html">Многострочный текст — textarea</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Электронная почта — email</a></li>
+<li class="toctree-l2"><a class="reference internal" href="number.html">Числовое поле — number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="date.html">Дата — date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datetime.html">Дата и время — datetime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radio.html">Переключатель — radio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checkboxes.html">Список из чекбоксов — checkboxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="select.html">Ниспадающий список — select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user.html">Выбор пользователя — user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attachments.html">Прикреплённые файлы — attachments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Выбор из справочника — dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="button-switcher.html">Меню вкладок — buttonSwitcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing2d.html">Аннотации на чертёже — drawing2d</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view.html">Выбор из представления — view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view-display.html">Отображение представления — viewDisplay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feed.html">Отображение ленты сообщений — feed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="object.html">Разделы в форме — object</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../types-of-view.html">Виды представлений</a></li>
+</ul>
+
+  </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+      </div>
+      <main class="bd-main">
+        
+        
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+            </div>
+            
+            
+            <article class="bd-article" role="main">
+              
+  <section id="email">
+<h1>Электронная почта — email<a class="headerlink" href="#email" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2>Определение<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Компонент используется для ввода электронной почты.
+От обычного текстового поля он отличается возможностью верификации формата email.</p>
+<p>Тип компонента в конфигураторе: <strong>email</strong>.</p>
+</section>
+<section id="id2">
+<h2>Внешний вид<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>JSON-схема для компонента электронной почты в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;executor-email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Электронная почта исполнителя&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Введите электронную почту специалиста...&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Как пользователь видит компонент:</p>
+<a class=""
+               data-lightbox="group-aeb53903-c682-426a-92cc-4774e3f4ec82"
+               href="../../_images/email-screen-11.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/email-screen-11.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента электронной почты"/>
+                </a><p>Реакция компонента на неверную форму email:</p>
+<a class=""
+               data-lightbox="group-948bdac0-eacc-49d7-b9ea-40ce7d11c491"
+               href="../../_images/email-screen-21.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/email-screen-21.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента электронной почты"/>
+                </a></section>
+<section id="id3">
+<h2>Свойства<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Электронная почта&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Введите электронную почту ответственного лица...&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;helperText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Введите адрес почты&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hidden&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 80.0%" />
+<col style="width: 10.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Свойство</p></th>
+<th class="head"><p>Определение</p></th>
+<th class="head"><p>Тип данных</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>Тип элемента. Для электронной почты — это всегда <code class="docutils literal notranslate"><span class="pre">email</span></code>.</p></td>
+<td><p><strong>string</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">title</span></code></p></td>
+<td><p>Название поля, отображаемое в форме.</p></td>
+<td><p><strong>string</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">description</span></code></p></td>
+<td><p>Описание поля. Отображается как заглушка поля в форме.</p></td>
+<td><p><strong>string</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code></p></td>
+<td><p>Это стандартное свойство для всех компонентов.
+При установке значения <code class="docutils literal notranslate"><span class="pre">true</span></code> для этого свойства, компонент будет скрыт из формы.
+Это свойство помогает выстраивать логику для работы с полями.
+То есть с помощью хуков есть возможность изменить значение этого свойства в определённых ситуациях.
+Либо использовать данные из этого поля в других местах, но так, чтобы конечный пользователь не видел этого.</p></td>
+<td><p><strong>boolean</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">helperText</span></code></p></td>
+<td><p>Описание поля. Это стандартное свойство и отображается как текст под полем компонента.</p></td>
+<td><p><strong>string</strong></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2>Модель данных<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>Данные сохраняются в <code class="docutils literal notranslate"><span class="pre">FormInstances</span></code> в поле <code class="docutils literal notranslate"><span class="pre">Data</span></code> в виде JSON.</p>
+<p>Заполненное поле электронной почты в пользовательском приложении:</p>
+<a class=""
+               data-lightbox="group-a682b898-1b20-4aed-8f1d-4c44ad82e04e"
+               href="../../_images/email-screen-31.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/email-screen-31.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="Пример компонента электронной почты"/>
+                </a><p>После сохранения данные попадают в <code class="docutils literal notranslate"><span class="pre">FromInstances</span></code> в конфигураторе:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;executor-email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test@plotpad.ru&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>Примеры использования<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<p>Ниже компонент используется без <code class="docutils literal notranslate"><span class="pre">description</span></code> и с <code class="docutils literal notranslate"><span class="pre">helperText</span></code>. Также явно проставлено свойство <code class="docutils literal notranslate"><span class="pre">&quot;hidden&quot;:</span> <span class="pre">false</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E-mail поле&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;hidden&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;helperText&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Введите адрес почты&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            </article>
+            
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="text-area.html" title="назад страница">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">назад</p>
+          <p class="prev-next-title">Многострочный текст — textarea</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="number.html" title="вперёд страница">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">вперёд</p>
+      <p class="prev-next-title">Числовое поле — number</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> На этой странице
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Определение
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Внешний вид
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Свойства
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Модель данных
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   Примеры использования
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+<div class="toc-item">
+  
+<div id="searchbox"></div>
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+<div class="toc-item">
+  
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+          </div>
+        </footer>
+        
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1e1de1a1873e13ef5536"></script>
+
+  <footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2023, МРС.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br>
+</p>
+
+  </div>
+  
+</div>
+  </footer>
+  </body>
+</html>
