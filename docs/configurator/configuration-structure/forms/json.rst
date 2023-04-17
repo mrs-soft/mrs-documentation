@@ -55,7 +55,7 @@
 Все остальные атрибуты можно не добавлять, если такой необходимости нет.
 
 Но форма не будет работать, если не добавить в ``properties`` хотя бы один компонент формы.
-Подробнее о компонентах в разделе :doc:`/constructor/components`.
+Подробнее о компонентах в разделе :doc:`/configurator/components`.
 
 Пример формы
 ------------
@@ -88,6 +88,6 @@
 
 Подробнее о компонентах, которые использовались в этой форме:
 
-#.  :doc:`/constructor/components/text`
-#.  :doc:`/constructor/components/date`
-#.  :doc:`/constructor/components/object`
+#.  :doc:`/configurator/components/text`
+#.  :doc:`/configurator/components/date`
+#.  :doc:`/configurator/components/object`

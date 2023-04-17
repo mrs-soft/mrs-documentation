@@ -5,14 +5,14 @@
     :maxdepth: 2
     :titlesonly:
 
-    elements-of-system/forms
-    elements-of-system/dictionaries
-    elements-of-system/view
-    elements-of-system/menu
-    elements-of-system/connections
-    elements-of-system/doc-templates
-    elements-of-system/analytics
-    elements-of-system/integrations
+    configuration-structure/forms
+    configuration-structure/dictionaries
+    configuration-structure/view
+    configuration-structure/menu
+    configuration-structure/connections
+    configuration-structure/doc-templates
+    configuration-structure/analytics
+    configuration-structure/integrations
 
 Информационная система
 ----------------------
