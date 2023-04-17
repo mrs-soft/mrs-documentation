@@ -6,7 +6,7 @@
 
 На этом сайте вы найдёте документацию для МРС Платформы:
 
-#.  :doc:`configurator`
+#.  :doc:`configuration`
 #.  :doc:`api`
 #.  :doc:`services`
 #.  :doc:`examples`
@@ -43,7 +43,7 @@
 ..  toctree::
     :hidden:
 
-    configurator
+    configuration
     api
     services
     examples

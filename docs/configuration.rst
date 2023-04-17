@@ -15,8 +15,8 @@
     :maxdepth: 3
     :titlesonly: 
     
-    configurator/dev-environment
-    configurator/configuration-structure
-    configurator/components
-    configurator/types-of-view
-..  configurator/how-to-start
+    configuration/dev-environment
+    configuration/configuration-structure
+    configuration/components
+    configuration/types-of-view
+..  configuration/how-to-start
