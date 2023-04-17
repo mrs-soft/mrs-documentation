@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Подключение к справочникам 1С &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
+    <title>Логинация &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -54,12 +54,10 @@
     <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/ref-books-1c';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'configurator/how-to-start';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="Совместная работа с Bitrix" href="bitrix-work.html" />
-    <link rel="prev" title="Кейс «Как сделать СтройКонтроль в Конструкторе?»" href="plotpad-in-constructor.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
   </head>
@@ -150,7 +148,7 @@
                 </li>
                 
 
-                <li class="nav-item current active">
+                <li class="nav-item">
                     <a class="nav-link" href="../examples.html">
                         Примеры
                     </a>
@@ -225,7 +223,7 @@
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
   
   <div class="sidebar-header-items sidebar-primary__section">
@@ -261,7 +259,7 @@
                 </li>
                 
 
-                <li class="nav-item current active">
+                <li class="nav-item">
                     <a class="nav-link" href="../examples.html">
                         Примеры
                     </a>
@@ -314,27 +312,6 @@
   </div>
 
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Section navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">
-    Навигация
-  </p>
-  <div class="bd-toc-item navbar-nav">
-    <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="first-form.html">Гайд «Как создать форму?»</a></li>
-<li class="toctree-l1"><a class="reference internal" href="entity-and-bis-rules.html">Гайд «Как задать сущности и правила бизнес-логики»</a></li>
-<li class="toctree-l1"><a class="reference internal" href="first-checklist.html">Гайд «Как создать чек-лист?»</a></li>
-<li class="toctree-l1"><a class="reference internal" href="expand-call-request.html">Гайд «Как расширить заявку-вызов?»</a></li>
-<li class="toctree-l1"><a class="reference internal" href="plotpad-in-constructor.html">Кейс «Как сделать СтройКонтроль в Конструкторе?»</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Подключение к справочникам 1С</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bitrix-work.html">Совместная работа с Bitrix</a></li>
-</ul>
-
-  </div>
-</nav>
-    </div>
-  </div>
-  
 
   
   <div class="sidebar-end-items sidebar-primary__section">
@@ -357,7 +334,33 @@
             <article class="bd-article" role="main">
               
   <section id="id1">
-<h1>Подключение к справочникам 1С<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>Логинация<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Перед началом работы вы должны убедиться, что у вас есть:</p>
+<ol class="arabic simple">
+<li><p>Код вашей организации.</p></li>
+<li><p>Данные — email и пароль — созданного для вас пользователя в <strong>Конструкторе</strong> и в <strong>Конфигураторе</strong>.</p></li>
+</ol>
+<p>Если чего-то из этого вам не хватает, обратитесь к ответственному лицу в вашей компании.</p>
+<section id="id2">
+<h2>Конструктор<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Чтобы попасть в Конструктор вашей организации перейдите по ссылке:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">код_организации</span><span class="p">]</span><span class="o">.</span><span class="n">plotpad</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Введите код вашей организации:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/app-logination-1.png"><img alt="Окно логинации в Конструкторе: ввод кода организации" class="align-center" src="../_images/app-logination-1.png" style="width: 70%;" /></a>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><p>Используйте email и пароль для входа:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/app-logination-2.png"><img alt="Окно логинации в Конструкторе: ввод email и пароля" class="align-center" src="../_images/app-logination-2.png" style="width: 70%;" /></a>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><p>Если возникают какие-то трудности со входом, то обратитесь в нашу службу поддержки через ответственное лицо вашей организации.</p></li>
+</ol>
+</section>
 </section>
 
 
@@ -368,20 +371,6 @@
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="plotpad-in-constructor.html" title="назад страница">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-          <p class="prev-next-subtitle">назад</p>
-          <p class="prev-next-title">Кейс «Как сделать СтройКонтроль в Конструкторе?»</p>
-      </div>
-  </a>
-  <a class='right-next' id="next-link" href="bitrix-work.html" title="вперёд страница">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">вперёд</p>
-      <p class="prev-next-title">Совместная работа с Bitrix</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
 </div>
             </footer>
             
@@ -391,6 +380,23 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> На этой странице
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Конструктор
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
