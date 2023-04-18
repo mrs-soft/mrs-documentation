@@ -409,6 +409,143 @@
               
   <section id="n8n">
 <h1>N8N<a class="headerlink" href="#n8n" title="Permalink to this heading">#</a></h1>
+<p>n8n - онлайн сервис для автоматизации разных типов работы и связи между различными сервисами.
+Процессы в n8n - определенные сценарии, состоящие из узлов, отвечающих за получение, обработку или отправку данных.
+Для отдела прикладной разработки это инструмент для решения задач, которые невозможно решить возможностями отдельно взятой системы.</p>
+<section id="id1">
+<h2>Логинация<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Для входа вам потребуются данные для входа. Если у вас их нет, то обратитесь к вашему руководителю.</p>
+<a class=""
+               data-lightbox="group-87a513a4-252b-4ac7-a789-6074fe51b090"
+               href="../../_images/n8n-1-logination1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-1-logination1.png"
+                     class=""
+                     width="50%"
+                     height="auto"
+                     alt="N8N"/>
+                </a></section>
+<section id="id2">
+<h2>Общий вид сервиса<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<a class=""
+               data-lightbox="group-97580489-f3c1-44c4-9db1-cc74bd49c882"
+               href="../../_images/n8n-2-overview1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-2-overview1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="N8N"/>
+                </a></section>
+<section id="id3">
+<h2>Описание нужных для работы элементов<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Элемент меню “Workflow” — <a class="framed reference internal" href="../../_images/n8n-9-workflow-icon.png"><img alt="Workflow-Icon" class="framed" src="../../_images/n8n-9-workflow-icon.png" style="width: 52.0px; height: 34.4px;" /></a>.
+При наведении на этот элемент появляется меню:</p>
+<a class="framed"
+               data-lightbox="group-c160dd07-68a5-4e85-9c59-8f08d6718856"
+               href="../../_images/n8n-3-workflow-menu1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-3-workflow-menu1.png"
+                     class=""
+                     width="50%"
+                     height="auto"
+                     alt="N8N"/>
+                </a><p>Из основных для работы тут это “New” и “Open”. “New” открывает новый пустой workflow для скрипта,
+а “Open” – открывает меню со списком сохраненных скриптов, при нажатии на которые открывается соответствующий workflow.</p>
+</li>
+<li><p>Элемент меню “Executions” — <a class="framed reference internal" href="../../_images/n8n-10-executions-icon.png"><img alt="Executions-Icon" class="framed" src="../../_images/n8n-10-executions-icon.png" style="width: 50.400000000000006px; height: 36.0px;" /></a>.
+При нажатии на этот элемент открывается список с результатами автоматического выполнения скриптов:</p>
+<a class="framed"
+               data-lightbox="group-f4489a2d-11fa-4381-8ae1-c517fb62832f"
+               href="../../_images/n8n-4-executions-list1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-4-executions-list1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="N8N"/>
+                </a><p>Статус указывает на то выполнен скрипт удачно или с ошибкой. Так же нажав на кнопку <a class="framed reference internal" href="../../_images/n8n-11-folder-icon.png"><img alt="Folder-Icon" class="framed" src="../../_images/n8n-11-folder-icon.png" style="width: 40.800000000000004px; height: 39.2px;" /></a> можно посмотреть выполнение скрипта:</p>
+<a class="framed"
+               data-lightbox="group-48340010-3558-4c87-92b8-6b0940868e9e"
+               href="../../_images/n8n-5-script1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-5-script1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="N8N"/>
+                </a><p>В открытом execution видны какие ноды (каждый квадрат называется нодой и имеет свой функционал и параметры,
+стрелки – связи между нодами по которым передаются данные от ноды к ноде в соответствующем порядке) отработали (зеленая рамка),
+в какие скрипт не дошел (без цветной рамки) и какие не отработали из-за ошибки (красная рамка).
+Ошибку можно посмотреть дважды нажав на соответствующую ноду.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В execution невозможно выполнение и изменение нод и всего скрипта, так как тут отображается только выполнение.</p>
+</div>
+</section>
+<section id="id4">
+<h2>Начало работы<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<p>Для создания новой ноды необходимо нажать на кнопку <a class="framed reference internal" href="../../_images/n8n-12-new-nod-icon.png"><img alt="New-Nod-Icon" class="framed" src="../../_images/n8n-12-new-nod-icon.png" style="width: 48.0px; height: 48.0px;" /></a> в правой стороне окна.
+Откроется список выбора типа нод. Так как список возможных нод очень большой,
+лучше искать нужную ноду через поиск вверху этого меню.</p>
+<a class="framed"
+               data-lightbox="group-77e8e768-b308-4e2c-9dd8-85688dfd516a"
+               href="../../_images/n8n-6-nod-menu1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-6-nod-menu1.png"
+                     class=""
+                     width="50%"
+                     height="auto"
+                     alt="N8N"/>
+                </a><p>После выбора нужной ноды, она автоматически откроется для настройки.
+У каждого типа нод свои настройки, про которые можно почитать в официальной документации <a class="reference external" href="https://docs.n8n.io/">https://docs.n8n.io/</a>.</p>
+<p>После того как вы внесли нужны ноды и закончили работу необходимо нажать на кнопку Save:</p>
+<a class="framed"
+               data-lightbox="group-3528b998-a4c0-489f-a57e-ee53f114342d"
+               href="../../_images/n8n-7-save1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-7-save1.png"
+                     class=""
+                     width="40%"
+                     height="auto"
+                     alt="N8N"/>
+                </a><p>Так же в случае, если ваш скрипт должен выполнятся автоматически по тригеру
+(для каждого из тригера заводится отдельная нода, но не более одной на скрипт),
+то после сохранения необходимо перевести слайдер “Active” в активное состояние.</p>
+<p>Для более удобной ориентации между своими workflow, в левом верхнем углу можно внести имя для скрипта.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>После ввода имени происходит автоматическое сохранение</p>
+</div>
+<a class="framed"
+               data-lightbox="group-3c21e087-e2d3-4837-a1c7-c37c99ecbc65"
+               href="../../_images/n8n-8-my-workflow-31.png"
+               title=""
+               data-title=""
+               
+               ><img src="../../_images/n8n-8-my-workflow-31.png"
+                     class=""
+                     width="40%"
+                     height="auto"
+                     alt="N8N"/>
+                </a></section>
 </section>
 
 
@@ -442,6 +579,38 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> На этой странице
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Логинация
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Общий вид сервиса
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Описание нужных для работы элементов
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   Начало работы
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
 <div class="toc-item">
   
 <div id="searchbox"></div>
