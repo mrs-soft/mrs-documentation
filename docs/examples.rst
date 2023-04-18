@@ -8,7 +8,6 @@
     examples/first-form
     examples/entity-and-bis-rules
     examples/first-checklist
-    examples/expand-call-request
     examples/plotpad-in-constructor
     examples/ref-books-1c
     examples/bitrix-work
