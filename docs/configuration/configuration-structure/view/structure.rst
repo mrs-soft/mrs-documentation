@@ -1,38 +1,98 @@
-Структура Представления
-=======================
+Структура данных
+================
 
-Модель view
------------
+Поля представления
+------------------
 
-View =
+**View**
 
-*   Id: guid
-*   Title: string
-*   Class: string
-*   Query: json
-*   Map: json
-*   Settings: json
+..  list-table::
+    :header-rows: 1
+    :align: left
 
-Модель данных
-+++++++++++++
+    *   - Поле
+        - Тип данных
+    *   - ``title``
+        - **string**
+    *   - ``viewType``
+        - **ViewType**
+    *   - ``query``
+        - **IQuery** | **null**
+    *   - ``map``
+        - **string**
+    *   - ``settings``
+        - **object**
+    *   - ``forCreate``
+        - **object**
+    *   - ``filters``
+        - **IViewFilter[]**
+
+**ViewType**. Отвечает за тип представления. Подробнее о них в разделе :doc:`../../types-of-view`.
+
+..  list-table::
+    :header-rows: 1
+    :align: left
+
+    *   - Значение, которое определяет система
+        - Значение, которое записывает прикладной программист
+    *   - ``List`` 
+        - "list"
+    *   - ``Grid`` 
+        - "grid"
+    *   - ``Drawing2d`` 
+        - "drawing2d"
+    *   - ``Tree`` 
+        - "tree"
+    *   - ``Document`` 
+        - "document"
+    *   - ``Calendar`` 
+        - "calendar"
+    *   - ``Gantt`` 
+        - "gantt"
+    *   - ``DataGrid`` 
+        - "dataGrid"
+    *   - ``Embed`` 
+        - "embed"
+
+Модель данных для видов представления
+-------------------------------------
+
+**IViewTitle**. Отвечает за отображение названия.
 
 ..  code-block:: javascript
 
     interface IViewTitle {
         value: string;
         placeholder: string;
-        textClip?: boolean;
+        noClip?: boolean;
     }
+
+..  list-table::
+    :widths: 10 90
+    :header-rows: 1
+    :align: left
+
+    *   - Поле
+        - Определение
+    *   - ``value``
+        - Значение, которое используется как название в представлении.
+    *   - ``placeholder``
+        - Значение, которое используется, если ``value`` пусто.
+    *   - ``noClip``
+        - Свойство, которое позволяет показывать текстовые поля в полном объёме, если значение ``true``.
+          Если значение ``false``, то часть текста скрывается.
+          
+          Пока работает только для плоского списка.
+
+**IViewDescription**. Отвечает за отображение описания. 
 
 ..  code-block:: javascript
 
     interface IViewDescription extends IViewTitle {}
 
-..  code-block:: javascript
+Повторяет полностью поля ``IViewTitle``.
 
-    interface IViewCaption extends IViewTitle {
-        color?: string;
-    }
+**IViewIcon**. Отвечает за иконку, которая будет отображаться в представлении.
 
 ..  code-block:: javascript
 
@@ -41,11 +101,22 @@ View =
         color?: string;
     }
 
-..  code-block:: javascript
+..  list-table::
+    :widths: 10 90
+    :header-rows: 1
+    :align: left
 
-    interface IViewField extends IViewTitle {
-        title: string;
-    }
+    *   - Поле
+        - Определение
+    *   - ``value``
+        - В это поле передаётся наименование иконки из библиотеки иконок.
+    *   - ``color``
+        - В это поле передаётся цвет из библиотеки цветов.
+
+**IViewChip**. Отвечает за отображение чипсов в представлении.
+
+..  note:: Чипсы --- это элементы представлений, которые отображают информацию по тем
+           или иным полям формы представления без непосредственного открытия формы.
 
 ..  code-block:: javascript
 
@@ -53,6 +124,22 @@ View =
         icon?: MRSIcon;
         color?: string;
     }
+
+..  list-table::
+    :widths: 10 90
+    :header-rows: 1
+    :align: left
+
+    *   - Поле
+        - Определение
+    *   - ``icon``
+        - В это поле передаётся наименование иконки из библиотеки иконок.
+    *   - ``color``
+        - В это поле передаётся цвет из библиотеки цветов.
+
+Помимо полей выше, также включает в себя поля 
+
+**IViewUser**. Отвечает за отображения пользовательских данных в представлении.
 
 ..  code-block:: javascript
 
@@ -62,12 +149,21 @@ View =
         caption?: string;
     }
 
-..  code-block:: javascript
+..  list-table::
+    :widths: 10 90
+    :header-rows: 1
+    :align: left
 
-    interface IViewImage {
-        placeholder: string;
-        images: IImage[];
-    }
+    *   - Поле
+        - Определение
+    *   - ``avatar``
+        - В это поле передаётся аватар пользователя.
+    *   - ``name``
+        - В это поле передаётся имя пользователя.
+    *   - ``caption``
+        - В это поле передаётся дополнительная информация по пользователю. Например данные об организации.
+
+**IImage** и **IViewImage**
 
 ..  code-block:: javascript
 
@@ -75,4 +171,9 @@ View =
         url: string;
     }
 
-..  note:: В поля ``color`` подставляются только значения из темы, например, “primary.dark”.
+..  code-block:: javascript
+
+    interface IViewImage {
+        placeholder: string;
+        images: IImage[];
+    }
