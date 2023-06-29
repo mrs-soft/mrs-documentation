@@ -162,18 +162,3 @@
         - В это поле передаётся имя пользователя.
     *   - ``caption``
         - В это поле передаётся дополнительная информация по пользователю. Например данные об организации.
-
-**IImage** и **IViewImage**
-
-..  code-block:: javascript
-
-    interface IImage {
-        url: string;
-    }
-
-..  code-block:: javascript
-
-    interface IViewImage {
-        placeholder: string;
-        images: IImage[];
-    }
