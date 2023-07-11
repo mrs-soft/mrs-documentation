@@ -4,7 +4,8 @@ Tree — Дерево
 Определение
 -----------
 
-Представление treeview --- это элемент интерфейса для иерархического отображения информации. Представляет собой совокупность связанных отношениями элементов в иерархическом древе. 
+Представление treeview --- это элемент интерфейса для иерархического отображения информации. 
+Представляет собой совокупность связанных отношениями элементов в иерархическом древе. 
 
 Каждый элемент чаще всего называют узлом и ветвью, который может иметь несколько подразделов.
 Обычно используется для просмотра структуры каталогов (папок) и других подобных элементов, связанных иерархическими отношениями.
@@ -27,14 +28,13 @@ Tree — Дерево
 
 ..  code-block:: javascript
 
-    interface ITreeViewItem {
-        id: string;
+    interface ITreeViewItem extends IWithId {
         title: IViewTitle;
         description?: IViewDescription;
         icon?: IViewIcon;
-        parentId: string | null;
+        parentId: ObjectId | null;
         isFolder?: boolean;
-    }
+        children: ITreeViewItem[];
 
 Пример
 ------
@@ -42,27 +42,45 @@ Tree — Дерево
 JSON
 ++++
 
+..  code-block:: json
+
+    {
+        "title": "[Tree] Справочник с чертежами",
+        "class": "tree",
+        "settings": null,
+        "isArchived": false,
+        "forCreate": null,
+        "type": null,
+        "sqlField": null,
+        "relationsData": [],
+        "name": "638748cb30ac700123000068"
+    }
+
 Map
 +++
 
 ..  code-block:: javascript
 
     function hook(item) {
-        const { id, name } = item;
+        const { id, name, isFolder } = item;
         return {
             id,
+            isFolder,
             title: {
                 value: name,
-                placeholder: "Название карточки",
             },
-    parentId: item.parent_id,
+            icon: {
+                value:  isFolder ? "Folder" : "More",
+                color: "info.main",
+            },
+            parentId: item?.parent_id,
         };
     }
 
 Иконки
 ''''''
 
-    Для отображения иконок в дереве нужно добавить в Map следующий блок:
+Для отображения иконок в дереве нужно добавить в Map следующий блок:
 
 ..  code-block:: javascript
 
@@ -71,12 +89,12 @@ Map
             color: "primary.light",
         },
 
-..  note::  первая икона для родительского элемента, вторая будет отображаться для дочерних элементов
+..  note::  Первая икона для родительского элемента, вторая будет отображаться для дочерних элементов
 
 Подпись
 '''''''
 
-    Для отображения подписи в TreeView нужно добавить в Map блок description:
+Для отображения подписи в TreeView нужно добавить в Map блок description:
 
 ..  code-block:: javascript
 
@@ -92,52 +110,62 @@ Map
 Query
 +++++
 
-..  code-block:: SQL
+..  code-block:: json
 
-    {"sort": [{"sort": "DESCENDING", "property": "isFolder"}, 
-    {"sort": "ASCENDING", "property": "name"}], "type": "dictionary", "query": [{"value": "Tree_view", "operator": "eq", "property": "dictionaryType"},  
-    {"value": "${ids}", "operator": "in", "property": "id"}, 
-    {"value": "${name}", "operator": "contains", "property": "name"}  {{#unless ids}}, 
-    {"group": [{"value": "${parentId}", "operator": "eq", "property": "parent_id"}, 
-    {"value": "${parentId}", "operator": "isnull", "property": "parent_id"}], "logical": "OR"} {{/unless}}], "pagination": {"limit": 20, "offset": 0}}
-
-..  attention:: Особенности Query для построения дерева. При использовании фильтров во view для иерархических структур (дерево, иерархический справочник) следует учитывать, что при использовании и не использовании ``parentId: null`` в запросах будут получены разные варианты. 
-    
-При использовании ``parentId: null`` поиск будет проведен только на верхнем уровне справочника, и если записей, удовлетворяющих условию, не будет на верхнем уровне, то даже при наличии таковых на более глубоких уровнях получить их будет невозможно (для этого надо добавить в запрос соответствующий parentId).
-
-Запрос вида:
-
-..  code-block:: SQL
-
-    {"value": "rd", "operator": "eq", "property": "dictionaryType"}, 
-    {"value": "${areaId}", "operator": "contains", "property": "main_folder_id"},
-    {"group": [
-    {"value": "${parentId}", "operator": "eq", "property": "parent_id"}, 
-    {"value": "${parentId}", "operator": "isnull", "property": "parent_id"}
-    ]}
-
-всегда ищет элементы с указанным id (null или отличным от null).
-
-Если нет уверенности в том, что удовлетворяющие условию фильтра данные имеются на верхнем уровне структуры, стоит исключить parentId: null из запроса. Будут возвращены все найденные элементы, и сторона клиента отвечает за их корректное отображение. Однако стоит учесть, что при использовании пагинации элемент, являющийся родителем, может прийти позже своих дочерних элементов, и в процессе прокрутки дерево (или иерархический справочник) будет перерисовано.
-
-Запрос вида:
-
-..  code-block:: SQL
-
-    {"value": "rd", "operator": "eq", "property": "dictionaryType"}, 
-    {"value": "${areaId}", "operator": "contains", "property": "main_folder_id"}, {{#if areaId}} {{#if parentId}}, 
-    {"value": "${parentId}", "operator": "eq", "property": "parent_id"}, {{/if}} {{else}}, 
-    {"group": [
-    {"value": "${parentId}", "operator": "eq", "property": "parent_id"}, 
-    {"value": "${parentId}", "operator": "isnull", "property": "parent_id"}]}
-    {{/if}}
-
-при отсутствии фильтра ищет записи с учетом ``parentId`` (и при ``parentId: null`` возвращает все элементы верхнего уровня), а если указан параметр ``areaId``, то при ``parentId: null`` поиск будет вестись без учета ``parentId``.
+        {
+        "sort": [
+            {
+                "sort": "DESCENDING",
+                "property": "isFolder"
+            },
+            {
+                "sort": "ASCENDING",
+                "property": "name"
+            }
+        ],
+        "type": "dictionary",
+        "query": [
+            {
+                "value": "drawing2d_tree",
+                "operator": "eq",
+                "property": "dictionaryType"
+            },
+            {
+                "value": "${ids}",
+                "operator": "in",
+                "property": "id"
+            },
+            {
+                "value": "${areaName}",
+                "operator": "contains",
+                "property": "name"
+            },
+            {
+                "group": [
+                    {
+                        "value": "${parentId}",
+                        "operator": "eq",
+                        "property": "parent_id"
+                    },
+                    {
+                        "value": "${parentId}",
+                        "operator": "isnull",
+                        "property": "parent_id"
+                    }
+                ],
+                "logical": "AND"
+            }
+        ],
+        "pagination": {
+            "limit": 20,
+            "offset": 0
+        }
+        }
 
 Filters
 +++++++
 
-..  code-block:: javascript
+..  code-block:: json
 
     [
      {
@@ -150,3 +178,46 @@ Filters
       "placeholder": "Введите название участка"
      }
     ]
+
+Комментарии
+-----------
+
+..  attention:: Особенности Query для построения дерева. При использовании фильтров во view для иерархических структур (дерево, иерархический справочник) следует учитывать, 
+    что при использовании и не использовании ``parentId: null`` в запросах будут получены разные варианты. 
+    
+При использовании ``parentId: null`` поиск будет проведен только на верхнем уровне справочника, и если записей, удовлетворяющих условию, 
+не будет на верхнем уровне, то даже при наличии таковых на более глубоких уровнях получить их будет невозможно (для этого надо добавить в запрос соответствующий parentId).
+
+Запрос вида:
+
+..  code-block:: json
+
+    {"value": "rd", "operator": "eq", "property": "dictionaryType"}, 
+    {"value": "${areaId}", "operator": "contains", "property": "main_folder_id"},
+    {"group": [
+    {"value": "${parentId}", "operator": "eq", "property": "parent_id"}, 
+    {"value": "${parentId}", "operator": "isnull", "property": "parent_id"}
+    ]}
+
+всегда ищет элементы с указанным id (null или отличным от null).
+
+Если нет уверенности в том, что удовлетворяющие условию фильтра данные имеются на верхнем уровне структуры, стоит исключить parentId: null из запроса. 
+Будут возвращены все найденные элементы, и сторона клиента отвечает за их корректное отображение. 
+Однако стоит учесть, что при использовании пагинации элемент, являющийся родителем, может прийти позже своих дочерних элементов, 
+и в процессе прокрутки дерево (или иерархический справочник) будет перерисовано.
+
+Запрос вида:
+
+..  code-block:: json
+
+    {"value": "rd", "operator": "eq", "property": "dictionaryType"}, 
+    {"value": "${areaId}", "operator": "contains", "property": "main_folder_id"}, {{#if areaId}} {{#if parentId}}, 
+    {"value": "${parentId}", "operator": "eq", "property": "parent_id"}, {{/if}} {{else}}, 
+    {"group": [
+    {"value": "${parentId}", "operator": "eq", "property": "parent_id"}, 
+    {"value": "${parentId}", "operator": "isnull", "property": "parent_id"}]}
+    {{/if}}
+
+при отсутствии фильтра ищет записи с учетом ``parentId`` (и при ``parentId: null`` возвращает все элементы верхнего уровня), 
+а если указан параметр ``areaId``, то при ``parentId: null`` поиск будет вестись без учета ``parentId``.
+
