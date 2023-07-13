@@ -22,8 +22,7 @@
     :maxdepth: 2
     :caption: Подробнее в статьях:
 
-    view/structure
-    view/json
     view/map
+    view/json
     view/query
     view/filters
