@@ -12,7 +12,7 @@
     :maxdepth: 1
     :caption: Все стандартные компоненты формы:
 
-    
+    components/tabs
     components/text
     components/text-area
     components/email
