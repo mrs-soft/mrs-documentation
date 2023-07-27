@@ -58,7 +58,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
-    <link rel="next" title="Структура Представления" href="view/structure.html" />
+    <link rel="next" title="Структура данных (Map)" href="view/map.html" />
     <link rel="prev" title="Иерархический справочник — tree" href="dictionaries/dictionaries-types/tree.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
@@ -346,8 +346,10 @@
 </ul>
 </li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Представления</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="view/structure.html">Структура Представления</a></li>
-<li class="toctree-l3"><a class="reference internal" href="view/query.html">Запросы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view/map.html">Структура данных (Map)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view/json.html">JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view/query.html">Query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view/filters.html">Filters</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="menu.html">Меню</a></li>
@@ -378,7 +380,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../components/object.html">Разделы в форме — object</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../types-of-view.html">Виды представлений</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../types-of-view.html">Виды представлений</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../types-of-view/drawing2d.html">Drawing2d — Чертёж</a></li>
+</ul>
+</li>
 </ul>
 
   </div>
@@ -414,20 +419,33 @@
 <p>Представление — это преднастроеный элемент пользовательского интерфейса системы, служащий для отображения и/или интерактивной работы с данными.</p>
 <p>Представления позволяют улучшить пользовательский опыт.
 Например, вместо того чтобы всегда использовать список объектов вы можете вывести их как карточки, отобразить на чертеже, карте,
-в календаре, диаграмме Гантта и тд.</p>
+в календаре, диаграмме Гантта и так далее.</p>
 <p>В представлениях могут быть организованы интерактивные элементы.
 Например, фильтры для отображения требуемой выборки данных или возможность изменять объекты системы прямо из представления (запланировано в v2.1).</p>
 <p>Представление можно вывести в главное меню приложения, откуда пользователи смогут войти в него и выполнить свою задачу.</p>
-<p>Представлени строится на основе определенного Запроса к данным системы и функции-хука преобразования (map) данных.
+<p>Представление строится на основе определенного запроса (query) к данным системы и функции-хука (map) преобразования данных.
 Полученные в результате данные должны соответствовать модели, которую ожидает выбранный тип представления.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Подробнее в статьях:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="view/structure.html">Структура Представления</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="view/structure.html#view">Модель view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view/map.html">Структура данных (Map)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="view/map.html#id1">Поля представления</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/map.html#id2">Модель данных для видов представления</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="view/query.html">Запросы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="view/json.html">JSON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="view/json.html#id1">Структура JSON</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="view/query.html">Query</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="view/query.html#id1">Структура Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/query.html#id4">Операторы</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="view/filters.html">Filters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="view/filters.html#id1">Структура фильтров</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -448,10 +466,10 @@
           <p class="prev-next-title">Иерархический справочник — tree</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="view/structure.html" title="вперёд страница">
+  <a class='right-next' id="next-link" href="view/map.html" title="вперёд страница">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">вперёд</p>
-      <p class="prev-next-title">Структура Представления</p>
+      <p class="prev-next-title">Структура данных (Map)</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>

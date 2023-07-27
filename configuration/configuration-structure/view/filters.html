@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Экземпляр формы &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
+    <title>Filters &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -54,12 +54,12 @@
     <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'configuration/configuration-structure/forms/form-instances';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'configuration/configuration-structure/view/filters';</script>
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
     <link rel="search" title="Поиск" href="../../../search.html" />
-    <link rel="next" title="Бизнес-правила (хуки)" href="hooks.html" />
-    <link rel="prev" title="Структура Схемы данных" href="json.html" />
+    <link rel="next" title="Меню" href="../menu.html" />
+    <link rel="prev" title="Query" href="query.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
   </head>
@@ -330,11 +330,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../configuration-structure.html">Структура конфигурации</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../forms.html">Формы</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="configuration.html">Структура Формы</a></li>
-<li class="toctree-l3"><a class="reference internal" href="json.html">Структура Схемы данных</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Экземпляр формы</a></li>
-<li class="toctree-l3"><a class="reference internal" href="hooks.html">Бизнес-правила (хуки)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../forms.html">Формы</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../forms/configuration.html">Структура Формы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/json.html">Структура Схемы данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/form-instances.html">Экземпляр формы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../forms/hooks.html">Бизнес-правила (хуки)</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dictionaries.html">Справочники</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -345,11 +345,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../view.html">Представления</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../view/map.html">Структура данных (Map)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../view/json.html">JSON</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../view/query.html">Query</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../view/filters.html">Filters</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../view.html">Представления</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="map.html">Структура данных (Map)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="json.html">JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="query.html">Query</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Filters</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../menu.html">Меню</a></li>
@@ -412,58 +412,177 @@
             
             <article class="bd-article" role="main">
               
-  <section id="id1">
-<h1>Экземпляр формы<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<dl class="field-list simple">
-<dt class="field-odd">Экземпляр формы<span class="colon">:</span></dt>
-<dd class="field-odd"><p>это отдельная сущностью системы, которая хранит данные заполняемые пользователям клиентского приложения по выбранной форме.</p>
-</dd>
-</dl>
-<section id="id2">
-<h2>Экземпляр формы в клиентском приложении<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>После написания JSON-схемы в конфигураторе и публикации, в клиентском приложении у вас появляется сама форма.
-Форма, написанная один раз, может переиспользоваться множество раз с разными входными данными.</p>
-<p>То есть, когда в клиенте вы заходите на страницу созданной формы, там можно создавать множество <strong>экземпляров формы</strong>.</p>
-<a class=""
-               data-lightbox="group-2bcea3c0-a726-4def-9cb1-89e4c24214ad"
-               href="../../../_images/form-instances-1-client1.gif"
+  <section id="filters">
+<h1>Filters<a class="headerlink" href="#filters" title="Permalink to this heading">#</a></h1>
+<p>Фильтры необходимы для обработки запросов из блока <code class="docutils literal notranslate"><span class="pre">query</span></code> в <a class="reference internal" href="query.html#query-in-query"><span class="std std-ref">Query</span></a>.</p>
+<p>Каждому фильтру должен соответствовать блок с запросом в <code class="docutils literal notranslate"><span class="pre">query</span></code>, в противном случае фильтр не будет работать.</p>
+<p>JSON-файл с фильтрами создаётся в папке с представлением и именуется по следующему принципу:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">наименование_представления</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Например:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project_view</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<a class="framed"
+               data-lightbox="group-cfe78261-3ee6-434f-a793-ade852a0898c"
+               href="../../../_images/filters-1-naming-example1.png"
                title=""
                data-title=""
                
-               ><img src="../../../_images/form-instances-1-client1.gif"
-                     class="align-center"
-                     width="100%"
+               ><img src="../../../_images/filters-1-naming-example1.png"
+                     class=""
+                     width="50%"
                      height="auto"
-                     alt="Форма в конфигураторе"/>
-                </a><hr class="docutils" />
-<p>Заполнение экземпляра формы:</p>
-<a class=""
-               data-lightbox="group-a20f3d0e-8bb5-4239-8079-8695a0849100"
-               href="../../../_images/form-instances-2-client-filing1.gif"
-               title=""
-               data-title=""
-               
-               ><img src="../../../_images/form-instances-2-client-filing1.gif"
-                     class="align-center"
-                     width="100%"
-                     height="auto"
-                     alt="Форма в конфигураторе"/>
-                </a></section>
-<section id="id3">
-<h2>Экземпляр формы в конфигураторе<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>Экземпляр формы является отдельной сущностью системы. Информация сохраняется в JSON-формате по шаблону:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;Наименование поля&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Данные поля&quot;</span>
+                     alt="Пример наименования"/>
+                </a><section id="id1">
+<h2>Структура фильтров<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Общий вид JSON-файла с фильтрами:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;inSidebar&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<section id="iviewfilter">
+<h3>IViewFilter<a class="headerlink" href="#iviewfilter" title="Permalink to this heading">#</a></h3>
+<p>Общая модель данных для фильтров.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">IViewFilter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">placeholder?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">viewId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">fields?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">        </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="nx">VIEW_FILTER_TYPE</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">icon</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">multiple?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">inSidebar?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="kt">IViewFilterParameter</span><span class="p">[];</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>То есть заполненный пример из предыдущего пункта статьи сохранится так:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;Hello World!&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;dateField&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1643694572000</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;textField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Привет, мир!&quot;</span>
+<table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Поле</p></th>
+<th class="head"><p>Определение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">title</span></code></p></td>
+<td><p>Название фильтра, которое будет видеть пользователь.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">placeholder</span></code></p></td>
+<td><p>Заглушка для фильтра.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">viewId</span></code></p></td>
+<td><p>В поле записывается наименование представления, если тип фильтра — <code class="docutils literal notranslate"><span class="pre">view</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fields</span></code></p></td>
+<td><p>Поля формы или справочника, к которым применяется фильтр.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
+<td><p>В этом поле определяется тип фильтра. Подробнее о них <a class="reference internal" href="#filter-type"><span class="std std-ref">ниже</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">icon</span></code></p></td>
+<td><p>В этом поле записывается наименование иконки для фильтра. Само наименование берётся из библиотеки иконок.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">multiple</span></code></p></td>
+<td><p>Этот параметр отвечает за множественный выбор. Если значение <code class="docutils literal notranslate"><span class="pre">true</span></code>, то за раз можно выбрать несколько фильтров.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">inSidebar</span></code></p></td>
+<td><p>Этот параметр работает с боковым меню. Если значение <code class="docutils literal notranslate"><span class="pre">true</span></code>, то у представления появится боковое меню.
+Данные для этого меню берутся из значений фильтра.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">params</span></code></p></td>
+<td><p>В этом блоке описываются параметры, относительно которых совершаются запросы при фильтрации.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="iviewfilterparameter">
+<h3>IViewFilterParameter<a class="headerlink" href="#iviewfilterparameter" title="Permalink to this heading">#</a></h3>
+<p>Модель данных для параметров фильтра.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">IViewFilterParameter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">value?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">object</span><span class="p">[];</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+<table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Поле</p></th>
+<th class="head"><p>Определение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Название переменной из поля <code class="docutils literal notranslate"><span class="pre">value</span></code> в <strong>Query</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p>Изначальное значение фильтра, которое задаётся прикладным программистом. Необходимо для работы заготовленных фильтров.
+Если значение фильтра не должно быть определено, то поле можно либо не заполнять, либо заполнить пустой строкой <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>.</p>
+<p>В поле можно передавать строку, объект или массив объектов.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="view-filter-type">
+<span id="filter-type"></span><h3>VIEW_FILTER_TYPE<a class="headerlink" href="#view-filter-type" title="Permalink to this heading">#</a></h3>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="nx">VIEW_FILTER_TYPE</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">TEXT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">VIEW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;view&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">DATE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">SWITCH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;switch&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 90.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Поле</p></th>
+<th class="head"><p>Определение</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TEXT</span></code></p></td>
+<td><p>Простой текстовый фильтр, который можно использовать для поиска по словам или номеру.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">VIEW</span></code></p></td>
+<td><p>Фильтр созданный на основе какого-то другого представления.
+Например, если замечания нужно отфильтровать по участкам на объекте строительства.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">DATE</span></code></p></td>
+<td><p>Фильтрация по дате. В <code class="docutils literal notranslate"><span class="pre">value</span></code> параметров для такого фильтра обычно передаётся массив объектов с ключами <code class="docutils literal notranslate"><span class="pre">end</span></code> и <code class="docutils literal notranslate"><span class="pre">start</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SWITCH</span></code></p></td>
+<td><p>Это фильтр-переключатель (чекбокс). Удобен в работе с заготовленными фильтрами. Например, если пользователю необходимо
+отфильтровать экземпляры формы, которые созданы им.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 </section>
 
@@ -475,17 +594,17 @@
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="json.html" title="назад страница">
+  <a class='left-prev' id="prev-link" href="query.html" title="назад страница">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">назад</p>
-          <p class="prev-next-title">Структура Схемы данных</p>
+          <p class="prev-next-title">Query</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="hooks.html" title="вперёд страница">
+  <a class='right-next' id="next-link" href="../menu.html" title="вперёд страница">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">вперёд</p>
-      <p class="prev-next-title">Бизнес-правила (хуки)</p>
+      <p class="prev-next-title">Меню</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -506,14 +625,26 @@
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Экземпляр формы в клиентском приложении
+  <a class="reference internal nav-link" href="#id1">
+   Структура фильтров
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   Экземпляр формы в конфигураторе
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iviewfilter">
+     IViewFilter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iviewfilterparameter">
+     IViewFilterParameter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#view-filter-type">
+     VIEW_FILTER_TYPE
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
