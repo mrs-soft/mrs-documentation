@@ -34,6 +34,7 @@ extensions = [
     'sphinxcontrib.youtube',
     'sphinxcontrib.images',
     'hoverxref.extension',
+    'sphinx_design'
     ]
 
 hoverxref_roles = [
