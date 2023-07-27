@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Query &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
+    <title>Запросы &#8212; документация Мобильные решения для строительства. Платформа МРС. 1.0</title>
   <script>
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -58,8 +58,8 @@
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
     <link rel="search" title="Поиск" href="../../../search.html" />
-    <link rel="next" title="Filters" href="filters.html" />
-    <link rel="prev" title="JSON" href="json.html" />
+    <link rel="next" title="Меню" href="../menu.html" />
+    <link rel="prev" title="Структура Представления" href="structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
   </head>
@@ -346,10 +346,8 @@
 </ul>
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../view.html">Представления</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="map.html">Структура данных (Map)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="json.html">JSON</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Query</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html">Структура Представления</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Запросы</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../menu.html">Меню</a></li>
@@ -380,10 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../components/object.html">Разделы в форме — object</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../types-of-view.html">Виды представлений</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../types-of-view/drawing2d.html">Drawing2d — Чертёж</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../types-of-view.html">Виды представлений</a></li>
 </ul>
 
   </div>
@@ -412,345 +407,10 @@
             
             <article class="bd-article" role="main">
               
-  <section id="query">
-<h1>Query<a class="headerlink" href="#query" title="Permalink to this heading">#</a></h1>
-<p>Запрос (query) — это описание выборки данных системы на языке SQL или встроенного языка запросов.
-Запросы используются в представлениях для обработки и извлечения сведений из состояния системы.</p>
-<p>Query-файл создаётся в папке с представлением и именуется по следующему принципу:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">наименование_представления</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">json</span>
-</pre></div>
-</div>
-<p>Например:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project_view</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">json</span>
-</pre></div>
-</div>
-<a class="framed"
-               data-lightbox="group-13fb70b7-9cf4-49e9-8782-9222a302b87a"
-               href="../../../_images/query-1-naming-example1.png"
-               title=""
-               data-title=""
-               
-               ><img src="../../../_images/query-1-naming-example1.png"
-                     class=""
-                     width="50%"
-                     height="auto"
-                     alt="Пример наименования"/>
-                </a><section id="id1">
-<h2>Структура Query<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sort&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;sort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${...}&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;logical&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;pagination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;offset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<section id="id2">
-<h3>Верхний уровень<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sort&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;...&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;...&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;pagination&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;...&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="w"> </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<table class="table">
-<colgroup>
-<col style="width: 10.0%" />
-<col style="width: 80.0%" />
-<col style="width: 10.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Поле</p></th>
-<th class="head"><p>Определение</p></th>
-<th class="head"><p>Тип данных</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sort</span></code></p></td>
-<td><p>В поле записывается сортировка для полей справочника или экземлпяра формы.</p></td>
-<td><p><strong>array of objects</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">type</span></code></p></td>
-<td><p>В этом поле определяется, на основе чего вы хотите создать представление: справочник — <code class="docutils literal notranslate"><span class="pre">dictionary</span></code> —
-или экземпляр формы — <code class="docutils literal notranslate"><span class="pre">formInstance</span></code>.</p></td>
-<td><p><strong>string</strong></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">query</span></code></p></td>
-<td><p>В этом блоке описываются запросы, которые необходимо совершить.</p></td>
-<td><p><strong>array of objects</strong></p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sort">
-<h3>Sort<a class="headerlink" href="#sort" title="Permalink to this heading">#</a></h3>
-<p>В поле записывается сортировка для полей справочника или экземлпяра формы.
-Поле содержит объекты, которые состоят из полей <code class="docutils literal notranslate"><span class="pre">sort</span></code> и <code class="docutils literal notranslate"><span class="pre">propery</span></code>.
-Объектов может быть столько же сколько полей есть справочнике или экземпляре формы.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sort&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;sort&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<table class="table">
-<colgroup>
-<col style="width: 10.0%" />
-<col style="width: 80.0%" />
-<col style="width: 10.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Поле</p></th>
-<th class="head"><p>Определение</p></th>
-<th class="head"><p>Тип данных</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sort</span></code></p></td>
-<td><p>В это поле записывается тип сортировки, который вы хотите применить к полю: <code class="docutils literal notranslate"><span class="pre">DESCENDING</span></code> (по убыванию)
-или <code class="docutils literal notranslate"><span class="pre">ASCENDING</span></code> (по возрастанию).</p></td>
-<td><p><strong>string</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>В это поле записывается наименование поля справочника или экземпляра формы, которое вы хотите отсортиртировать.</p></td>
-<td><p><strong>string</strong></p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="query-in-query">
-<span id="id3"></span><h3>Query<a class="headerlink" href="#query-in-query" title="Permalink to this heading">#</a></h3>
-<p>В этом блоке описываются необходимые фильтры для представления.
-Запрос состоит из полей <strong>value</strong>, <strong>operator</strong> и <strong>property</strong>.</p>
-<p>Также внутри блока <code class="docutils literal notranslate"><span class="pre">query</span></code> могут быть описаны блоки <code class="docutils literal notranslate"><span class="pre">group</span></code> для дполнительной фильтрации данных.</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;query&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${...}&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;operator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;property&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">],</span>
-<span class="w">      </span><span class="nt">&quot;logical&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<table class="table">
-<colgroup>
-<col style="width: 10.0%" />
-<col style="width: 80.0%" />
-<col style="width: 10.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Поле</p></th>
-<th class="head"><p>Определение</p></th>
-<th class="head"><p>Тип данных</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
-<td><p>В этом поле записывются данные, по которым необходимо фильтровать в запросе.
-Наименование какого-то поля указывается с использованием шаблонных литералов — <code class="docutils literal notranslate"><span class="pre">${...}</span></code>.</p></td>
-<td><p><strong>string</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">operator</span></code></p></td>
-<td><p>В этом поле указывается, какой оператор необходимо использовать при запросе.
-Операторы подробнее описаны ниже на этой странице.</p></td>
-<td><p><strong>string</strong></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>В этом поле указываются данные, с которыми сравнивается <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p></td>
-<td><p><strong>string</strong></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">group</span></code></p></td>
-<td><p>В этом поле можно сгруппировать нескольких разных фильтров.
-Каждый такой блок также состоит из <code class="docutils literal notranslate"><span class="pre">value</span></code>, <code class="docutils literal notranslate"><span class="pre">operator</span></code> и <code class="docutils literal notranslate"><span class="pre">property</span></code>,
-которые аналогичны перечисленным выше.</p></td>
-<td><p><strong>array of objects</strong></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">logical</span></code></p></td>
-<td><p>Поле служит для группировки блоков из <code class="docutils literal notranslate"><span class="pre">group</span></code>.</p>
-<p>По умолчанию там пишется <code class="docutils literal notranslate"><span class="pre">AND</span></code>, но также можно прописать <code class="docutils literal notranslate"><span class="pre">OR</span></code>.</p>
-</td>
-<td><p><strong>string</strong></p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Примечание</p>
-<p>Групп фильтров может быть несколько и для каждой такой группы необходимо своё поле <code class="docutils literal notranslate"><span class="pre">logical</span></code>.</p>
-</div>
-</section>
-</section>
-<section id="id4">
-<h2>Операторы<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p>Операторы в Query представляют из себя типичные логические операторы.
-Операторы делятся на простые и сложные. Простые используются для работы с примитивами.
-Сложные нужны для работы с <strong>jsonb</strong>-моделью.</p>
-<section id="id5">
-<h3>Простые операторы<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<table class="table">
-<colgroup>
-<col style="width: 10.0%" />
-<col style="width: 90.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Оператор</p></th>
-<th class="head"><p>Определение</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">eq</span></code></p></td>
-<td><p>эквивалентность, то есть равенство.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">neq</span></code></p></td>
-<td><p>неэквивалентность — неравенство.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gte</span></code></p></td>
-<td><p>больше или равно.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lte</span></code></p></td>
-<td><p>меньше или равно.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gt</span></code></p></td>
-<td><p>больше.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lt</span></code></p></td>
-<td><p>меньше.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
-<td><p>содержит совпадение значения в списке.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nin</span></code></p></td>
-<td><p>не содержит совпадений в списке.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">contains</span></code></p></td>
-<td><p>поиск подстроки в строке — <strong>Василий</strong> содержит <strong>Вас</strong>.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">isnull</span></code></p></td>
-<td><p>проверка на <code class="docutils literal notranslate"><span class="pre">null</span></code> — <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">=</span> <span class="pre">null</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">notnull</span></code></p></td>
-<td><p>проверка на то, что не является <code class="docutils literal notranslate"><span class="pre">null</span></code> — <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">!=</span> <span class="pre">null</span></code>.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition attention">
-<p class="admonition-title">Внимание</p>
-<p>Для работы <code class="docutils literal notranslate"><span class="pre">isnull</span></code> и <code class="docutils literal notranslate"><span class="pre">notnull</span></code> необходимо, чтобы <code class="docutils literal notranslate"><span class="pre">value</span></code> фильтра было <code class="docutils literal notranslate"><span class="pre">null</span></code> или не было вовсе.</p>
-</div>
-</section>
-<section id="id6">
-<h3>Сложные операторы<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
-<p>Наименования сложных операторов почти не отличаются от простых.
-Но помимо логических операций, они ещё могут преобразовывать данные, с которыми работают.
-Поэтому ниже хоть наименования идут те же, но описание дополняется.</p>
-<table class="table">
-<colgroup>
-<col style="width: 10.0%" />
-<col style="width: 90.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Оператор</p></th>
-<th class="head"><p>Определение</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">eq</span></code></p></td>
-<td><p>Эквивалентность то есть равенство. Преобразует поле в текст и сравнивает.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">neq</span></code></p></td>
-<td><p>Неэквивалентность — неравенство.
-Обратная операция <code class="docutils literal notranslate"><span class="pre">eq</span></code>, но еще есть проверка, является ли поле <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gte</span></code></p></td>
-<td><p>Больше или равно. Преобразует в <code class="docutils literal notranslate"><span class="pre">decimal</span></code> и сравнивает.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lte</span></code></p></td>
-<td><p>Меньше или равно. Преобразует в decimal и сравнивает.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">gt</span></code></p></td>
-<td><p>Больше. Преобразует в decimal и сравнивает.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">lt</span></code></p></td>
-<td><p>Меньше. Преобразует в decimal и сравнивает.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
-<td><p>Содержит совпадение значения в списке. Составляет полный путь до элемента.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">contains</span></code></p></td>
-<td><p>Поиск подстроки в строке — <strong>Василий</strong> содержит <strong>Вас</strong>. Преобразует <code class="docutils literal notranslate"><span class="pre">value</span></code> в текст и в нижний регистр.</p>
-<p>Если value приходит массивом: <code class="docutils literal notranslate"><span class="pre">([&quot;Вас&quot;,</span> <span class="pre">&quot;ВаСи&quot;])</span></code>, —
-разбивает на составляющие с <strong>или</strong>: <cite>василий</cite> содержит <cite>вас</cite> или <cite>василий</cite> содержит <cite>васи</cite>.</p>
-</td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isnull</span></code></p></td>
-<td><p>Проверка на null — <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">=</span> <span class="pre">null</span></code>.
-Просто проверка на null, преобразования данных нет.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">notnull</span></code></p></td>
-<td><p>Проверка на то, что не является null — <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">!=</span> <span class="pre">null</span></code>.
-Просто проверка на null, преобразования данных нет.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">injson</span></code></p></td>
-<td><p>Для поиска по не вложенным объектам типа json.</p>
-<p>Например, поле <code class="docutils literal notranslate"><span class="pre">reviewers</span></code> у экземпляра формы.</p>
-</td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">inObject</span></code></p></td>
-<td><p>Для поиска по единичным значениям типа <code class="docutils literal notranslate"><span class="pre">data.document.id</span></code>.
-Важно чтобы в конце было именно единичное значение.</p>
-<p>Например: <code class="docutils literal notranslate"><span class="pre">data:</span> <span class="pre">{document:</span> <span class="pre">{id:</span> <span class="pre">“123”}}</span></code>.</p>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Примечание</p>
-<p>Для работы с json используются те же операторы,
-только отсутствует <code class="docutils literal notranslate"><span class="pre">nin</span></code> и добавляются <code class="docutils literal notranslate"><span class="pre">injson</span></code> и <code class="docutils literal notranslate"><span class="pre">inObject</span></code>.</p>
-</div>
-</section>
-</section>
+  <section id="id1">
+<h1>Запросы<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Запрос — это описание выборки данных системы на языке SQL или встроенного языка запросов.
+Запросы используются в представлениях и других частях системы, где необходимо обработать и извлечь сведения из состояния системы.</p>
 </section>
 
 
@@ -761,17 +421,17 @@
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="json.html" title="назад страница">
+  <a class='left-prev' id="prev-link" href="structure.html" title="назад страница">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">назад</p>
-          <p class="prev-next-title">JSON</p>
+          <p class="prev-next-title">Структура Представления</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="filters.html" title="вперёд страница">
+  <a class='right-next' id="next-link" href="../menu.html" title="вперёд страница">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">вперёд</p>
-      <p class="prev-next-title">Filters</p>
+      <p class="prev-next-title">Меню</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -784,57 +444,6 @@
           
             <div class="bd-sidebar-secondary bd-toc">
               
-<div class="toc-item">
-  
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> На этой странице
-</div>
-<nav id="bd-toc-nav" class="page-toc">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Структура Query
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Верхний уровень
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sort">
-     Sort
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#query-in-query">
-     Query
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   Операторы
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     Простые операторы
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id6">
-     Сложные операторы
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-</nav>
-</div>
-
 <div class="toc-item">
   
 <div id="searchbox"></div>

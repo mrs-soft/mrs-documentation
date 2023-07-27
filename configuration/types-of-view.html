@@ -58,7 +58,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="Drawing2d — Чертёж" href="types-of-view/drawing2d.html" />
+    <link rel="next" title="Прикладные API" href="../application-api.html" />
     <link rel="prev" title="Разделы в форме — object" href="components/object.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="ru">
@@ -346,10 +346,8 @@
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="configuration-structure/view.html">Представления</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="configuration-structure/view/map.html">Структура данных (Map)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="configuration-structure/view/json.html">JSON</a></li>
-<li class="toctree-l3"><a class="reference internal" href="configuration-structure/view/query.html">Query</a></li>
-<li class="toctree-l3"><a class="reference internal" href="configuration-structure/view/filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration-structure/view/structure.html">Структура Представления</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration-structure/view/query.html">Запросы</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration-structure/menu.html">Меню</a></li>
@@ -380,10 +378,7 @@
 <li class="toctree-l2"><a class="reference internal" href="components/object.html">Разделы в форме — object</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Виды представлений</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="types-of-view/drawing2d.html">Drawing2d — Чертёж</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Виды представлений</a></li>
 </ul>
 
   </div>
@@ -414,8 +409,6 @@
               
   <section id="id1">
 <h1>Виды представлений<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
 <section id="list">
 <h2>List — Список<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
 <section id="id2">
@@ -444,7 +437,7 @@
 <section id="id5">
 <h4>Список для отображения информации о доступных пользователю экземплярах формы<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <a class="framed"
-               data-lightbox="group-7c606887-ca07-416d-a70c-0cbc1915019a"
+               data-lightbox="group-a1e0b7b0-32cd-4b37-bf83-95194aaa0179"
                href="../_images/list-1-form-instances1.png"
                title=""
                data-title=""
@@ -458,7 +451,7 @@
 <section id="id6">
 <h4>Список для отображения и скачивания отчетов<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <a class="framed"
-               data-lightbox="group-13cf6d42-7a30-4f98-b44d-750d53babc30"
+               data-lightbox="group-ad82e360-a532-4ee2-ac2f-bc4af059bca5"
                href="../_images/list-2-reports1.png"
                title=""
                data-title=""
@@ -472,7 +465,7 @@
 <section id="id7">
 <h4>Список для отображения плоских справочников<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <a class="framed"
-               data-lightbox="group-f60b64ba-2a22-4ae0-bba8-873055223a1d"
+               data-lightbox="group-0a100186-4a31-4160-b542-bb5ea60c7078"
                href="../_images/list-3-dictionaries1.png"
                title=""
                data-title=""
@@ -508,7 +501,7 @@
 <section id="id10">
 <h3>Внешний вид<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <a class="framed"
-               data-lightbox="group-c0274cf7-502f-4ce8-a185-b486ed5af167"
+               data-lightbox="group-51086425-c089-41a5-84a9-73cab6f7135d"
                href="../_images/tree-1-view1.png"
                title=""
                data-title=""
@@ -545,12 +538,48 @@
 <section id="id13">
 <h3>Внешний вид<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
 <a class="framed"
-               data-lightbox="group-b8ffb521-7901-472e-9d39-4e6cc72eeced"
+               data-lightbox="group-dd847061-8219-43e1-a671-2bcc0ad0abea"
                href="../_images/grid-1-view1.png"
                title=""
                data-title=""
                
                ><img src="../_images/grid-1-view1.png"
+                     class="align-center"
+                     width="100%"
+                     height="auto"
+                     alt="List View"/>
+                </a></section>
+</section>
+<section id="drawing2d">
+<h2>Drawing2d — Чертёж<a class="headerlink" href="#drawing2d" title="Permalink to this heading">#</a></h2>
+<section id="id14">
+<h3>Предназначение<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
+<p>Представление darwing2d — это возможность отображать и работать с двухмерными чертежами.
+Просматривать чертеж, проставлять и редактировать аннотации и отметки, а также указывать дополнительную информацию</p>
+<p><strong>Class</strong>: <code class="docutils literal notranslate"><span class="pre">drawing2d</span></code></p>
+</section>
+<section id="id15">
+<h3>Модель данных<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">interface</span><span class="w"> </span><span class="nx">IDrawing2dViewItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">IViewTitle</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">?:</span><span class="w"> </span><span class="nx">IViewDescription</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">pin</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="p">[];</span>
+<span class="w">    </span><span class="nx">shapes</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="p">[];</span>
+<span class="w">    </span><span class="nb">document</span><span class="o">:</span><span class="w"> </span><span class="nx">object</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id16">
+<h3>Внешний вид<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
+<a class="framed"
+               data-lightbox="group-75408dbf-8351-46f7-b13d-8e6ff12d53f4"
+               href="../_images/drawing2d-1-view1.png"
+               title=""
+               data-title=""
+               
+               ><img src="../_images/drawing2d-1-view1.png"
                      class="align-center"
                      width="100%"
                      height="auto"
@@ -574,10 +603,10 @@
           <p class="prev-next-title">Разделы в форме — object</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="types-of-view/drawing2d.html" title="вперёд страница">
+  <a class='right-next' id="next-link" href="../application-api.html" title="вперёд страница">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">вперёд</p>
-      <p class="prev-next-title">Drawing2d — Чертёж</p>
+      <p class="prev-next-title">Прикладные API</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -675,6 +704,28 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id13">
+     Внешний вид
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#drawing2d">
+   Drawing2d — Чертёж
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Предназначение
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Модель данных
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
      Внешний вид
     </a>
    </li>
