@@ -1,11 +1,6 @@
 Виды представлений
 ==================
 
-..  toctree::
-    :hidden:
-
-    types-of-view/drawing2d
-
 List — Список
 -------------
 
@@ -123,6 +118,40 @@ Grid — Карточки
 +++++++++++
 
 ..  thumbnail:: images/grid-1-view.png
+    :align: center
+    :alt: List View
+    :class: framed
+
+
+Drawing2d — Чертёж
+------------------
+
+Предназначение
+++++++++++++++
+
+Представление darwing2d --- это возможность отображать и работать с двухмерными чертежами.
+Просматривать чертеж, проставлять и редактировать аннотации и отметки, а также указывать дополнительную информацию
+
+**Class**: ``drawing2d``
+
+Модель данных
++++++++++++++
+
+..  code-block:: javascript
+
+    interface IDrawing2dViewItem {
+        id: string,
+        title: IViewTitle;
+        description?: IViewDescription;
+        pin: object[];
+        shapes: object[];
+        document: object;
+    }
+
+Внешний вид
++++++++++++
+
+..  thumbnail:: images/drawing2d-1-view.png
     :align: center
     :alt: List View
     :class: framed
