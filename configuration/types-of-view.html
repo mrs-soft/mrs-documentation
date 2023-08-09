@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-light.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/tooltipster-sideTip-borderless.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
   
@@ -51,6 +52,7 @@
     <script src="../_static/js/tooltipster.bundle.min.js"></script>
     <script src="../_static/js/micromodal.min.js"></script>
     <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -358,6 +360,7 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="components/tabs.html">Вкладки для отображения формы по частям</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/text.html">Краткий текст — text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/text-area.html">Многострочный текст — textarea</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/email.html">Электронная почта — email</a></li>
@@ -370,7 +373,7 @@
 <li class="toctree-l2"><a class="reference internal" href="components/user.html">Выбор пользователя — user</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/attachments.html">Прикреплённые файлы — attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/dictionary.html">Выбор из справочника — dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components/button-switcher.html">Меню вкладок — buttonSwitcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="components/button-switcher.html">Меню вкладок — buttonSwitcher <strong>[DEPRECATED]</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/drawing2d.html">Аннотации на чертёже — drawing2d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/view.html">Выбор из представления — view</a></li>
 <li class="toctree-l2"><a class="reference internal" href="components/view-display.html">Отображение представления — viewDisplay</a></li>
@@ -437,7 +440,7 @@
 <section id="id5">
 <h4>Список для отображения информации о доступных пользователю экземплярах формы<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
 <a class="framed"
-               data-lightbox="group-a1e0b7b0-32cd-4b37-bf83-95194aaa0179"
+               data-lightbox="group-7f066966-49aa-4aec-a034-5934042ef10a"
                href="../_images/list-1-form-instances1.png"
                title=""
                data-title=""
@@ -451,7 +454,7 @@
 <section id="id6">
 <h4>Список для отображения и скачивания отчетов<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
 <a class="framed"
-               data-lightbox="group-ad82e360-a532-4ee2-ac2f-bc4af059bca5"
+               data-lightbox="group-1d53ebad-2e16-481c-83a1-71dea266cab2"
                href="../_images/list-2-reports1.png"
                title=""
                data-title=""
@@ -465,7 +468,7 @@
 <section id="id7">
 <h4>Список для отображения плоских справочников<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
 <a class="framed"
-               data-lightbox="group-0a100186-4a31-4160-b542-bb5ea60c7078"
+               data-lightbox="group-e00ea9b8-8c26-425a-ab16-3c643b3ad57a"
                href="../_images/list-3-dictionaries1.png"
                title=""
                data-title=""
@@ -501,7 +504,7 @@
 <section id="id10">
 <h3>Внешний вид<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <a class="framed"
-               data-lightbox="group-51086425-c089-41a5-84a9-73cab6f7135d"
+               data-lightbox="group-07d47cf1-9d66-4b17-8244-393d3734fddc"
                href="../_images/tree-1-view1.png"
                title=""
                data-title=""
@@ -538,7 +541,7 @@
 <section id="id13">
 <h3>Внешний вид<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
 <a class="framed"
-               data-lightbox="group-dd847061-8219-43e1-a671-2bcc0ad0abea"
+               data-lightbox="group-0c681df9-8a5f-4bee-ac71-55b1fe064c2f"
                href="../_images/grid-1-view1.png"
                title=""
                data-title=""
@@ -574,7 +577,7 @@
 <section id="id16">
 <h3>Внешний вид<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h3>
 <a class="framed"
-               data-lightbox="group-75408dbf-8351-46f7-b13d-8e6ff12d53f4"
+               data-lightbox="group-f72b4635-b24e-474f-b611-1541bf4ebdd8"
                href="../_images/drawing2d-1-view1.png"
                title=""
                data-title=""

@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/css/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
   
@@ -51,6 +52,7 @@
     <script src="../../_static/js/tooltipster.bundle.min.js"></script>
     <script src="../../_static/js/micromodal.min.js"></script>
     <script src="../../_static/translations.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script src="../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -358,6 +360,7 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../components.html">Компоненты формы</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../components/tabs.html">Вкладки для отображения формы по частям</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/text.html">Краткий текст — text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/text-area.html">Многострочный текст — textarea</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/email.html">Электронная почта — email</a></li>
@@ -370,7 +373,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../components/user.html">Выбор пользователя — user</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/attachments.html">Прикреплённые файлы — attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/dictionary.html">Выбор из справочника — dictionary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../components/button-switcher.html">Меню вкладок — buttonSwitcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../components/button-switcher.html">Меню вкладок — buttonSwitcher <strong>[DEPRECATED]</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/drawing2d.html">Аннотации на чертёже — drawing2d</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/view.html">Выбор из представления — view</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../components/view-display.html">Отображение представления — viewDisplay</a></li>
@@ -425,7 +428,7 @@
 <p>Сразу после установки зайдите в раздел с расширениями (Extensions) в VS Code — <a class="reference internal" href="../../_images/dev-environment-1-vsc-extensions.png"><img alt="VSC-Extensions" src="../../_images/dev-environment-1-vsc-extensions.png" style="width: 6%;" /></a>.</p>
 <p>В поиске введите <strong>mrsc</strong> и установите появившееся расширение:</p>
 <a class=""
-               data-lightbox="group-55a068ab-bbe8-44d1-b7a6-1fcb71cc41e0"
+               data-lightbox="group-ccfe5c85-d4b9-4147-8df8-4d88c51677cd"
                href="../../_images/dev-environment-2-vsc-mrsc1.png"
                title=""
                data-title=""
@@ -441,7 +444,7 @@
 <p>После установки создайте пустую папку для дальнейшей работы.
 Откройте её с помощью VS Code и в правом верхнем углу нажмите кнопку <strong>Prepare workspace with needed files</strong>.</p>
 <a class=""
-               data-lightbox="group-1eb1cff6-6f44-4971-ab9b-d5c87ad6b769"
+               data-lightbox="group-918a645d-8925-490b-aeff-07fbd5ee4f8b"
                href="../../_images/dev-environment-3-vsc-workspace-preparing1.gif"
                title=""
                data-title=""
@@ -454,7 +457,7 @@
                 </a><p>После этого в папке появятся необходимые файлы для дальнейшей работы.</p>
 <p>Далее зайдите в файл <code class="docutils literal notranslate"><span class="pre">mrsconfig.json</span></code>.</p>
 <a class="framed"
-               data-lightbox="group-d66374f7-99fb-4a5e-8ed8-f8d2114da1f7"
+               data-lightbox="group-3ffc448f-4b3e-4179-b3bc-fbbdbfaf66b5"
                href="../../_images/dev-environment-4-mrsconfig1.jpg"
                title=""
                data-title=""
@@ -513,7 +516,7 @@
 <h2>Логинация <strong>[DEPRECATED]</strong><a class="headerlink" href="#deprecated" title="Permalink to this heading">#</a></h2>
 <p>После того, как вы установили рабочую ссылку в конфиге, надо войти в систему. В правом верхнем углу нажмите кнопку <strong>Auth</strong>, чтобы войти.</p>
 <a class=""
-               data-lightbox="group-4547fa0c-89a1-4471-9d18-217ced13a321"
+               data-lightbox="group-d09452b8-4cf3-4830-9274-d2a8f9d304bf"
                href="../../_images/dev-environment-5-mrsc-login1.gif"
                title=""
                data-title=""
@@ -531,7 +534,7 @@
 <p>Далее вам необходимо скачать с сервера актуальную версию конфигурации, с которой вы собираетесь работать.
 Для этого нажмите в правом верхнем углу кнопку <strong>Pull</strong> и в всплывающем окне нажмите <strong>Yes</strong>.</p>
 <a class=""
-               data-lightbox="group-5ef00c4a-2017-478f-8d7c-3482dcecc9e0"
+               data-lightbox="group-1dc81453-a9c7-43be-9571-7490afab0d20"
                href="../../_images/dev-environment-6-mrsc-pull1.gif"
                title=""
                data-title=""
